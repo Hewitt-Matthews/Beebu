@@ -26,3 +26,16 @@ $button-text:       $white;
 .wp-block-buttons {
   margin-bottom: $spacing*2;
 }
+
+.btn-primary {
+  vertical-align: middle;
+
+  a {
+    color: $white;
+    background: $black;
+    border-radius: 40px;
+    padding: 1.5rem 2rem;
+    display: block;
+    color: $white;
+  }
+}
