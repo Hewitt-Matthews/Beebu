@@ -1,0 +1,45 @@
+.section {
+    &--spaced {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    &--curved {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 187px;
+            background: url('../img/white-oval.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            top: -186px;
+            content: '';
+            z-index: 1;
+        }
+    }
+
+    &--green {
+        background: $green;
+
+        &.section--curved:before {
+            background: url('../img/green-oval.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+    }
+    
+    &--grey {
+        background: $grey-dark;
+
+        &.section--curved:before {
+            background: url('../img/grey-oval.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+    }
+}

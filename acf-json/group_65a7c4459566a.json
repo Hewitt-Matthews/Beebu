@@ -68,6 +68,26 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_65c24ac7c10a9",
+            "label": "Show Background Mask",
+            "name": "show_background_mask",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If checked this will add a dark mask to the image so the white text can be read easier",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_65a7c445145c1",
             "label": "Title",
             "name": "title",
@@ -150,5 +170,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705493727
+    "modified": 1707231972
 }

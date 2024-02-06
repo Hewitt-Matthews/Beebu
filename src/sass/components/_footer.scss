@@ -1,8 +1,11 @@
 .footer {
-  background: $grey-dark;
+  background-color: $grey-dark;
   width: 100%;
   padding: 8rem 0 2rem;
   color: $white;
+  background-image: url('../img/footer-flourish.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
 
   p, h2, h3, h4, a {
     color: $white;

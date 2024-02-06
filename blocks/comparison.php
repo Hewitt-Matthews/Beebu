@@ -6,7 +6,7 @@ $button = get_sub_field('button');
 
 ?>
 
-<div class="comparison">
+<div class="comparison section section--spaced">
     <div class="wrapper">
         <div class="comparison__inner">
             <h2 class="comparison__title"><?=$title ?></h2>

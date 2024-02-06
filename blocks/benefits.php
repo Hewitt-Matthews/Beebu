@@ -7,10 +7,10 @@ $button = get_sub_field('button');
 
 ?>
 
-<div class="benefits">
+<div class="benefits section section--spaced section--curved">
     <div class="wrapper">
         <div class="benefits__inner">
-            <h1 class="benefits__title"><?=$title ?></h1>
+            <h2 class="benefits__title"><?=$title ?></h2>
             <p class="benefits__description"><?=$description ?></p>
         </div>
         <div class="benefits__grid">

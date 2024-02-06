@@ -38,7 +38,7 @@ $button = get_sub_field('button');
 
 ?>
 
-<div class="reviews">
+<div class="reviews section section--spaced section--green section--curved">
     <div class="wrapper">
         <div class="reviews__inner">
             <h2 class="reviews__title"><?=$title ?></h2>

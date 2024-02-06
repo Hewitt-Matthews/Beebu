@@ -7,7 +7,7 @@ $button = get_sub_field('button');
 
 ?>
 
-<div class="help">
+<div class="help section section--spaced section--green">
     <div class="wrapper">
         <div class="help__inner">
             <div class="help__content">

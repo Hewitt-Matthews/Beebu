@@ -6,10 +6,10 @@ $articles = get_sub_field('articles');
 
 ?>
 
-<div class="featured-articles">
+<div class="featured-articles section section--spaced section--curved">
     <div class="wrapper">
         <div class="featured-articles__inner">
-            <h1 class="featured-articles__title"><?=$title ?></h1>
+            <h2 class="featured-articles__title"><?=$title ?></h2>
             <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
         </div>
         <div class="featured-articles__grid">

@@ -1,7 +1,13 @@
 .packages {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    padding-top: 0;
+    
+    &__inner {
+        z-index: 999;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     &__title {
         text-align: center;
@@ -23,6 +29,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        background-color: $white;
 
         &-eyebrow {
             background: $orange;

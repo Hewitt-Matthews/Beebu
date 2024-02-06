@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer section--grey section--curved">
     <div class="wrapper">
         <div class="footer__inner">
             <div class="footer__col">
