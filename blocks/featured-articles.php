@@ -18,7 +18,7 @@ $articles = get_sub_field('articles');
                     <img src="<?=get_the_post_thumbnail_url($article, 'small'); ?>" alt="" class="article-card__image" />
                     <h2 class="article-card__title"><?=$article->post_title; ?></h2>
                     <p class="article-card__excerpt"><?=get_the_excerpt($article); ?></p>
-                    <a href="<?=get_permalink($article); ?>" class="article-card__button button">Help & Advice</a>
+                    <a href="<?=get_permalink($article); ?>" class="article-card__button button button--small">Help & Advice</a>
                 </div>
             <?php endforeach; ?>
         </div>

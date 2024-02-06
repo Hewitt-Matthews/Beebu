@@ -9,6 +9,7 @@
 
     &__title {
         margin: 0;
+        font-size: 4rem;
     }
 
     &__description {
@@ -39,7 +40,10 @@
     }
 
     &__benefit-title {}
-    &__benefit-copy {}
+
+    &__benefit-copy {
+        font-size: 1.25rem;
+    }
 
     &__footer {
         display: flex;

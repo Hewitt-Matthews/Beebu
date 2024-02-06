@@ -7,6 +7,11 @@
         gap: 5rem;
     }
 
+    &__title {
+        font-size: 4rem;
+        
+    }
+
     &__questions {
         display: flex;
         flex-direction: column;

@@ -5,62 +5,73 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-family: $primary-font;
-  font-size: 2.5rem;
-  line-height: 2.7rem;
+  font-size: 4rem;
+  line-height: 1;
 
-  @include max-screen(768px) {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
+  // @include max-screen(768px) {
+  //   font-size: 2rem;
+  //   line-height: 2.5rem;
+  // }
 }
 
 h2 {
   font-family: $primary-font;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 1;
 
-  @include max-screen(768px) {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-  }
+  // @include max-screen(768px) {
+  //   font-size: 1.8rem;
+  //   line-height: 2.2rem;
+  // }
 }
 
 h3 {
   font-family: $primary-font;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 2.25rem;
+  line-height: 1;
 
-  @include max-screen(768px) {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
+  // @include max-screen(768px) {
+  //   font-size: 1.2rem;
+  //   line-height: 1.7rem;
+  // }
 }
 
-h4, h5, h6 {
+h4 {
+  font-family: $primary-font;
+  font-size: 2rem;
+  line-height: 1;
+
+  // @include max-screen(768px) {
+  //   font-size: 1.2rem;
+  //   line-height: 1.7rem;
+  // }
+}
+
+h5 {
   font-family: $primary-font;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1;
 
-  @include max-screen(768px) {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
+  // @include max-screen(768px) {
+  //   font-size: 1.2rem;
+  //   line-height: 1.7rem;
+  // }
 }
 
-p {
+h6{
   font-family: $primary-font;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+
+  // @include max-screen(768px) {
+  //   font-size: 1.2rem;
+  //   line-height: 1.7rem;
+  // }
 }
 
-.large-title {
-  font-size: 3rem;
-  line-height: 3.5rem;
-}
-
-.sub-title {
-  font-size: 0.875rem;
-  line-height: 1.2rem;
-  text-transform: uppercase;
-  margin-bottom: $spacing;
+p, a, li, td {
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 400;
 }

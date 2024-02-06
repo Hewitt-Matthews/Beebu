@@ -5,11 +5,13 @@
     
     &__excerpt {
         flex-grow: 1;
+        font-size: 1.25rem;
     }
 
     &__image {
         height: 320px;
         object-fit: cover;
         border-radius: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
