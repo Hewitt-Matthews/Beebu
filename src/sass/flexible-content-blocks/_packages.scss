@@ -1,0 +1,131 @@
+.packages {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        max-width: 350px;
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    &__package {
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        &-eyebrow {
+            background: $orange;
+            padding: .5rem 1rem;
+            border-radius: 2rem;
+            align-self: flex-start;
+        }
+
+        &-speed {
+            z-index: 10;
+            margin-top: -5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        &-small {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        &-large {
+            font-size: 3.75rem;
+            line-height: 1;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 40px;
+        }
+
+        &-specs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        &-button {
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin: .5rem 0;
+        }
+
+        >span {
+            margin-top: 0.5rem;
+        }
+
+    }
+
+    .gauge {
+        position: relative;
+        border-radius: 50%/100% 100% 0 0;
+        background-color: $orange;
+        overflow: hidden;
+        will-change: auto;
+    }
+    .gauge:before{
+        content: "";
+        display: block;
+        padding-top: 50%;   /* ratio of 2:1*/
+        will-change: auto;
+    }
+    .gauge .chart {
+      overflow: hidden;
+      will-change: auto;
+    }
+    .gauge .mask {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      bottom: 0;
+      top: 24%;
+      background-color: #fff;
+      border-radius: 50%/100% 100% 0 0;
+      will-change: auto;
+    }
+    
+    .gauge .percentage {
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #F6F4F2;
+        transform:rotate(var(--rotation)); 
+        transform-origin: bottom center; 
+        will-change: auto;
+    }
+    .gauge:hover {
+      --rotation: 100deg;
+      will-change: auto;
+    }
+    .gauge .value {
+      position:absolute; bottom:0%; left:0;   
+      width:100%; 
+      text-align: center;
+      will-change: auto;
+    }
+}

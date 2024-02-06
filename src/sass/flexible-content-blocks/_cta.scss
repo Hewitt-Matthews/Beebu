@@ -1,0 +1,16 @@
+.cta {
+    padding: 7rem 3.5rem;
+    border-radius: 1.5rem;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        max-width: 500px;
+        color: $white;
+    }
+    
+    &__copy {
+        max-width: 500px;
+        color: $white;
+    }
+}

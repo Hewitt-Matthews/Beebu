@@ -1,0 +1,15 @@
+.article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    &__excerpt {
+        flex-grow: 1;
+    }
+
+    &__image {
+        height: 320px;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+}

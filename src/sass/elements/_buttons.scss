@@ -15,6 +15,7 @@ $button-text:       $white;
   cursor: pointer;
   outline: 0;
   position: relative;
+  border-radius: 1.5rem;
 
   @include link-hover {
     background: transparent;
@@ -38,4 +39,11 @@ $button-text:       $white;
     display: block;
     color: $white;
   }
+}
+
+.button--black {
+  color: $white;
+  background: $black;
+  border-color: $black;
+  color: $white;
 }

@@ -1,0 +1,55 @@
+.reviews {
+    background: $green;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__score {
+        display: flex;
+        gap: .2rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    &__review {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 450px;
+        padding: 2.5rem;
+        background: #F6F4F2;
+        border-radius: 1.5rem;
+    }
+
+    &__star {
+        padding: 6px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: #219653;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &__trustpilot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+            max-height: 45px;
+            width: auto;
+        }
+    }
+} 

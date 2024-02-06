@@ -1,0 +1,27 @@
+.postcode-search {
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px solid $black;
+    background: $white;
+    display: inline-flex;
+    border-radius: 3.5rem;
+
+    &__input {
+        border: none;
+        font-size: 1.5rem;
+        color: $black;
+        min-width: 300px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__button {
+        padding: 1rem 2rem;
+        background: $black;
+        color: $white;
+        border: none;
+        border-radius: 2.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}

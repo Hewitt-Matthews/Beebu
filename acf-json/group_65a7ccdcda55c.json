@@ -39,6 +39,22 @@
             "message": "Data pulled through from trustpilot automatically.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_65c20274ca800",
+            "label": "Button",
+            "name": "button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -59,5 +75,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705495821
+    "modified": 1707213445
 }

@@ -36,7 +36,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "pagination": 0,
             "min": 1,
             "max": 3,
@@ -61,6 +61,28 @@
                     "default_value": "Full fibre",
                     "maxlength": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65a7bfb154d5a"
+                },
+                {
+                    "key": "field_65c245dc91ca1",
+                    "label": "Gauge Meter",
+                    "name": "gauge_meter",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "0 is empty, 100 is full (orange)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 100,
+                    "step": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_65a7bfb154d5a"
@@ -216,5 +238,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705493085
+    "modified": 1707230733
 }
