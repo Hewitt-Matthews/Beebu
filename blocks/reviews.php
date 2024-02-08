@@ -1,38 +1,39 @@
 <?php 
 
 $title = get_sub_field('title');
-$reviews = [
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-    [
-        'rating' => 5,
-        'title' => 'Review Title',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
-    ],
-];
+// $reviews = [
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+//     [
+//         'rating' => 5,
+//         'title' => 'Review Title',
+//         'copy' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu feugiat pretium nibh ipsum consequat nisl vel. Non sodales neque sodales ut etiam sit amet.'
+//     ],
+// ];
+$reviews = get_sub_field('reviews');
 $rating = 5;
 $button = get_sub_field('button');
 
@@ -46,7 +47,7 @@ $button = get_sub_field('button');
                 <?php foreach ($reviews as $review): ?>
                     <div class="reviews__review">
                         <div class="reviews__score">
-                            <?php for ($i=0; $i < $review['rating']; $i++): ?>
+                            <?php for ($i=0; $i < $review['stars']; $i++): ?>
                                 <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
                             <?php endfor; ?>
                         </div>

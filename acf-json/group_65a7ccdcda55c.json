@@ -23,11 +23,11 @@
             "append": ""
         },
         {
-            "key": "field_65a7ccf7e5c5a",
-            "label": "Message",
-            "name": "",
+            "key": "field_65c4bb55bf07f",
+            "label": "Reviews",
+            "name": "reviews",
             "aria-label": "",
-            "type": "message",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,9 +36,79 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Data pulled through from trustpilot automatically.",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65c4bb63bf080",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65c4bb55bf07f"
+                },
+                {
+                    "key": "field_65c4bb68bf081",
+                    "label": "Copy",
+                    "name": "copy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_65c4bb55bf07f"
+                },
+                {
+                    "key": "field_65c4bb6fbf082",
+                    "label": "Stars",
+                    "name": "stars",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "min": 0,
+                    "max": 5,
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65c4bb55bf07f"
+                }
+            ]
         },
         {
             "key": "field_65c20274ca800",
@@ -75,5 +145,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707213445
+    "modified": 1707391880
 }
