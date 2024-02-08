@@ -9,21 +9,30 @@
                     <li>Monday - Friday</li>
                     <li>9:00am - 6:00pm</li>
                 </ul>
-                <a class="footer__email" href="mailto:talktous@beebu.co.uk">talktous@beebu.co.uk</a>
+                <?php if(get_field('email_address', 'option')): ?>
+                    <a class="footer__email" href="mailto:<?=get_field('email_address', 'option') ?>"><?=get_field('email_address', 'option') ?></a>
+                <?php endif; ?>
                 <div class="footer__socials">
-
-                    <a href="#" class="footer__social">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                    <?php if(get_field('linkedin_url', 'option')): ?>
+                        <a href="<?=get_field('linkedin_url', 'option') ?>" class="footer__social">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if(get_field('instagram_url', 'option')): ?>
+                        <a href="<?=get_field('instagram_url', 'option') ?>" class="footer__social">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if(get_field('x_url', 'option')): ?>
+                        <a href="<?=get_field('x_url', 'option') ?>" class="footer__social">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if(get_field('facebook_url', 'option')): ?>
+                        <a href="<?=get_field('facebook_url', 'option') ?>" class="footer__social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="footer__col">

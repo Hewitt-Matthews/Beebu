@@ -6,6 +6,10 @@
   background-image: url('../img/footer-flourish.svg');
   background-repeat: no-repeat;
   background-position: right top;
+  
+  @include max-screen(767px) {
+    background-position: right bottom;
+  }
 
   p, h2, h3, h4, a {
     color: $white;
@@ -77,6 +81,10 @@
           color: $white;
           font-size: 20px;
       }
+
+      @include max-screen(767px) {
+        flex-direction: column;
+      }
   }
 
   &__bottom {
@@ -89,6 +97,11 @@
     p {
       font-size: 1rem;
       margin: 0;
+    }
+
+    @include max-screen(767px) {
+      gap: 1rem;
+      flex-direction: column;
     }
   }
 }
