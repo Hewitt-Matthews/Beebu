@@ -1,5 +1,9 @@
 .comparison {
 
+    @include max-screen(767px) { 
+        display: none;
+    }
+    
     &__title {
         text-align: center;
         margin-bottom: 3rem;

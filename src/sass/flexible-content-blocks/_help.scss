@@ -5,6 +5,11 @@
         display: grid;
         grid-template-columns: 27fr 41fr;
         gap: 5rem;
+
+        @include max-screen(767px) { 
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
     }
 
     &__title {

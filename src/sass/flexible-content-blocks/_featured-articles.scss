@@ -4,6 +4,10 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 2.5rem;
+
+        @include max-screen(767px) { 
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -15,5 +19,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2.5rem;
+
+        @include max-screen(767px) { 
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
     }
 }

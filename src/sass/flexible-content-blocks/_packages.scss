@@ -20,6 +20,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2.5rem;
+
+        @include max-screen(767px) { 
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
     }
 
     &__package {
