@@ -14,12 +14,69 @@
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 5rem;
 
     @include max-screen(767px) {
       grid-template-columns: 1fr;
     }
+  }
+
+  &__col {
+    p, li, a {
+      font-size: 1.25rem;
+    }
+
+    ul.menu li {
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &:first-of-type {
+      p, li, a  {
+        font-size: 1.125rem;
+        line-height: 1.4;
+      }
+      ul {
+        margin: 1rem 0 2rem;
+        list-style: disc;
+        padding: 0 0 0 2rem;
+      }
+      .footer__email {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__socials {
+    margin: 2rem 0;
+    display: flex;
+    gap: 2rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  &__trustpilot {
+      margin: 5rem 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+
+      img {
+          max-height: 45px;
+          width: auto;
+      }
+
+      span {
+          color: $white;
+          font-size: 20px;
+      }
   }
 
   &__bottom {
@@ -30,7 +87,7 @@
     margin-top: 2rem;
 
     p {
-      font-size: 0.875rem;
+      font-size: 1rem;
       margin: 0;
     }
   }

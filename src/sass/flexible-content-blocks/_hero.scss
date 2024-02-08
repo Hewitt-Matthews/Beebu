@@ -1,5 +1,5 @@
 .hero {
-    padding: 20em 0;
+    padding: 16em 0 12em;
     background-size: cover;
     background-position: center;
 
@@ -13,5 +13,24 @@
 
     &__copy {
         color: $white;
+    }
+
+    &__trustpilot {
+        margin-top: 3rem;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+            max-height: 45px;
+            width: auto;
+        }
+
+        span {
+            color: $white;
+            font-size: 20px;
+        }
     }
 }
