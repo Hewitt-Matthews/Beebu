@@ -179,6 +179,60 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_65f30a278c83f": {
+                    "key": "layout_65f30a278c83f",
+                    "name": "content_slider",
+                    "label": "Content Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65f30a2e8c843",
+                            "label": "Content Slider",
+                            "name": "content_slider",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f30942202f7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        },
+                        {
+                            "key": "field_65f31120e8ee8",
+                            "label": "Section Options",
+                            "name": "section_options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f2fba9b99f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65a7d18401a6c": {
                     "key": "layout_65a7d18401a6c",
                     "name": "featured_articles",
@@ -534,6 +588,60 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65f31615c8e2b": {
+                    "key": "layout_65f31615c8e2b",
+                    "name": "text_-_image_block",
+                    "label": "Text & Image Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65f31619c8e2f",
+                            "label": "Text & Image Block",
+                            "name": "text_&_image_block",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f31552db676"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        },
+                        {
+                            "key": "field_65f31637c8e30",
+                            "label": "Section Options",
+                            "name": "section_options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f2fba9b99f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -568,5 +676,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710424916
+    "modified": 1710429798
 }

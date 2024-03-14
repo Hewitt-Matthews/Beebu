@@ -13,6 +13,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'comparison_table' )
                 get_template_part('blocks/comparison');
 
+            if( get_row_layout() == 'content_slider' )
+                get_template_part('blocks/content-slider');
+
             if( get_row_layout() == 'call_to_action' )
                 get_template_part('blocks/cta');
 
@@ -36,6 +39,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 
             if( get_row_layout() == 'team_slider' )
                 get_template_part('blocks/team-slider');
+
+            if( get_row_layout() == 'text_-_image_block' )
+                get_template_part('blocks/text-image-block');
 
         endwhile; // close the loop of flexible content
     endif; // close flexible content conditional

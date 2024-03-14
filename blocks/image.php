@@ -17,7 +17,7 @@ if ( $image_size ) : ?>
     style="background-image: url('<?= $image['url'] ?>');
   ">
     <div class="wrapper">
-      <?php if($mask): ?>
+      <?php if($show_background_mask): ?>
         <div class="cta__mask"></div>
       <?php endif; ?>
     </div>
