@@ -25,12 +25,17 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'hero' )
                 get_template_part('blocks/hero');
 
+            if( get_row_layout() == 'image' )
+                get_template_part('blocks/image');
+
             if( get_row_layout() == 'packages' )
                 get_template_part('blocks/packages');
 
             if( get_row_layout() == 'reviews' )
                 get_template_part('blocks/reviews');
 
+            if( get_row_layout() == 'team_slider' )
+                get_template_part('blocks/team-slider');
 
         endwhile; // close the loop of flexible content
     endif; // close flexible content conditional

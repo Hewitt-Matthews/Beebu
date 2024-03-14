@@ -2,10 +2,17 @@
 
 $title = get_sub_field('title');
 $packages = get_sub_field('packages');
+$section_options_background_colour = get_sub_field('section_options_background_colour');
+$section_options_curved_section = get_sub_field('section_options_curved_section');
+$section_padding = get_sub_field('section_padding');
 
 ?>
 
-<div class="packages section section--spaced section--green section--curved">
+<div class="packages section
+  <?php echo 'section--' . $section_options_background_colour; ?>
+  <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
+  <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
+  ">
     <div class="wrapper">
         <div class="packages__inner">
             <h2 class="packages__title"><?=$title ?></h2>

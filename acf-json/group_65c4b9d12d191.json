@@ -17,7 +17,26 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 1
+            "endpoint": 0
+        },
+        {
+            "key": "field_65c4bad1ce780",
+            "label": "Email Address",
+            "name": "email_address",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "hello@beebu.co.uk",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_65c4b9d1b374a",
@@ -34,7 +53,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 1
+            "endpoint": 0
         },
         {
             "key": "field_65c4b9fabd6e7",
@@ -117,11 +136,11 @@
             "append": ""
         },
         {
-            "key": "field_65c4bad1ce780",
-            "label": "Email Address",
-            "name": "email_address",
+            "key": "field_65f2d29eac91b",
+            "label": "Comparison Table",
+            "name": "",
             "aria-label": "",
-            "type": "email",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -130,10 +149,30 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "hello@beebu.co.uk",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_65f2d2acac91c",
+            "label": "Comparison Table",
+            "name": "comparison_table",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_65a7c2de80257"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         }
     ],
     "location": [
@@ -154,5 +193,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707391717
+    "modified": 1710412523
 }

@@ -1,9 +1,9 @@
 {
-    "key": "group_65a7ccdcda55c",
-    "title": "Reviews",
+    "key": "group_65f2f5ad911d9",
+    "title": "Team Slider",
     "fields": [
         {
-            "key": "field_65a7ccdde5c59",
+            "key": "field_65f2f5cb99f98",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -16,18 +16,18 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "We're rated \"Excellent\"",
+            "default_value": "Behind the brand",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_65f2deaad0043",
-            "label": "Reviews Selection",
-            "name": "reviews_selection",
+            "key": "field_65f2f5d699f99",
+            "label": "Copy",
+            "name": "copy",
             "aria-label": "",
-            "type": "post_object",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,35 +36,11 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "reviews"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 1,
-            "allow_null": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_65c20274ca800",
-            "label": "Button",
-            "name": "button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
+            "default_value": "Our team works tirelessly to ensure no form of entertainment or online meetings are interrupted. From the original founders to the support staff, we’re all here to make your enjoyment next level.",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -85,5 +61,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710416134
+    "modified": 1710421508
 }

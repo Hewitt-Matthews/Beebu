@@ -10,9 +10,16 @@ $mask = get_sub_field('show_background_mask');
 $button = get_sub_field('button');
 $title = get_sub_field('title');
 $copy = get_sub_field('copy');
+$section_options_background_colour = get_sub_field('section_options_background_colour');
+$section_options_curved_section = get_sub_field('section_options_curved_section');
+$section_padding = get_sub_field('section_padding');
 
 ?>
-<div class="ctacontainer section section--spaced">
+<div class="ctacontainer section
+  <?php echo 'section--' . $section_options_background_colour; ?>
+  <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
+  <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
+  ">
     <div class="wrapper">
         <div class="cta cta--<?=$type ?>" style="background-image: url('<?=get_sub_field('background_image')['url']; ?>');">
         <?php if($mask): ?>

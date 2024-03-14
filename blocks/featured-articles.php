@@ -3,10 +3,17 @@
 $title = get_sub_field('title');
 $button = get_sub_field('button');
 $articles = get_sub_field('articles');
+$section_options_background_colour = get_sub_field('section_options_background_colour');
+$section_options_curved_section = get_sub_field('section_options_curved_section');
+$section_padding = get_sub_field('section_padding');
 
 ?>
 
-<div class="featured-articles section section--spaced section--curved">
+<div class="featured-articles section
+  <?php echo 'section--' . $section_options_background_colour; ?>
+  <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
+  <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
+  ">
     <div class="wrapper">
         <div class="featured-articles__inner">
             <h2 class="featured-articles__title"><?=$title ?></h2>

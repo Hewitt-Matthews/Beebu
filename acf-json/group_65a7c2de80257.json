@@ -3,11 +3,11 @@
     "title": "Comparison Table",
     "fields": [
         {
-            "key": "field_65a7c2de28add",
-            "label": "Title",
-            "name": "title",
+            "key": "field_65f2d6948e6bb",
+            "label": "Use Options Page Comparison Table Data",
+            "name": "use_options_page_comparison_table_data",
             "aria-label": "",
-            "type": "text",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,7 +16,35 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "How do we compare",
+            "message": "Duplicate content from options page - comparison table",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65a7c2de28add",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f2d6948e6bb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -30,7 +58,15 @@
             "type": "table",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f2d6948e6bb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -47,7 +83,15 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f2d6948e6bb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -74,5 +118,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705494951
+    "modified": 1710413621
 }

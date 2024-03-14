@@ -1,13 +1,13 @@
 {
-    "key": "group_65a7ccdcda55c",
-    "title": "Reviews",
+    "key": "group_65f2efec6cc51",
+    "title": "Image",
     "fields": [
         {
-            "key": "field_65a7ccdde5c59",
-            "label": "Title",
-            "name": "title",
+            "key": "field_65f2effb9d1e2",
+            "label": "Image Size",
+            "name": "image_size",
             "aria-label": "",
-            "type": "text",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,18 +16,18 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "We're rated \"Excellent\"",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Full Width",
+            "ui_off_text": "Contained",
+            "ui": 1
         },
         {
-            "key": "field_65f2deaad0043",
-            "label": "Reviews Selection",
-            "name": "reviews_selection",
+            "key": "field_65f2f0639d1e3",
+            "label": "Show Background Mask",
+            "name": "show_background_mask",
             "aria-label": "",
-            "type": "post_object",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,26 +36,18 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "reviews"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 1,
-            "allow_null": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
+            "message": "If checked this will add a dark mask to the image so the white text can be read easier",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
-            "key": "field_65c20274ca800",
-            "label": "Button",
-            "name": "button",
+            "key": "field_65f2efec9d1e1",
+            "label": "Image",
+            "name": "image",
             "aria-label": "",
-            "type": "link",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -64,7 +56,16 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -85,5 +86,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710416134
+    "modified": 1710420723
 }
