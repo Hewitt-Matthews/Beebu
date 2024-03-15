@@ -1,6 +1,7 @@
-<?php $rating = 5; ?>
+<?php $rating = 5; 
+$hero_type = get_sub_field('hero_type'); ?>
 
-<div class="hero" style="background-image: url('<?=get_sub_field('background_image')['url']; ?>');">
+<div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>" style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : echo 'background-image: url(' . get_sub_field('background_image')['url'] .')'; endif; ?>">
     <div class="wrapper">
         <div class="hero__inner">
             <h1 class="hero__title"><?=get_sub_field('title'); ?></h1>

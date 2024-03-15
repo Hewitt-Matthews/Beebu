@@ -3,6 +3,32 @@
     "title": "Hero",
     "fields": [
         {
+            "key": "field_65f45768d64b2",
+            "label": "Hero Type",
+            "name": "hero_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "background-image": "Background Image",
+                "green-background": "Green Background",
+                "flourish": "Flourish"
+            },
+            "default_value": "background-image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_65a7d2024d167",
             "label": "Background Image",
             "name": "background_image",
@@ -10,7 +36,22 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "background-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "flourish"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -86,5 +127,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705497100
+    "modified": 1710512153
 }
