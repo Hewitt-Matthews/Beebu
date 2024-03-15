@@ -43,6 +43,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'text_-_image_block' )
                 get_template_part('blocks/text-image-block');
 
+            if( get_row_layout() == 'text_-_list_block' )
+                get_template_part('blocks/text-list-block');
+
         endwhile; // close the loop of flexible content
     endif; // close flexible content conditional
 
