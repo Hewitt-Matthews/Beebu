@@ -59,11 +59,11 @@
             "return_format": "array"
         },
         {
-            "key": "field_65a7c9671b1cf",
-            "label": "FAQ",
-            "name": "faq",
+            "key": "field_65f40a1b7bb61",
+            "label": "FAQ Selection",
+            "name": "faq_selection",
             "aria-label": "",
-            "type": "repeater",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,57 +72,19 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_65a7c9761b1d0",
-                    "label": "Question",
-                    "name": "question",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65a7c9671b1cf"
-                },
-                {
-                    "key": "field_65a7c97d1b1d1",
-                    "label": "Answer",
-                    "name": "answer",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65a7c9671b1cf"
-                }
-            ]
+            "post_type": [
+                "faqs"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -143,5 +105,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705494920
+    "modified": 1710496325
 }
