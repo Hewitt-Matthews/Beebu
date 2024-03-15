@@ -4,10 +4,10 @@
 
   <div class="wrapper">
 
-  <?php /******************************************************************************************
-   * Featured Article
-   ******************************************************************************************/
-  get_template_part('/template-parts/featured-article'); ?>
+    <?php /******************************************************************************************
+     * Featured Article
+     ******************************************************************************************/
+    get_template_part('/template-parts/featured-article'); ?>
     
     <h1>Articles</h1>
 
@@ -37,6 +37,8 @@
       <?php endwhile; wp_reset_postdata(); ?>
 
     </ul>
+
+    <?php include('flexible-content.php'); ?>
 
   </div>
 
