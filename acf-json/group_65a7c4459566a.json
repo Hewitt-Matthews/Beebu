@@ -61,11 +61,39 @@
                 "class": "",
                 "id": ""
             },
-            "message": "If checked this will add a green 'e' logo to the background of this call to action",
+            "message": "If checked this will add an 'e' logo to the background of this call to action",
             "default_value": 1,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_65f42d977148c",
+            "label": "Flourish Colour",
+            "name": "flourish_colour",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65a7c4ab145c6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Green",
+            "ui_off_text": "Clear",
+            "ui": 1
         },
         {
             "key": "field_65c24ac7c10a9",
@@ -170,5 +198,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710414440
+    "modified": 1710501336
 }

@@ -6,6 +6,7 @@ if(get_sub_field('cta_type')) {
 }
 
 $flourish = get_sub_field('show_background_flourish');
+$flourish_colour = $flourish ? get_sub_field('flourish_colour') : null;
 $mask = get_sub_field('show_background_mask');
 $button = get_sub_field('button');
 $title = get_sub_field('title');
@@ -25,8 +26,12 @@ $section_padding = get_sub_field('section_padding');
         <?php if($mask): ?>
             <div class="cta__mask"></div>
         <?php endif; ?>
-        <?php if($flourish): ?>
+        <?php if($flourish): 
+          if ( $flourish_colour ) : ?>
             <div class="cta__flourish"></div>
+          <?php else : ?>
+            <div class="cta__flourish-clear"></div>
+          <?php endif; ?>
         <?php endif; ?>
             <div class="cta__inner">
                 <h2 class="cta__title"><?=$title ?></h2>
