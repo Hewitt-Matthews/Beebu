@@ -25,6 +25,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'call_to_action' )
                 get_template_part('blocks/cta');
 
+            if( get_row_layout() == 'employee_testimonial_slider' )
+                get_template_part('blocks/employee-testimonial-slider');
+
             if( get_row_layout() == 'featured_articles' )
                 get_template_part('blocks/featured-articles');
 
