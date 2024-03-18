@@ -39,8 +39,10 @@ $section_padding = get_sub_field('section_padding');
                     <hr class="cta__rule" />
                 <?php endif; ?>
                     <p class="cta__copy"><?=$copy ?></p>
-                <?php if($type == 'button'): ?>
+                <?php if($type == 'button'): 
+                  if ( $button !== '' ) : ?>
                     <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
+                  <?php endif; ?>
                 <?php elseif ($type == 'postcode'): ?>
                     <form class="postcode-search">
                         <input class="postcode-search__input" type="text" placeholder="Enter Postcode" />

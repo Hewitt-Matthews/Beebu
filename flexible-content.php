@@ -10,6 +10,12 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'benefits' )
                 get_template_part('blocks/benefits');
 
+            if( get_row_layout() == 'careers_list' )
+                get_template_part('blocks/careers-list');
+
+            if( get_row_layout() == 'coloured_block_grid' )
+                get_template_part('blocks/coloured-block-grid');
+
             if( get_row_layout() == 'comparison_table' )
                 get_template_part('blocks/comparison');
 
@@ -39,6 +45,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 
             if( get_row_layout() == 'team_slider' )
                 get_template_part('blocks/team-slider');
+
+            if( get_row_layout() == 'text_block' )
+                get_template_part('blocks/text-block');
 
             if( get_row_layout() == 'text_-_image_block' )
                 get_template_part('blocks/text-image-block');
