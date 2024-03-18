@@ -751,6 +751,60 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_65f85645bcef3": {
+                    "key": "layout_65f85645bcef3",
+                    "name": "tabbed_content",
+                    "label": "Tabbed Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65f8564bbcef7",
+                            "label": "Tabbed Content",
+                            "name": "tabbed_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f855cea6b7b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        },
+                        {
+                            "key": "field_65f85675bcef8",
+                            "label": "Section Options",
+                            "name": "section_options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f2fba9b99f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65f2f614d3501": {
                     "key": "layout_65f2f614d3501",
                     "name": "team_slider",
@@ -992,5 +1046,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710769881
+    "modified": 1710773914
 }

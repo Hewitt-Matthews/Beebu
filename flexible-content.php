@@ -49,6 +49,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'reviews' )
                 get_template_part('blocks/reviews');
 
+            if( get_row_layout() == 'tabbed_content' )
+                get_template_part('blocks/tabbed-content');
+
             if( get_row_layout() == 'team_slider' )
                 get_template_part('blocks/team-slider');
 
