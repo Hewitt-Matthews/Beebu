@@ -31,6 +31,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'featured_articles' )
                 get_template_part('blocks/featured-articles');
 
+            if( get_row_layout() == 'grid_content' )
+                get_template_part('blocks/grid-content');
+
             if( get_row_layout() == 'help_and_advice' )
                 get_template_part('blocks/help');
 

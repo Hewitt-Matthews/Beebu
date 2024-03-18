@@ -449,6 +449,60 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_65f8469cc9222": {
+                    "key": "layout_65f8469cc9222",
+                    "name": "grid_content",
+                    "label": "Grid Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65f846a1c9226",
+                            "label": "Grid Content",
+                            "name": "grid_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f845ed1acd3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        },
+                        {
+                            "key": "field_65f846c7c9227",
+                            "label": "Section Options",
+                            "name": "section_options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65f2fba9b99f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65a7d19901a70": {
                     "key": "layout_65a7d19901a70",
                     "name": "help_and_advice",
@@ -918,6 +972,13 @@
                 "operator": "==",
                 "value": "roles"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "support"
+            }
         ]
     ],
     "menu_order": 2,
@@ -931,5 +992,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710761265
+    "modified": 1710769881
 }
