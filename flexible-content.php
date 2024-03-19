@@ -34,6 +34,9 @@ if (have_posts()) : while (have_posts()) : the_post();
             if( get_row_layout() == 'grid_content' )
                 get_template_part('blocks/grid-content');
 
+            if( get_row_layout() == 'guides_slider' )
+                get_template_part('blocks/guides-slider');
+
             if( get_row_layout() == 'help_and_advice' )
                 get_template_part('blocks/help');
 
