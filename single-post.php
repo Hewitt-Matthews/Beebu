@@ -6,7 +6,8 @@
 
     <?php if(have_posts()) : ?>
       
-      <?php while(have_posts()) : the_post(); ?>
+      <?php while(have_posts()) : the_post(); 
+      $author_id = get_post_field( 'post_author', $post_id );?>
 
         <article>
 
