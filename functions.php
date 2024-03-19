@@ -144,10 +144,117 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 /******************************************************************************************
- * News - Pagination Query
+ * Posts - Filter Articles
  ******************************************************************************************/
-function custom_query_vars( $query_vars ) {
-  $query_vars[] = 'post-page';
-  return $query_vars;
+function filter_articles_by_category() {
+
+  $category = $_POST['category'];
+
+  $args = array(
+    'post_type'      => 'post',
+    'category_name'  => $category,
+    'tax_query'     => array(
+      array(
+        'taxonomy' => 'post-type',
+        'field'    => 'slug',
+        'terms'    => 'articles'
+      )
+    ),
+    'posts_per_page' => 4,
+  );
+
+  $post_query = new WP_Query($args);
+
+  if ($post_query->have_posts()) {
+
+    echo '<ul>';
+
+    while ($post_query->have_posts()) : $post_query->the_post(); ?>
+
+      <li>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+          <h3 class="article-card__title"><?php the_title(); ?></h3>
+          <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
+        </a>
+
+      </li>
+
+    <?php endwhile; wp_reset_postdata();
+
+    echo '</ul>';
+
+    echo paginate_links(array(
+      'base' => '/articles/%_%',
+      'current' => max(1, get_query_var('paged')),
+      'total' => $post_query->max_num_pages
+    ));
+
+  } else {
+    echo '<p>No posts found.</p>';
+  }
+
+  wp_die();
 }
-add_filter( 'query_vars', 'custom_query_vars' );?>
+add_action('wp_ajax_filter_articles_by_category', 'filter_articles_by_category');
+add_action('wp_ajax_nopriv_filter_articles_by_category', 'filter_articles_by_category');
+
+/******************************************************************************************
+ * Posts - Filter Guides
+ ******************************************************************************************/
+function filter_guides_by_category() {
+
+  $category = $_POST['category'];
+
+  $args = array(
+    'post_type'      => 'post',
+    'category_name'  => $category,
+    'tax_query'     => array(
+      array(
+        'taxonomy' => 'post-type',
+        'field'    => 'slug',
+        'terms'    => 'guides'
+      )
+    ),
+    'posts_per_page' => 4,
+  );
+
+  $post_query = new WP_Query($args);
+
+  if ($post_query->have_posts()) {
+
+    echo '<ul>';
+
+    while ($post_query->have_posts()) : $post_query->the_post(); ?>
+
+      <li>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+          <h3 class="article-card__title"><?php the_title(); ?></h3>
+          <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
+        </a>
+
+      </li>
+
+    <?php endwhile; wp_reset_postdata();
+
+    echo '</ul>';
+
+    echo paginate_links(array(
+      'base' => '/guides/%_%',
+      'current' => max(1, get_query_var('paged')),
+      'total' => $post_query->max_num_pages
+    ));
+
+  } else {
+    echo '<p>No posts found.</p>';
+  }
+
+  wp_die();
+}
+add_action('wp_ajax_filter_guides_by_category', 'filter_guides_by_category');
+add_action('wp_ajax_nopriv_filter_guides_by_category', 'filter_guides_by_category');?>

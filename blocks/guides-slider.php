@@ -16,9 +16,7 @@ $args = array(
   )
 );
 
-$guides_query = new WP_Query( $args ); 
-
-if ( !isset($_GET['posts']) || ( $_GET['posts'] !== 'guides' ) ) : ?>
+$guides_query = new WP_Query( $args ); ?>
 
 <div class="guides-slider slider section
   <?php echo 'section--' . $section_options_background_colour; ?>
@@ -30,7 +28,7 @@ if ( !isset($_GET['posts']) || ( $_GET['posts'] !== 'guides' ) ) : ?>
         <div class="meta">
           <h2 class="slider__title">Guides</h2>
         </div>
-        <a href="/articles?posts=guides" class="button button--black">See all guides</a>
+        <a href="/guides" class="button button--black">See all guides</a>
         <!-- Slider Navigation Buttons -->
       </div>
       <div class="slider__slider">
@@ -51,5 +49,3 @@ if ( !isset($_GET['posts']) || ( $_GET['posts'] !== 'guides' ) ) : ?>
       </div>
     </div>
 </div>
-
-<?php endif; ?>

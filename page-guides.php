@@ -1,18 +1,19 @@
 <?php get_header(); 
 
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$tax_query = array();
+$paged = ( get_query_var( 'post-page' ) ) ? get_query_var( 'post-page' ) : 1;
 $category = get_query_var( 'category' ) ? get_query_var( 'category' ) : '' ;
 
 $blogPosts = new WP_Query( array (
-  'posts_per_page' => 4,
+  'posts_per_page' => 3,
   'post_type'      => 'post',
   'paged'          => $paged,
-  'tax_query'     => array(
+  'tax_query'      => array(
     array(
       'taxonomy' => 'post-type',
       'field'    => 'slug',
-      'terms'    => 'articles'
-    )
+      'terms'    => 'guides'
+    ),
   ),
   'category_name' => $category
 )); ?>
@@ -20,18 +21,13 @@ $blogPosts = new WP_Query( array (
 <div class="all-articles">
 
   <div class="wrapper">
-
-    <?php /******************************************************************************************
-     * Featured Article
-     ******************************************************************************************/
-    get_template_part('/template-parts/featured-article'); ?>
     
-    <h1>Articles</h1>
+    <h1>Guides</h1>
 
     <?php /******************************************************************************************
      * Resource Categories
      ******************************************************************************************/
-    get_template_part('/template-parts/filter-articles'); ?>
+    get_template_part('/template-parts/filter-guides'); ?>
 
     <div id="posts-container">
 
