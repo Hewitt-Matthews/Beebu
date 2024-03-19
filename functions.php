@@ -10,6 +10,7 @@ define('THEME_VERSION', $theme->Version);
  * Enqueue CSS & JS
  ******************************************************************************************/
 function add_theme_scripts() {
+  wp_enqueue_style( 'dani-styles', get_stylesheet_directory_uri() . '/assets/css/dani-styles.css', false, '1.0', 'all' );
   wp_enqueue_style( 'main-styles', get_stylesheet_directory_uri() . '/assets/css/main.css', false, '1.0', 'all' );
   wp_deregister_script('jquery'); // remove original WordPress jQuery
   wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), null, false);
@@ -140,4 +141,13 @@ function register_my_menus() {
       )
     );
 }
-add_action( 'init', 'register_my_menus' ); ?>
+add_action( 'init', 'register_my_menus' );
+
+/******************************************************************************************
+ * News - Pagination Query
+ ******************************************************************************************/
+function custom_query_vars( $query_vars ) {
+  $query_vars[] = 'post-page';
+  return $query_vars;
+}
+add_filter( 'query_vars', 'custom_query_vars' );?>

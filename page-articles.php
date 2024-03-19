@@ -1,4 +1,17 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+$tax_query = array();
+$paged = ( get_query_var( 'post-page' ) ) ? get_query_var( 'post-page' ) : 1;
+
+if ( isset($_GET['posts']) ) :
+  $tax_query = array(
+    array(
+      'taxonomy' => 'post-type',
+      'field'    => 'slug',
+      'terms'    => $_GET['posts']
+    ),
+  );
+endif; ?>
 
 <div class="all-articles">
 
@@ -13,10 +26,11 @@
 
     <ul>
 
-      <?php $blogPosts = new WP_Query( array(
-        'posts_per_page' => 3,
-        'post_type' => 'post',
-        'paged'=> $paged
+      <?php $blogPosts = new WP_Query( array (
+        'posts_per_page' => 12,
+        'post_type'      => 'post',
+        'paged'          => $paged,
+        'tax_query'      => $tax_query
       )); 
       
       while ( $blogPosts->have_posts() ) :
@@ -37,6 +51,13 @@
       <?php endwhile; wp_reset_postdata(); ?>
 
     </ul>
+
+    <?php echo paginate_links(array(
+      //'base' => '/resources/' . $args_term . '/%_%',
+      'format' => '?post-page=%#%',
+      'current' => max(1, get_query_var('post-page')),
+      'total' => $blogPosts->max_num_pages
+    )); ?>
 
     <?php include('flexible-content.php'); ?>
 
