@@ -257,4 +257,47 @@ function filter_guides_by_category() {
   wp_die();
 }
 add_action('wp_ajax_filter_guides_by_category', 'filter_guides_by_category');
-add_action('wp_ajax_nopriv_filter_guides_by_category', 'filter_guides_by_category');?>
+add_action('wp_ajax_nopriv_filter_guides_by_category', 'filter_guides_by_category'); 
+
+/******************************************************************************************
+ * Form Options - ACF Gravity Form Select
+ ******************************************************************************************/
+function acf_load_form_select_choices( $field ) {
+    
+  // Reset choices
+  $field['choices'] = array();
+
+  // Make sure Gravity Forms is active
+  if (class_exists('GFForms')) {
+
+    // Get a list of forms
+    $forms = GFAPI::get_forms();
+
+    // Check if there are forms available
+    if (!empty($forms)) {
+
+      if( is_array($forms) ) {
+      
+        foreach( $forms as $form ) {
+
+          // Exclude forms with IDs 4, 5, and 6
+          if ($form['id'] !== 4 && $form['id'] !== 5 && $form['id'] !== 6) {
+            $field['choices'][ $form['id'] ] = $form['title'];
+          }
+            
+        }
+        
+      }
+    } else {
+      echo 'No forms found.';
+    }
+
+  } else {
+    echo 'Gravity Forms is not active.';
+  }
+
+  // Return the field
+  return $field;
+  
+}
+add_filter('acf/load_field/name=form', 'acf_load_form_select_choices'); ?>
