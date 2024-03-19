@@ -11,6 +11,14 @@ if ( isset($_GET['posts']) ) :
       'terms'    => $_GET['posts']
     ),
   );
+else:
+  $tax_query = array(
+    array(
+      'taxonomy' => 'post-type',
+      'field'    => 'slug',
+      'terms'    => 'articles'
+    )
+  );
 endif; ?>
 
 <div class="all-articles">
@@ -22,7 +30,7 @@ endif; ?>
      ******************************************************************************************/
     get_template_part('/template-parts/featured-article'); ?>
     
-    <h1>Articles</h1>
+    <h1><?php if ( isset($_GET['posts']) ) : echo 'Guides'; else: echo 'Articles'; endif; ?></h1>
 
     <ul>
 
