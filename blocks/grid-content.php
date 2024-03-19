@@ -24,17 +24,20 @@ $section_padding = get_sub_field('section_padding');
       </div>
       <div class="grid-content__grid">
         <?php foreach ( $grid_blocks as $block ) : ?>
-          <?php if ( $block['page_link'] ) : ?>
-            <a href="<?= $block['page_link'] ?>">
+          <?php if ( $block['page_link'] && $block['link_type'] ) : ?>
+            <a href="<?= $block['page_link']['url'] ?>">
           <?php endif; ?>
             <div class="grid-content__block">
               <img class="grid-content__block-image" src="<?= $block['icon']['url'] ?>" />
               <div>
                 <h2 class="grid-content__block-title"><?= $block['title'] ?></h2>
                 <p class="grid-content__block-copy"><?= $block['description'] ?></p>
+                <?php if ( $block['page_link'] && !$block['link_type'] ) : ?>
+                  <a href="<?= $block['page_link']['url'] ?>" class="button button--black"><?= $block['page_link']['title'] ?></a>
+                <?php endif; ?>
               </div>
             </div>
-          <?php if ( $block['page_link'] ) : ?>
+          <?php if ( $block['page_link'] && $block['link_type'] ) : ?>
             </a>
           <?php endif; ?>
         <?php endforeach; ?>
