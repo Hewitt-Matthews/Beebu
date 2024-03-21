@@ -281,9 +281,9 @@ function acf_load_form_select_choices( $field ) {
         foreach( $forms as $form ) {
 
           // Exclude forms with IDs 4, 5, and 6
-          if ($form['id'] !== 4 && $form['id'] !== 5 && $form['id'] !== 6) {
+          // if ($form['id'] !== 4 && $form['id'] !== 5 && $form['id'] !== 6) {
             $field['choices'][ $form['id'] ] = $form['title'];
-          }
+          // }
             
         }
         
