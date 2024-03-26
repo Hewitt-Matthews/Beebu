@@ -39,6 +39,19 @@
     display: flex;
   }
 
+  &__menu .menu-main-navigation-container ul#menu-main-navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu .menu-main-navigation-container ul#menu-main-navigation li.menu-item:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+
+  &__menu .menu-main-navigation-container ul#menu-main-navigation li.menu-item:not(:last-of-type) a {
+    color: #ffffff;
+  }
+
   nav {
     flex: 1;
     display: flex;

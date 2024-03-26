@@ -19,50 +19,46 @@ $blogPosts = new WP_Query( array (
 
 <div class="all-articles">
 
-  <div class="wrapper">
+  <?php /******************************************************************************************
+   * Featured Article
+   ******************************************************************************************/
+  get_template_part('/template-parts/featured-article'); ?>
+  
+  <h1>Articles</h1>
 
-    <?php /******************************************************************************************
-     * Featured Article
-     ******************************************************************************************/
-    get_template_part('/template-parts/featured-article'); ?>
-    
-    <h1>Articles</h1>
+  <?php /******************************************************************************************
+   * Resource Categories
+   ******************************************************************************************/
+  get_template_part('/template-parts/filter-articles'); ?>
 
-    <?php /******************************************************************************************
-     * Resource Categories
-     ******************************************************************************************/
-    get_template_part('/template-parts/filter-articles'); ?>
+  <div id="posts-container">
 
-    <div id="posts-container">
+    <ul>
 
-      <ul>
+      <?php while ( $blogPosts->have_posts() ) : $blogPosts->the_post(); ?>
 
-        <?php while ( $blogPosts->have_posts() ) : $blogPosts->the_post(); ?>
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+            <h3 class="article-card__title"><?php the_title(); ?></h3>
+            <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
+          </a>
+        </li>
 
-          <li>
-            <a href="<?php the_permalink(); ?>">
-              <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
-              <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
-              <h3 class="article-card__title"><?php the_title(); ?></h3>
-              <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
-            </a>
-          </li>
+      <?php endwhile; wp_reset_postdata(); ?>
 
-        <?php endwhile; wp_reset_postdata(); ?>
+    </ul>
 
-      </ul>
-
-      <?php
-      echo paginate_links(array(
-        'current' => max(1, get_query_var('paged')),
-        'total' => $blogPosts->max_num_pages
-      )); ?>
-
-    </div>
-
-    <?php include('flexible-content.php'); ?>
+    <?php
+    echo paginate_links(array(
+      'current' => max(1, get_query_var('paged')),
+      'total' => $blogPosts->max_num_pages
+    )); ?>
 
   </div>
+
+  <?php include('flexible-content.php'); ?>
 
 </div>
 
