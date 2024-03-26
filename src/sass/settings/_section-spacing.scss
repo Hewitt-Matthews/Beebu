@@ -31,6 +31,18 @@
             background-position: bottom center;
         }
     }
+
+    &--dark {
+      background: $grey-dark;
+
+      h2, p {
+        color: $white;
+      }
+    }
+
+    &--off-white {
+      background: $off-white;
+    }
     
     &--grey {
         background: $grey-dark;
