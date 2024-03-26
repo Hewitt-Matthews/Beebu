@@ -20,40 +20,44 @@ $section_padding = get_sub_field('section_padding'); ?>
 
       <div class="text-list-block__inner">
 
-        <?php if ( $title ) : ?>
-          <h2><?= $title ?></h2>
-        <?php endif; ?>
+        <div class="text-list-block__meta">
 
-        <?php if ( $copy ) : ?>
-          <?= $copy ?>
-        <?php endif; ?>
+          <?php if ( $title ) : ?>
+            <h2><?= $title ?></h2>
+          <?php endif; ?>
 
-        <?php if ( $button ) : ?>
-          <a class="button" href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"><?= $button['title']; ?></a>
+          <?php if ( $copy ) : ?>
+            <?= $copy ?>
+          <?php endif; ?>
+
+          <?php if ( $button ) : ?>
+            <a class="button" href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"><?= $button['title']; ?></a>
+          <?php endif; ?>
+
+        </div>
+      
+        <?php if ( $list ) : ?>
+
+          <div class="text-list-block__list">
+
+            <?php foreach ( $list as $item ) : 
+            
+              $title = $item['title'];
+
+            ?>
+
+              <div class="text-list-block__list-inner">
+                <img src="http://localhost:10109/wp-content/uploads/2024/03/Tick.svg" />
+                <p><?= $title ?></p>
+              </div>
+
+            <?php endforeach; ?>
+
+          </div>
+
         <?php endif; ?>
 
       </div>
-
-      <?php if ( $list ) : ?>
-
-        <div class="text-list-block__list">
-
-          <?php foreach ( $list as $item ) : 
-          
-            $title = $item['title'];
-
-          ?>
-
-            <div class="text-list-block__list-inner">
-              <img src="http://localhost:10109/wp-content/uploads/2024/03/Tick.svg" />
-              <p><?= $title ?></p>
-            </div>
-
-          <?php endforeach; ?>
-
-        </div>
-
-      <?php endif; ?>
 
     </div>
 

@@ -1,0 +1,40 @@
+.text-list-block {
+
+  &__inner {
+      display: grid;
+      grid-template-columns: 41fr 41fr;
+      gap: 5rem;
+
+      a.button {
+        margin-top: 1em;
+      }
+
+      @include max-screen(767px) { 
+          grid-template-columns: 1fr;
+          gap: 1rem;
+      }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__list-inner {
+    display: flex;
+    background: $white;
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+
+    img {
+      height: 42px;
+      width: 42px;
+      margin-right: 1em;
+    }
+    p {
+      font-weight: 700;
+    }
+  }
+
+}

@@ -38,10 +38,24 @@
       h2, p {
         color: $white;
       }
+
+      &.section--curved:before {
+        background: url('../img/grey-oval.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+      }
     }
 
     &--off-white {
       background: $off-white;
+
+      &.section--curved:before {
+        background: url('../img/off-white-oval.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+      }
     }
     
     &--grey {
