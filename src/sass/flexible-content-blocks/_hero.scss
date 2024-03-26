@@ -2,17 +2,19 @@
     padding: 16em 0 12em;
     background-size: cover;
     background-position: center;
+    // height: 1080px;
 
-    .flourish-hero {
-
-    }
-
-    .section--green {
-      
-    }
+    // .flourish-hero {
+    //   background-image: url('../img/flourish.svg');
+    //   background-repeat: no-repeat;
+    //   background-position: right top;
+    //   height: 100%;
+    //   width: 100%;
+    // }
 
     &__inner {
         max-width: 700px;
+        padding: 100px 0px 160px 0px;
     }
 
     &__title {
@@ -45,5 +47,17 @@
             flex-direction: column;
             gap: 1rem;
         }
+    }
+
+    &.section--green {
+
+      .hero__title {
+        color: $off-black;
+      }
+
+      .hero__copy {
+        color: $off-black;
+      }
+      
     }
 }
