@@ -57,13 +57,35 @@ $section_padding = get_sub_field('section_padding');
     </div>
 
     <script>
-      $(".tab-button").click(function(event) {
-        var offset = this.offsetLeft;
-        var parentWidth = $(this).parent().width();
-        var width = $(this).outerWidth();
-        $(this).parent().animate({
-          scrollLeft: offset - ((parentWidth - width) / 2.0)
-        }, 500)
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get all tab buttons
+        const tabButtons = document.querySelectorAll('.tab-button');
+
+        // Add click event listeners to each tab button
+        tabButtons.forEach(function(tabButton) {
+          tabButton.addEventListener('click', function() {
+            // Get the tab ID associated with the clicked button
+            const tabId = tabButton.getAttribute('aria-controls');
+
+            // Hide all tab panels
+            const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+            tabPanels.forEach(function(tabPanel) {
+              tabPanel.style.display = 'none';
+            });
+
+            // Show the selected tab panel
+            const selectedTabPanel = document.getElementById(tabId);
+            if (selectedTabPanel) {
+              selectedTabPanel.style.display = 'block';
+            }
+
+            // Set the aria-selected attribute for tab buttons
+            tabButtons.forEach(function(button) {
+              button.setAttribute('aria-selected', 'false');
+            });
+            tabButton.setAttribute('aria-selected', 'true');
+          });
+        });
       });
     </script>
 

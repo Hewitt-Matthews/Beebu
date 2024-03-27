@@ -3,9 +3,33 @@
   &__tabs {
     padding-top: 4em;
     display: grid;
-    grid-template-columns: 15fr 41fr;
-    gap: 5rem;
+    grid-template-columns: 13fr 41fr;
+    gap: 10rem;
     padding-bottom: 18em;
+
+    li.tab-button {
+      margin-bottom: 1em;
+    }
+
+    li.tab-button:hover {
+      cursor: pointer;
+    }
+
+    li.tab-button[aria-selected="true"] {
+      border-bottom: 2px solid;
+    }
+
+    li.tab-button h3 {
+      margin-bottom: 12px;
+    }
+
+    div[role="tabpanel"]:first-child {
+      display: block;
+    }
+
+    div[role="tabpanel"] {
+      display: none;
+    }
   }
 
 }
