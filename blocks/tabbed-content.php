@@ -36,7 +36,7 @@ $section_padding = get_sub_field('section_padding');
 
         </div>
 
-        <main id="main">
+        <div id="main" class="tab-container__right">
 
           <?php $x = 1; foreach ( $content_tabs as $tab ) : ?>
 
@@ -50,7 +50,7 @@ $section_padding = get_sub_field('section_padding');
 
           <?php $x++; endforeach; ?>
 
-        </main>
+        </div>
 
       </div>
 

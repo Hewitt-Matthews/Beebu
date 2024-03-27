@@ -41,6 +41,10 @@
     font-weight: 700;
   }
 
+  form .gform-body label a {
+    font-size: 14px;
+  }
+
   form .gform-body input:not([type="checkbox"]) {
     height: 78px;
     gap: 10px;

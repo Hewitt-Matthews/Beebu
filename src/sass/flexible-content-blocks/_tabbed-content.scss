@@ -1,0 +1,11 @@
+.tabbed-content {
+
+  &__tabs {
+    padding-top: 4em;
+    display: grid;
+    grid-template-columns: 15fr 41fr;
+    gap: 5rem;
+    padding-bottom: 18em;
+  }
+
+}
