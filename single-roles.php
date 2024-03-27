@@ -21,7 +21,7 @@
 
         <div class="single-role__content">
 
-          <div class="single_role__content-left">
+          <div class="single-role__content-left">
 
             <h1 class="single-role__title"><?php the_title(); ?></h1>
 
@@ -33,13 +33,22 @@
 
             <a href="#apply" class="button">Apply for role</a>
 
-            <?= $copy ?>
+            <div class="copy">
+
+              <?= $copy ?>
+
+            </div>
+
+            <?php /******************************************************************************************
+             * Social Share
+             ******************************************************************************************/
+            get_template_part('/template-parts/social-share'); ?>
 
           </div>
 
-          <div class="single_role__content-right">
+          <div class="single-role__content-right">
 
-            <div class="">
+            <div class="single-role__meta">
 
               <div class="date">
                 <strong>Date</strong>
@@ -56,16 +65,11 @@
                 <p><?= $salary ?></p>
               </div>
 
-              <a href="#apply" class="button">Apply for role</a>
+              <a href="#apply" class="button button--black">Apply for role</a>
 
             </div>
           
           </div>
-
-          <?php /******************************************************************************************
-           * Social Share
-           ******************************************************************************************/
-          get_template_part('/template-parts/social-share'); ?>
 
         </div>
             
@@ -73,7 +77,11 @@
       
     <?php endif; ?>
 
-    <div class="single-role__form" id="apply">
+  </div>
+
+  <div class="single-role__form section--off-white section--spaced section--curved" id="apply">
+
+    <div class="wrapper">
 
       <?php echo do_shortcode('[gravityform id="1" title="false" ajax="true"]'); ?>
 

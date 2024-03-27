@@ -1,0 +1,124 @@
+.single-role {
+  background-image: url('../img/large-flourish.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 240px 0px;
+
+  &__content {
+    padding-top: 4em;
+    display: grid;
+    grid-template-columns: 41fr 20fr;
+    gap: 10rem;
+    padding-bottom: 18em;
+
+    @include max-screen(991px) { 
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .copy {
+      padding-top: 4em;
+
+      ul {
+        list-style-type: disc;
+        margin-left: 1.5em;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 0.5em;
+  }
+
+  &__description {
+    padding: 1em 0;
+  }
+
+  &__form {
+    .gform_heading {
+      display: none;
+    }
+
+    form {
+      max-width: 1020px;
+    }
+
+    form .gform-body .gfield_label {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  
+    form .gform-body input:not([type="checkbox"]) {
+      height: 78px;
+      gap: 10px;
+      border-radius: 16px;
+      border: 3px 0px 0px 0px;
+      opacity: 0px;
+      font-size: 20px;
+    }
+  
+    form .gform-body textarea {
+      height: 250px;
+      padding: 24px;
+      gap: 10px;
+      border-radius: 16px;
+      border: 3px 0px 0px 0px;
+      opacity: 0px;
+    }
+  
+    form .gform_footer .gform_button {
+      padding: 24px 40px!important;
+      border-radius: 2px!important;
+      display: inline-block!important;
+      color: #000000!important;
+      background: #1AE0B0!important;
+      font-size: 1.5rem!important;
+      line-height: 1!important;
+      border: 1px solid #1AE0B0!important;
+      transition: 0.3s!important;
+      cursor: pointer!important;
+      outline: 0!important;
+      position: relative!important;
+      border-radius: 40px!important;
+    }
+  
+    form .gform_footer .gform_button:hover {
+      background: transparent!important;
+      border: 1px solid #1AE0B0!important;
+      color: #1AE0B0!important;
+    }
+  }
+
+  &__content-right {
+    padding-top: 12.5em;
+
+    @include max-screen(991px) { 
+      padding-top: 4.5em;
+    }
+  }
+
+  &__meta {
+    background-color: $brand;
+    border-radius: 24px;
+    padding: 40px;
+    height: fit-content;
+    position: sticky;
+    top: 5em; 
+    z-index: 1000;
+  }
+
+  .share {
+    display: flex;
+    font-size: 28px;
+    font-weight: 700;
+
+    .icons a:first-child i {
+      margin-left: 20px;
+    }
+
+    .icons a i {
+      width: 45px;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.careers-list {
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 27fr 41fr;
+    gap: 5rem;
+  }
+
+  &__inner {
+    
+  }
+
+  &__list {
+
+  }
+
+  &__career {
+    background-color: $off-white;
+    padding: 40px;
+    margin-bottom: 32px;
+    border-radius: 24px;
+    opacity: 0px;
+  }
+
+}

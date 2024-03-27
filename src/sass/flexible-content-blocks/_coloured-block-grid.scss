@@ -1,0 +1,41 @@
+.coloured-block-grid-block {
+
+  &__intro {
+    max-width: 1020px;
+  }
+
+  &__list {
+    margin: 4rem 0 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+
+    @include max-screen(991px) { 
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+  }
+
+  &__list-inner {
+    background-color: $brand;
+    padding: 32px;
+    border-radius: 24px;
+    display: flex;
+    gap: 3em;
+
+    img {
+      width: 100px;
+      height: 100px;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #ffffff;
+    }
+
+    .meta .title {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+  }
+
+}

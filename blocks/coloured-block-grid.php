@@ -17,13 +17,17 @@ $section_padding = get_sub_field('section_padding'); ?>
 
     <div class="coloured-block-grid-block__inner">
 
-      <?php if ( $title ) : ?>
-        <h2><?= $title ?></h2>
-      <?php endif; ?>
+      <div class="coloured-block-grid-block__intro">
 
-      <?php if ( $copy ) : ?>
-        <?= $copy ?>
-      <?php endif; ?>
+        <?php if ( $title ) : ?>
+          <h2><?= $title ?></h2>
+        <?php endif; ?>
+
+        <?php if ( $copy ) : ?>
+          <?= $copy ?>
+        <?php endif; ?>
+
+      </div>
 
       <?php if ( $grid_items ) : ?>
 
@@ -37,11 +41,13 @@ $section_padding = get_sub_field('section_padding'); ?>
 
           ?>
 
-            <div class="text-list-block__list-inner">
+            <div class="coloured-block-grid-block__list-inner">
 
               <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="" />
-              <p><?= $title ?></p>
-              <p><?= $copy ?></p>
+              <div class="meta">
+                <p class="title"><?= $title ?></p>
+                <p><?= $copy ?></p>
+              </div>
 
             </div>
 
