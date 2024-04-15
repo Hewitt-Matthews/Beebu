@@ -21,6 +21,26 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_661d119e2c50d",
+            "label": "Reduce Width",
+            "name": "reduce_width",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Reduce width of text block further",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -41,5 +61,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710515533
+    "modified": 1713181191
 }

@@ -1,6 +1,7 @@
 <?php
 
 $content = get_sub_field('content');
+$reduce_width = get_sub_field('reduce_width');
 $section_options_background_colour = get_sub_field('section_options_background_colour');
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding'); ?>
@@ -13,7 +14,7 @@ $section_padding = get_sub_field('section_padding'); ?>
 
   <div class="wrapper">
 
-    <div class="text-block">
+    <div class="text-block <?php if ( $reduce_width ) : echo 'reduce-width'; endif; ?>">
 
       <div class="text-block__inner">
 
