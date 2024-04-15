@@ -1,7 +1,48 @@
-.single-role {
+.single-article {
   background-image: url('../img/large-flourish.svg');
   background-repeat: no-repeat;
   background-position: right top;
   padding: 240px 0px 0px;
+}
+
+.single-post {
+
+  &__img {
+    border-radius: 24px;
+    max-height: 826px;
+  }
+
+  &__content {
+    max-width: 944px;
+    margin: auto;
+    padding: 8em 0em;
+  }
+
+  &__title {
+    padding: 1em 0;
+  }
+
+  &__meta {
+    font-weight: bold;
+
+    span {
+      color: $green;
+    }
+  }
+
+  .share {
+    display: flex;
+    font-size: 28px;
+    font-weight: 700;
+
+    .icons a:first-child i {
+      margin-left: 20px;
+    }
+
+    .icons a i {
+      width: 45px;
+      color: $black;
+    }
+  }
 
 }
