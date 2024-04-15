@@ -56,7 +56,7 @@ $section_padding = get_sub_field('section_padding'); ?>
 
 <script>
 $( document ).ready(function() {
-	$('.slick').slick({
+	$('.content-slider__slider').slick({
 	  centerMode: true,
     slidesToShow: 1,
 	  responsive: [

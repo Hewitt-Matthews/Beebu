@@ -19,14 +19,14 @@ $team_query = new WP_Query( $args ); ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
   ">
     <div class="wrapper">
-        <div class="slider__inner">
+        <div class="team-slider__inner">
           <div class="meta">
             <h2 class="slider__title"><?=$title ?></h2>
             <p class="slider__description"><?=$copy ?></p>
           </div>
           <!-- Slider Navigation Buttons -->
         </div>
-        <div class="slider__slider">
+        <div class="team-slider__slider slider-wrapper slick">
           <?php if ( $team_query->have_posts() ) :
             while ( $team_query->have_posts() ) : $team_query->the_post(); 
             
@@ -36,11 +36,11 @@ $team_query = new WP_Query( $args ); ?>
             
             ?>
 
-              <div class="slider__slide">
-                  <img class="slider__team-image" src="<?= $member_image['url'] ?>" />
+              <div class="team-slider__slide slick__slide">
+                  <img class="team-slider__team-image" src="<?= $member_image['url'] ?>" />
                   <div>
-                      <h2 class="slider__team-title"><?= $title ?></h2>
-                      <p class="slider__team-position"><?= $member_position ?></p>
+                      <h2 class="team-slider__team-title"><?= $title ?></h2>
+                      <p class="team-slider__team-position"><?= $member_position ?></p>
                   </div>
               </div>
 
@@ -49,3 +49,20 @@ $team_query = new WP_Query( $args ); ?>
         </div>
     </div>
 </div>
+
+<script>
+$( document ).ready(function() {
+	$('.team-slider__slider').slick({
+	  centerMode: true,
+    slidesToShow: 4,
+	  responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+	  ]
+	});
+});
+</script>
