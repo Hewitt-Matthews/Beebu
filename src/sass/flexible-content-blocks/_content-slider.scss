@@ -1,0 +1,31 @@
+.content-slider {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide {
+   
+  }
+
+  &__content {
+    background-color: white;
+    display: flex;
+    padding: 4em 0px;
+    gap: 2em;
+  }
+
+  &__meta {
+    align-content: center;
+  }
+
+  &__title {
+    color: $off-black!important;
+  }
+
+  &__copy {
+    color: $off-black!important;
+  }
+  
+}
