@@ -16,7 +16,12 @@
         <div class="header__inner">
             <div class="header__logo">
                 <a href="/">
+                  <?php // 404, home, about, contact
+                  if ( is_404() || is_page('about') || is_page('contact') || is_home() || is_front_page() ) : ?>
                     <img src="<?=get_template_directory_uri() ?>/assets/img/beebu-logo-white.svg" />
+                  <?php else : ?>
+                    <img src="<?=get_template_directory_uri() ?>/assets/img/beebu-logo-black.svg" />
+                  <?php endif; ?>
                 </a>
             </div>
             <nav aria-label="Main Menu">
