@@ -22,20 +22,20 @@ $guides_query = new WP_Query( $args ); ?>
   <?php echo 'section--' . $section_options_background_colour; ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
-  ">
+  " data-glide-el="track">
     <div class="wrapper">
-      <div class="slider__inner">
+      <div class="guides-slider__inner">
         <div class="meta">
           <h2 class="slider__title">Guides</h2>
         </div>
         <a href="/guides" class="button button--black">See all guides</a>
         <!-- Slider Navigation Buttons -->
       </div>
-      <div class="slider__slider">
+      <div class="guides-slider__slider slider-wrapper slick">
         <?php if ( $guides_query->have_posts() ) :
           while ( $guides_query->have_posts() ) : $guides_query->the_post(); ?>
 
-            <div class="slider__slide">
+            <div class="slider__slide slick__slide">
               <a href="<?php the_permalink(); ?>">
                 <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
@@ -49,3 +49,20 @@ $guides_query = new WP_Query( $args ); ?>
       </div>
     </div>
 </div>
+
+<script>
+$( document ).ready(function() {
+	$('.slick').slick({
+	  centerMode: true,
+	  slidesToShow: 3,
+	  responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+	  ]
+	});
+});
+</script>

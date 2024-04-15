@@ -1,0 +1,13 @@
+.guides-slider {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: row;
+  }
+  
+}
