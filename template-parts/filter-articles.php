@@ -6,17 +6,6 @@ $categories = get_categories( array(
   'hide_empty' => 0,
 ) ); ?>
 
-<style>
-	.cat-list.services-list {
-		padding: 1em;
-		margin-left: auto;
-		display: inline-block;
-	}
-	.cat-list.services-list:focus {
-		border-color: rgb(var(--primary));
-	}
-</style>
-
 <select name="category-dropdown" class="cat-list category-list">
   <option value="" data-slug="all" data-id=""><?php esc_attr_e( 'Category', 'textdomain' ); ?></option>
   <?php foreach ( $categories as $category ) : ?>
