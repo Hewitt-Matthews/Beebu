@@ -4,8 +4,36 @@
   background-position: right top;
   padding: 240px 0px 0px;
 
+  #posts-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+  }
+
   #posts-container ul li a {
     position: relative;
+  }
+
+  #posts-container .pagination {
+    padding: 4em 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 3em;
+    align-items: center;
+
+    .current {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      background-color: $green;
+      border-radius: 25px;
+      padding: 0.4em 0.8em;
+    }
+
+    a {
+      color: $off-black;
+    }
+
   }
 
 }

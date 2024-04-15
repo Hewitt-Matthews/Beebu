@@ -52,11 +52,12 @@ $blogPosts = new WP_Query( array (
 
       </ul>
 
-      <?php
-      echo paginate_links(array(
-        'current' => max(1, get_query_var('paged')),
-        'total' => $blogPosts->max_num_pages
-      )); ?>
+      <div class="pagination">
+        <?php echo paginate_links(array(
+          'current' => max(1, get_query_var('paged')),
+          'total' => $blogPosts->max_num_pages
+        )); ?>
+      </div>
 
     </div>
 
