@@ -40,13 +40,23 @@
   &__grid {
       margin: 4rem 0 2.5rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      // grid-template-columns: repeat(3, 1fr);
       gap: 2.5rem;
 
       @include max-screen(767px) { 
           grid-template-columns: 1fr;
           gap: 1rem;
       }
+  }
+
+  &__columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__columns-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   &__block {
@@ -75,4 +85,10 @@
       align-items: center;
       justify-content: center;
   }
+}
+
+// Contact
+.page-id-482 .grid-content {
+  padding-top: 0rem;
+  margin-top: -17rem;
 }

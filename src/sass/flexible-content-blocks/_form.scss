@@ -36,7 +36,7 @@
     display: none;
   }
 
-  form .gform-body label {
+  form .gform-body label, .gform-field-label.gfield_label_before_complex {
     font-size: 20px;
     font-weight: 700;
   }

@@ -63,6 +63,27 @@
             "ui": 1
         },
         {
+            "key": "field_661d16b18c971",
+            "label": "Grid Width",
+            "name": "grid_width",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Number of grid items per row on largest screen size",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 2,
+            "max": 4,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65f84644939f1",
             "label": "Grid Blocks",
             "name": "grid_blocks",
@@ -227,5 +248,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710861753
+    "modified": 1713182495
 }
