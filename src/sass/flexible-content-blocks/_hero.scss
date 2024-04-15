@@ -4,13 +4,15 @@
     background-position: center;
     // height: 1080px;
 
-    // .flourish-hero {
-    //   background-image: url('../img/flourish.svg');
-    //   background-repeat: no-repeat;
-    //   background-position: right top;
-    //   height: 100%;
-    //   width: 100%;
-    // }
+    &__flourish {
+      background-image: url('../img/flourish.svg');
+      background-repeat: no-repeat;
+      background-position: right top;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      margin-top: -16em;
+    }
 
     &__inner {
         max-width: 700px;
@@ -60,4 +62,8 @@
       }
       
     }
+}
+
+.error404 .hero {
+  margin-bottom: -200px;
 }

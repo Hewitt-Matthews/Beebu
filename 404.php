@@ -2,11 +2,7 @@
 
 <main id="maincontent">
 
-  <div class="wrapper">
-
-    <?php get_template_part('blocks/hero'); ?>
-
-  </div>
+  <?php get_template_part('blocks/hero'); ?>
 
 </main>
 

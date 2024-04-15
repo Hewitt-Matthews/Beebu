@@ -29,6 +29,10 @@ endif; ?>
 
 <div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>" style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : echo 'background-image: url(' . $background_image['url'] .')'; endif; ?>">
 
+  <?php if ( $hero_type === 'flourish' ) : ?>
+    <div class="hero__flourish"></div>
+  <?php endif; ?>
+
   <div class="wrapper">
 
     <div class="hero__inner">
@@ -43,6 +47,10 @@ endif; ?>
         </form>
       <?php endif; ?>
 
+      <?php if ( $add_page_button ) : ?>
+        <a href="<?=$button['url'] ?>" class="button <?php if ( $hero_type === 'flourish' ) : ?> button--black <?php endif; ?>"><?=$button['title'] ?></a>
+      <?php endif; ?>
+
       <?php if ( $trustpilot ) : ?>
         <div class="hero__trustpilot">
           <span>Excellent</span>
@@ -53,10 +61,6 @@ endif; ?>
           </div>
           <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot-white.svg" />
         </div>
-      <?php endif; ?>
-
-      <?php if ( $add_page_button ) : ?>
-        <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
       <?php endif; ?>
         
     </div>
