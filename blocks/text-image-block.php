@@ -19,7 +19,7 @@ $section_padding = get_sub_field('section_padding'); ?>
 
   <div class="wrapper">
 
-    <div class="text-image-block text-image-block--<?= $alignment ?>">
+    <div class="text-image-block__content text-image-block--<?= $alignment ?>">
 
       <div class="text-image-block__inner">
 
@@ -28,7 +28,7 @@ $section_padding = get_sub_field('section_padding'); ?>
         <?php endif; ?>
 
         <?php if ( $copy ) : ?>
-          <?= $copy ?>
+          <p><?= $copy ?></p>
         <?php endif; ?>
 
         <?php if ( $button ) : ?>
@@ -40,11 +40,11 @@ $section_padding = get_sub_field('section_padding'); ?>
       <div class="text-image-block__image">
 
         <?php if( !empty( $main_image ) ) : ?>
-          <img src="<?= $main_image['url'] ?>" alt="<?= $main_image['alt'] ?>" width="<?= $main_image['width'] ?>" height="<?= $main_image['height'] ?>" />
+          <img src="<?= $main_image['url'] ?>" alt="<?= $main_image['alt'] ?>" class="main-image" />
         <?php endif; ?>
 
         <?php if( !empty( $overlay_image ) ) : ?>
-          <img src="<?= $overlay_image['url'] ?>" alt="<?= $overlay_image['alt'] ?>" width="<?= $overlay_image['width'] ?>" height="<?= $overlay_image['height'] ?>" class="overlay-image" />
+          <img src="<?= $overlay_image['url'] ?>" alt="<?= $overlay_image['alt'] ?>" class="overlay-image" />
         <?php endif; ?>
 
       </div>

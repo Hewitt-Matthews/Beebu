@@ -1,4 +1,30 @@
 .text-image-block {
-  display: flex;
-  flex: 1;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__image img {
+    border-radius: 50%;
+  }
+
+  &__image img.main-image {
+    width: 650px;
+    height: 650px;
+  }
+
+  &__image img.overlay-image {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
 }

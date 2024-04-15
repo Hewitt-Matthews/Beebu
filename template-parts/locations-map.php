@@ -44,7 +44,7 @@ if ( $locations ) : ?>
 
           <div class="area">
 
-            <img src="<?=get_template_directory_uri() ?>/assets/img/location.svg" />
+            <img src="<?=get_template_directory_uri() ?>/assets/img/location.png" class="marker" />
 
           </div>
 
