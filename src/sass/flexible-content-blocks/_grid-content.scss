@@ -6,6 +6,17 @@
       align-items: center;
       justify-content: space-between;
 
+      &.center {
+        text-align: center;
+        display: block;
+  
+        .grid-content__description {
+          padding-top: 2em;
+          margin: auto;
+          max-width: none;
+        }
+      }
+
       @include max-screen(767px) { 
           flex-direction: column;
           gap: 1rem;
