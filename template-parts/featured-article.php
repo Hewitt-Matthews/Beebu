@@ -16,29 +16,33 @@ $link = get_the_permalink($featured_article); ?>
 
       <h2>Featured post</h2>
 
-      <div class="featured-article__image">
+      <div class="featured-article__article">
 
-        <?php if( !empty( $featured_image ) ) : ?>
-          <img src="<?= $featured_image ?>" alt="<?= $title ?>" />
-        <?php endif; ?>
+        <div class="featured-article__image">
 
-      </div>
+          <?php if( !empty( $featured_image ) ) : ?>
+            <img src="<?= $featured_image ?>" alt="<?= $title ?>" />
+          <?php endif; ?>
 
-      <div class="featured-article__inner section--green">
+        </div>
 
-        <?php if ( $title ) : ?>
-          <h2><?= $title ?></h2>
-        <?php endif; ?>
+        <div class="featured-article__inner section--green">
 
-        <?php if ( $date ) : ?>
-          <strong><?= $date ?></strong>
-        <?php endif; ?>
+          <?php if ( $title ) : ?>
+            <h3><?= $title ?></h3>
+          <?php endif; ?>
 
-        <?php if ( $copy ) : ?>
-          <?= $copy ?>
-        <?php endif; ?>
+          <?php if ( $date ) : ?>
+            <p class="date"><strong><?= $date ?></strong></p>
+          <?php endif; ?>
 
-        <a class="button" href="<?= $link ?>">Read more</a>
+          <?php if ( $copy ) : ?>
+            <p><?= $copy ?></p>
+          <?php endif; ?>
+
+          <a class="button button--black" href="<?= $link ?>">Read more</a>
+
+        </div>
 
       </div>
 

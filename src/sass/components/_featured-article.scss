@@ -1,0 +1,27 @@
+.featured-article {
+  
+  &__image {
+    img {
+      border-radius: 24px 0px 0px 24px;
+      object-fit: cover;
+      height: 100%;
+      object-position: left;
+    }
+  }
+
+  &__inner {
+    border-radius: 0px 24px 24px 0px;
+    padding: 4em;
+
+    .date {
+      font-size: 20px;
+    }
+  }
+
+  &__article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 24px;
+  }
+
+}

@@ -1,0 +1,11 @@
+.all-articles {
+  background-image: url('../img/large-flourish.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 240px 0px 0px;
+
+  #posts-container ul li a {
+    position: relative;
+  }
+
+}
