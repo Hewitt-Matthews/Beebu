@@ -39,7 +39,7 @@ $team_query = new WP_Query( $args ); ?>
               <div class="team-slider__slide slick__slide">
                   <img class="team-slider__team-image" src="<?= $member_image['url'] ?>" />
                   <div>
-                      <h2 class="team-slider__team-title"><?= $title ?></h2>
+                      <h3 class="team-slider__team-title"><?= $title ?></h3>
                       <p class="team-slider__team-position"><?= $member_position ?></p>
                   </div>
               </div>

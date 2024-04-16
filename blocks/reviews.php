@@ -44,7 +44,9 @@ $section_padding = get_sub_field('section_padding');
                 </div>
                 <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot.svg" />
             </div>
-            <a href="<?=$button['url'] ?>" class="button button--black"><?=$button['title'] ?></a>
+            <?php if ( $button ) : ?>
+              <a href="<?=$button['url'] ?>" class="button button--black"><?=$button['title'] ?></a>
+            <?php endif; ?>
         </div>
     </div>
 </div>
