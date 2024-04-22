@@ -8,7 +8,7 @@ $section_padding = get_sub_field('section_padding');
 
 ?>
 
-<div class="packages section
+<div class="js-packages packages section
   <?php echo 'section--' . $section_options_background_colour; ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
@@ -26,8 +26,8 @@ $section_padding = get_sub_field('section_padding');
                     ?>
                     <div class="packages__package">
                         <span class="packages__package-eyebrow"><?=$package['eyebrow'] ?></span>
-                        <div class="gauge" style="width: 100%; --rotation-2:<?=$degree ?>deg;">
-                            <div class="percentage"></div>
+                        <div class="gauge js-gauge" style="width: 100%; --rotation-2:<?=$degree ?>deg;">
+                            <div class="percentage js-percentage"></div>
                             <div class="mask"></div>
                         </div>
                         <div class="packages__package-speed">
