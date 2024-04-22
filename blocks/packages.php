@@ -26,7 +26,7 @@ $section_padding = get_sub_field('section_padding');
                     ?>
                     <div class="packages__package">
                         <span class="packages__package-eyebrow"><?=$package['eyebrow'] ?></span>
-                        <div class="gauge" style="width: 100%; --rotation:<?=$degree ?>deg;">
+                        <div class="gauge" style="width: 100%; --rotation-2:<?=$degree ?>deg;">
                             <div class="percentage"></div>
                             <div class="mask"></div>
                         </div>

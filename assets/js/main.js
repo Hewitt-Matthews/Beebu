@@ -21,4 +21,37 @@ $(document).ready(function() {
         $(e.target).parent().parent().toggleClass('is-closed');
     });
 
+
+    if ( document.querySelector('.packages') ) {
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                console.log('hello');
+                // Element is in view
+                entry.target.querySelectorAll('.gauge .percentage').forEach(el => {
+                    el.style.animationDelay = '.5s';
+                    el.style.transition = 'all 2s ease';
+                  el.style.transform = 'rotate(var(--rotation-2))';
+                });
+              } else {
+                // Element not in view
+                entry.target.querySelectorAll('.gauge .percentage').forEach(el => {
+                  el.style.animationDelay = '0s';
+                  el.style.transition = 'none';
+                  el.style.transform = 'rotate(0deg)';
+                });
+              }
+            });
+          });
+          
+      
+              const gauges = document.querySelectorAll('.packages .gauge');
+              gauges.forEach(gauge => {
+                  observer.observe(gauge);
+              });
+
+    }
+    
+
 });

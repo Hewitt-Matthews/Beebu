@@ -102,6 +102,7 @@
         background-color: $orange;
         overflow: hidden;
         will-change: auto;
+        width: 100%;
     }
     .gauge:before{
         content: "";
@@ -134,6 +135,10 @@
         transform:rotate(var(--rotation)); 
         transform-origin: bottom center; 
         will-change: auto;
+
+        --rotation: 0deg;
+        transition: all 2s ease;
+        transition-delay: .5s;
     }
     .gauge:hover {
       --rotation: 100deg;
