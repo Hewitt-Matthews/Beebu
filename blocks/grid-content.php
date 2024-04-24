@@ -47,7 +47,7 @@ $section_padding = get_sub_field('section_padding');
       </div>
       <?php if ( $button ) : ?>
         <div class="grid-content__footer">
-          <a href="<?= $button['url'] ?>" class="button button--black"><?=$button['title'] ?></a>
+          <a href="<?= $button['url'] ?>" class="button"><?=$button['title'] ?></a>
         </div>
       <?php endif; ?>
     </div>

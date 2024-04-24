@@ -26,16 +26,20 @@
     &__review {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         min-height: 450px;
         padding: 2.5rem;
         background: #F6F4F2;
         border-radius: 1.5rem;
 
+        &-title {
+            margin-top: 40px;
+        }
+
         &-copy {
             font-size: 1.25rem;
             margin: 0;
-        }
+        }      
     }
 
     &__star {
@@ -70,4 +74,20 @@
             gap: 1rem;
         }
     }
+
+    &.section {
+        margin-top: 10rem;
+    }
 } 
+
+@media screen and (max-width: 1176px){
+	.reviews__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.reviews__grid {
+		grid-template-columns: 1fr;
+	}
+}

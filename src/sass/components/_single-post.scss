@@ -1,21 +1,41 @@
 .single-article {
+  padding: 10rem 0;
   background-image: url('../img/large-flourish.svg');
   background-repeat: no-repeat;
   background-position: right top;
-  padding: 240px 0px 0px;
+  background-size: 80%;
 }
 
 .single-post {
 
   &__img {
-    border-radius: 24px;
-    max-height: 826px;
+     border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   &__content {
     max-width: 944px;
     margin: auto;
     padding: 8em 0em;
+
+    & p {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
+
+    & .wp-block-quote {
+      border-color: $green;
+      background: none;
+
+      & p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    }
+
   }
 
   &__title {

@@ -25,7 +25,7 @@ $section_padding = get_sub_field('section_padding');
                     <div class="article-card__tag button button--small">Help & Advice</div>
                     <img src="<?=get_the_post_thumbnail_url($article, 'small'); ?>" alt="" class="article-card__image" />
                     <h2 class="article-card__title"><?=$article->post_title; ?></h2>
-                    <p class="article-card__excerpt"><?=get_the_excerpt($article); ?></p>
+                    <p class="article-card__excerpt"><?= wp_trim_words( get_the_excerpt($article), 30, '[...]' ); ?></p>
             </a>
             <?php endforeach; ?>
         </div>

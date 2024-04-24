@@ -69,3 +69,24 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .cta {
+        padding: 7rem 1.5rem;
+
+        & .postcode-search {
+            display: flex;
+            padding: 1rem;
+        }
+
+        & .postcode-search .postcode-search__input {
+            text-align: center;
+        }
+    
+        .cta--button .cta__title, 
+        .cta--button .cta__copy {
+            max-width: 100%;
+        }
+
+    }
+}

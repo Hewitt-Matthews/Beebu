@@ -2,7 +2,7 @@ $button-background: $brand;
 $button-text:       $black ;
 
 .button, .wp-block-button__link {
-  padding: 24px 40px;
+  padding: 24px 30px;
   border-radius: $base-radius;
   display: inline-block;
   color: $button-text;
@@ -50,4 +50,14 @@ $button-text:       $black ;
   background: $black;
   border-color: $black;
   color: $white;
+
+  &:hover {
+    color: $black;
+    border-color: $black;
+  }
+}
+
+// Black button on the comparison table
+.comparison__grid a.button.button--black {
+  margin: 0 1rem;
 }

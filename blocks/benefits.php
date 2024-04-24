@@ -32,7 +32,7 @@ $section_padding = get_sub_field('section_padding');
             <?php endforeach; ?>
         </div>
         <div class="benefits__footer">
-            <a href="<?=$button['url'] ?>" class="button button--black"><?=$button['title'] ?></a>
+            <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
         </div>
     </div>
 </div>

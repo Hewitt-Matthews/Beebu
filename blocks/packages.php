@@ -6,6 +6,8 @@ $section_options_background_colour = get_sub_field('section_options_background_c
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding');
 
+$next_year = date('Y', strtotime('+1 year'));
+
 ?>
 
 <div class="js-packages packages section
@@ -44,6 +46,7 @@ $section_padding = get_sub_field('section_padding');
                         <a href="" class="button button--black packages__package-button"><small>From </small><?=$package['price'] ?></a>
                         <span><?=$package['contract_length'] ?></span>
                         <span>*Based on location</span>
+                        <span>**Monthly price will rise each year by the Consumer Price Index (CPI) rate of inflation published in January of that year, beginning from April <?php echo $next_year ?>.</span>
                     </div>
                 <?php endforeach; ?>
             </div>

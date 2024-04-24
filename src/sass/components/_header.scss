@@ -25,6 +25,7 @@
   &__logo {
     display: block;
     width: 200px;
+    
     @include flex-vertical-center;
 
     h2 {
@@ -77,6 +78,7 @@
     // }
   }
 }
+
 
 .single-roles .header .header__menu .menu-main-navigation-container ul#menu-main-navigation li.menu-item:not(:last-of-type) a,
 .single-post .header .header__menu .menu-main-navigation-container ul#menu-main-navigation li.menu-item:not(:last-of-type) a,
