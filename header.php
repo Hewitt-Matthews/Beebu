@@ -25,13 +25,13 @@
                 </a>
             </div>
             <nav aria-label="Main Menu">
-                <button class="open-button" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
-                    <div class="hidden">Open Menu</div>
+                <button class="open-button js-open-nav" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
+                    <!-- <div class="hidden">Open Menu</div> -->
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <!-- <div class="main-menu"> REINSTATE THIS TO REENABLE MOBILE MENU -->
+                <!-- <div class="main-menu"> -->
                 <div class="header__menu">
                     <?php wp_nav_menu( array('theme_location' => 'main-navigation') ); ?>
                 </div>
