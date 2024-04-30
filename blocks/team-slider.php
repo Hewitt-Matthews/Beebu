@@ -18,7 +18,7 @@ $team_query = new WP_Query( $args ); ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
   ">
-    <div class="wrapper">
+    <div class="wrapper wrapper--slider">
         <div class="team-slider__inner">
           <div class="meta">
             <h2 class="slider__title"><?=$title ?></h2>
@@ -53,7 +53,6 @@ $team_query = new WP_Query( $args ); ?>
 <script>
 $( document ).ready(function() {
 	$('.team-slider__slider').slick({
-	  centerMode: true,
     slidesToShow: 4,
 	  responsive: [
       {

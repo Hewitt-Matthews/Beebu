@@ -55,6 +55,11 @@
     color: #ffffff;
   }
 
+  &__menu .menu-main-navigation-container ul#menu-main-navigation li.menu-item a {
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+
   nav {
     flex: 1;
     display: flex;
@@ -108,7 +113,7 @@
   color: $off-black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 
   .header {
     

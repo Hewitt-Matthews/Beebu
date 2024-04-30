@@ -65,8 +65,8 @@ h6{
 
 p, a, li, td {
   font-family: $primary-font;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: 1.3rem;
+  line-height: 1.5;
   font-weight: 400;
 
   @include max-screen(768px) {

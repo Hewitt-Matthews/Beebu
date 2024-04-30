@@ -13,7 +13,7 @@ $section_padding = get_sub_field('section_padding'); ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
   " data-glide-el="track">
 
-  <div class="wrapper">
+  <div class="wrapper wrapper--slider">
 
     <div class="content-slider__inner">
 
@@ -57,7 +57,6 @@ $section_padding = get_sub_field('section_padding'); ?>
 <script>
 $( document ).ready(function() {
 	$('.content-slider__slider').slick({
-	  centerMode: true,
     slidesToShow: 1,
 	  responsive: [
       {

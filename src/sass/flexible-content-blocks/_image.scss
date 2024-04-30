@@ -1,4 +1,8 @@
 .image {
   height: 1080px;
   background-size: cover;
+
+  &.section {
+    margin-bottom: -10rem;
+  }
 }

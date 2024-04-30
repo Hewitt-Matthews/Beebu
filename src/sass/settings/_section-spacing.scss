@@ -1,11 +1,13 @@
 .section {
     &--spaced {
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        // padding-bottom: 6rem;
+        padding-bottom: 12rem;
     }
 
     &--curved {
         position: relative;
+        background: $white;
 
         &:before {
             position: absolute;
