@@ -17,7 +17,7 @@ $section_padding = get_sub_field('section_padding');
     <div class="wrapper">
         <div class="featured-articles__inner">
             <h2 class="featured-articles__title"><?=$title ?></h2>
-            <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
+            <a href="<?=$button['url'] ?>" class="button hide-mobile"><?=$button['title'] ?></a>
         </div>
         <div class="featured-articles__grid">
             <?php foreach ($articles as $article): ?>
@@ -29,5 +29,6 @@ $section_padding = get_sub_field('section_padding');
             </a>
             <?php endforeach; ?>
         </div>
+        <a href="<?=$button['url'] ?>" class="button hide-desktop"><?=$button['title'] ?></a>
     </div>
 </div>

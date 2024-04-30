@@ -117,4 +117,90 @@ $(document).ready(function() {
 
     }
 
+
+    // Adjust the .wrapper--slider left spacing so that it fits inline with other content
+    if(document.querySelector('.wrapper--slider')){
+
+      function applyPaddingAndMargin(sourceSelector, targetSelector) {
+        // Get source element
+        const sourceElement = document.querySelector(sourceSelector);
+        // Get computed styles
+        const computedStyle = window.getComputedStyle(sourceElement);
+        
+        // Get left padding and margin values
+        const leftPadding = parseInt(computedStyle.getPropertyValue('padding-left'));
+        const leftMargin = parseInt(computedStyle.getPropertyValue('margin-left'));
+        
+        // Apply padding and margin to target elements
+        const targetElements = document.querySelectorAll(targetSelector);
+        targetElements.forEach(function(targetElement) {
+            targetElement.style.paddingLeft = leftPadding + 'px';
+            targetElement.style.marginLeft = leftMargin + 'px';
+        });
+    
+      }
+    
+      function applyStylesOnResize() {
+          applyPaddingAndMargin('.hero .wrapper', '.wrapper--slider');
+      }
+    
+      // Apply styles when the page loads
+      applyStylesOnResize();
+    
+      // Apply styles when the window is resized
+      window.addEventListener('resize', applyStylesOnResize);
+
+    }
+
+
+    // Map Script
+    if(document.querySelector('.locations-map')){
+
+      const mapName = document.querySelectorAll('.js-map-name');
+      const areaMarker = document.querySelectorAll('.js-area-marker');
+
+      mapName.forEach(item => {
+
+        // When mouse enters
+        item.addEventListener('mouseenter', () => {
+
+          const location = item.dataset.location;
+          // Escape the space in the location string
+          const escapedLocation = location.replace(/\s/g, '\\ ');
+
+          const image = document.querySelector(`.js-area-marker[data-location=${escapedLocation}] img`);
+          const currentSrc = image.src;
+          
+          // Replace end of image link
+          const newSrc = currentSrc.replace('location.png', 'location-green.png');
+
+          // Set the new image src
+          image.src = newSrc;
+
+        });
+
+        // When mouse exits
+        item.addEventListener('mouseout', () => {
+
+          const location = item.dataset.location;
+          // Escape the space in the location string
+          const escapedLocation = location.replace(/\s/g, '\\ ');
+
+          const image = document.querySelector(`.js-area-marker[data-location=${escapedLocation}] img`);
+          const currentSrc = image.src;
+          
+          // Replace end of image link
+          const newSrc = currentSrc.replace('location-green.png', 'location.png');
+
+          // Set the new image src
+          image.src = newSrc;
+
+        });
+
+
+      })
+
+    }
+  
+
 });

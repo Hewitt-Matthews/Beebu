@@ -33,3 +33,18 @@
         cursor: pointer;
     }
 }
+
+
+@media screen and (max-width: 768px){
+    .hero .postcode-search {
+        width: 100%;
+    }
+    
+    &.postcode-search {
+        &__input {
+            padding: 10px 0;
+        }
+
+    }
+
+}

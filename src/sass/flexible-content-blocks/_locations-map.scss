@@ -1,0 +1,45 @@
+.locations-map {
+    margin-bottom: 6rem;
+
+    & .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        @include max-screen(1100px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__map {
+        // background-image: url(../img/map.png);
+        position: relative;
+
+        & .area {
+            width: 50px !important;
+            height: auto;
+            position: absolute;
+        }
+    }
+
+    & .locations__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        width: 80%;
+
+        & .area-name {
+            background-color: $off-white;
+            border-bottom: 5px solid $green;
+            padding: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: $green;
+                border-color: $off-black;
+            }
+        }
+    }
+}

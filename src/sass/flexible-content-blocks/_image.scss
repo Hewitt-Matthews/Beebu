@@ -6,3 +6,9 @@
     margin-bottom: -10rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 30vh;
+  }
+}

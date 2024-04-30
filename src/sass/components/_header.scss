@@ -146,11 +146,11 @@
         position: absolute;
         top: -20px;
         left: 110%;
-        width: 100vw;
+        width: 110%;
         transition: all .5s ease;
 
         &.nav-open {
-          left: 0%;
+          left: -5%;
         }
 
       .menu-main-navigation-container {

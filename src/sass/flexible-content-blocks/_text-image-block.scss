@@ -17,16 +17,43 @@
   &__image img.main-image {
     width: 650px;
     height: 650px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
   }
 
   &__image img.overlay-image {
     width: 270px;
     height: 270px;
+    aspect-ratio: 1 / 1;
     position: absolute;
     bottom: 0;
     right: 0;
     object-fit: cover;
   }
   
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .text-image-block {
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+
+    &__image img.main-image {
+      height: auto;
+      width: 100%;
+    }
+
+    &__image img.overlay-image {
+      height: 150px;
+      width: 150px;
+      bottom: -40px;
+    }
+
+  }
+
 }

@@ -84,3 +84,48 @@
   }
   
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .team-slider {
+    padding-bottom: 10rem;
+    
+    & .slick-list {
+      padding: 0 !important;
+    }
+
+    & .slick-arrow {
+      top: auto;
+      bottom: -5rem;
+      right: auto;
+      left: 0;
+    }
+
+    & .slick-next {
+      left: calc(5% + 60px);
+      right: auto;
+    }
+
+    & .slick-prev {
+      left: 5%;
+    }
+
+    & .slick-slide {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__inner {
+      & .meta {
+        width: 100%;
+      }
+    }
+
+  }
+
+}

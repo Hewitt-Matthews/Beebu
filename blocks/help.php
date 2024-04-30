@@ -23,7 +23,7 @@ $section_padding = get_sub_field('section_padding');
         <h2 class="help__title"><?= $title ?></h2>
         <p class="help__description"><?= $description ?></p>
         <?php if ( $button ) : ?>
-          <a href="<?= $button['url'] ?>" class="button button--black"><?= $button['title'] ?></a>
+          <a href="<?= $button['url'] ?>" class="button button--black hide-mobile"><?= $button['title'] ?></a>
         <?php endif; ?>
       </div>
 
@@ -50,7 +50,9 @@ $section_padding = get_sub_field('section_padding');
         <?php endforeach; ?>
 
       </div>
-
+      <?php if ( $button ) : ?>
+          <a href="<?= $button['url'] ?>" class="button button--black hide-desktop"><?= $button['title'] ?></a>
+        <?php endif; ?>
     </div>
 
   </div>

@@ -3,6 +3,7 @@
 @import "settings/mixins";
 @import "settings/variables";
 @import "settings/section-spacing";
+@import "settings/classes";
 
 @import "tools/media-queries";
 
@@ -60,6 +61,7 @@
 @import "flexible-content-blocks/text-block";
 @import "flexible-content-blocks/text-image-block";
 @import "flexible-content-blocks/text-list-block";
+@import "flexible-content-blocks/locations-map";
 
 @import "components/header";
 @import "components/footer";

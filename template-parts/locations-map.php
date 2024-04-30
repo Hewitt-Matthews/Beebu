@@ -16,13 +16,15 @@ if ( $locations ) : ?>
 
         <p><?= $copy ?></p>
 
-        <?php foreach( $locations as $location ) :
-        
+        <div class="locations__grid">
+          
+          <?php foreach( $locations as $location ) :
+          
           $location_name = $location['location_name'];
 
-        ?>
+          ?>
 
-          <div class="area-name">
+          <div class="area-name js-map-name" data-location="<?=$location_name?>">
 
             <?= $location_name ?>
 
@@ -30,9 +32,13 @@ if ( $locations ) : ?>
 
         <?php endforeach; ?>
 
+        </div>
+
       </div>
 
       <div class="locations-map__map">
+        
+      <img src="<?= get_template_directory_uri() ?>/assets/img/map.png">
 
         <?php foreach( $locations as $location ) :
       
@@ -42,9 +48,9 @@ if ( $locations ) : ?>
 
         ?>
 
-          <div class="area">
+          <div class="area js-area-marker" data-location="<?= $location_name ?>" style="left:<?=$map_x_coordinates?>%; top: <?=$map_y_coordinates?>%;">
 
-            <img src="<?=get_template_directory_uri() ?>/assets/img/location.png" class="marker" />
+            <img src="<?=get_template_directory_uri() ?>/assets/img/location.png" class="marker"/>
 
           </div>
 

@@ -4,16 +4,19 @@
     background-size: cover;
     background-position: center;
     // height: 1080px;
+    min-height: 100vh;
 
     &__flourish {
       background-image: url('../img/flourish.svg');
       background-repeat: no-repeat;
-      background-position: right top;
+      background-position: top;
+      // background-position: right top;
       height: 200%;
       // height: 100%;
       width: 100%;
       position: absolute;
       margin-top: -16em;
+      mix-blend-mode: multiply;
     }
 
     &__inner {
@@ -68,4 +71,21 @@
 
 .error404 .hero {
   margin-bottom: -200px;
+}
+
+@media screen and (max-width: 1080px){
+
+   .hero {
+    padding: 6em 0 0;
+
+    &__flourish {
+      height: 230%;
+    }
+
+    &__inner {
+      padding: 150px 0px 100px 0px;
+    }
+
+   }
+   
 }
