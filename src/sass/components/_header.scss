@@ -83,6 +83,10 @@
         width: 30px;
         background-color: $white;
 
+        &.hamburger--dark {
+          background-color: $off-black;
+        }
+
         &:not(:last-of-type) {
           margin-bottom: 6px;
         }

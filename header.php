@@ -27,9 +27,20 @@
             <nav aria-label="Main Menu">
                 <button class="open-button js-open-nav" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
                     <!-- <div class="hidden">Open Menu</div> -->
+                    
+
+                    <?php // 404, home, about, contact
+                  if ( is_404() || is_page('about') || is_page('contact') || is_home() || is_front_page() ) : ?>
                     <span></span>
                     <span></span>
                     <span></span>
+                  <?php else : ?>
+                    <span class="hamburger--dark"></span>
+                    <span class="hamburger--dark"></span>
+                    <span class="hamburger--dark"></span>
+                  <?php endif; ?>
+
+
                 </button>
                 <!-- <div class="main-menu"> -->
                 <div class="header__menu">
