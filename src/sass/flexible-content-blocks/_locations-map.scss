@@ -3,7 +3,12 @@
     background-image: url(../img/large-flourish.svg);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 40%;
+    background-size: 30%;
+
+    @include max-screen(1100px) {
+        margin-top: 6rem;
+        background-size: 70%;
+    }
 
     & .wrapper {
         display: grid;
@@ -12,6 +17,7 @@
 
         @include max-screen(1100px) {
             grid-template-columns: 1fr;
+            gap: 3rem;
         }
     }
 
@@ -20,10 +26,18 @@
         width: 150%;
         left: -10%;
 
+        @include max-screen(1100px) {
+            left: -30%;
+        }
+
         & .area {
             width: 50px !important;
             height: auto;
             position: absolute;
+
+            @include max-screen(1100px) {
+                width: 30px !important;
+            }
 
             &.map-hovered {
                 z-index: 100;
@@ -36,6 +50,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         width: 80%;
+
+        @include max-screen(768px) {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
 
         & .area-name {
             background-color: $off-white;
