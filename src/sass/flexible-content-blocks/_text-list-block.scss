@@ -1,4 +1,5 @@
 .text-list-block {
+  padding-bottom: 0;
 
   &__inner {
       display: grid;
@@ -9,9 +10,9 @@
         margin-top: 1em;
       }
 
-      @include max-screen(767px) { 
+      @include max-screen(768px) { 
           grid-template-columns: 1fr;
-          gap: 1rem;
+          gap: 5rem;
       }
   }
 
@@ -23,6 +24,7 @@
 
   &__list-inner {
     display: flex;
+    align-items: center;
     background: $white;
     padding: 2rem 3rem;
     border-radius: 1.5rem;
@@ -34,6 +36,7 @@
     }
     p {
       font-weight: 700;
+      margin-bottom: 0;
     }
   }
 

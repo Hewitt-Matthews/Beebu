@@ -16,7 +16,7 @@ $section_padding = get_sub_field('section_padding'); ?>
 
   <div class="wrapper">
 
-    <div class="text-list-block text-list-block--<?= $alignment ?>">
+    <div class="text-list-block">
 
       <div class="text-list-block__inner">
 
@@ -47,7 +47,7 @@ $section_padding = get_sub_field('section_padding'); ?>
             ?>
 
               <div class="text-list-block__list-inner">
-                <img src="http://localhost:10109/wp-content/uploads/2024/03/Tick.svg" />
+                <img src="<?=get_template_directory_uri() ?>/assets/img/tick.svg" />
                 <p><?= $title ?></p>
               </div>
 
