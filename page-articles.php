@@ -24,7 +24,7 @@ $blogPosts = new WP_Query( array (
    ******************************************************************************************/
   get_template_part('/template-parts/featured-article'); ?>
 
-  <div class="wrapper">
+  <div class="wrapper articles__wrapper">
   
     <h1>Articles</h1>
 

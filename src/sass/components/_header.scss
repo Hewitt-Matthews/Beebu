@@ -8,6 +8,7 @@
 
   @include max-screen(767px) {
     margin-bottom: -174px;
+    padding-top: 20px;
   }
 
   &__inner {
@@ -103,6 +104,14 @@
     //   }
     // }
   }
+}
+
+.careers-page .header {
+
+  & li.menu-item:not(:last-of-type) a {
+    color: $off-black !important;
+  }
+  
 }
 
 

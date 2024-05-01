@@ -4,6 +4,11 @@
     display: grid;
     grid-template-columns: 27fr 41fr;
     gap: 5rem;
+
+    @include max-screen(768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__inner {

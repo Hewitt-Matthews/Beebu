@@ -2,12 +2,21 @@
   background-image: url('../img/large-flourish.svg');
   background-repeat: no-repeat;
   background-position: right top;
-  padding: 240px 0px 0px;
+  // padding: 240px 0px 0px;
+  padding-top: 5rem;
+
+  @include max-screen(900px) {
+    padding-top: 10rem;
+  }
 
   #posts-container ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3em;
+
+    @include max-screen(768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   #posts-container ul li a {
@@ -22,9 +31,19 @@
     gap: 3em;
     align-items: center;
 
+    @include max-screen(768px) {
+      gap: 1em;
+    }
+    
+    & .page-numbers:not(.prev):not(.next) {
+      aspect-ratio: 1 / 1;
+      height: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .current {
-      font-size: 1.5rem;
-      line-height: 1.2;
       background-color: $green;
       border-radius: 25px;
       padding: 0.4em 0.8em;
@@ -34,6 +53,14 @@
       color: $off-black;
     }
 
+  }
+
+  & .articles__wrapper {
+    margin-top: 5rem;
+
+    & h1 {
+      margin-bottom: 0;
+    }
   }
 
 }

@@ -1,0 +1,35 @@
+.careers-page {
+
+  @include max-screen(768px){
+    & .hero.flourish-hero {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+    & .hero__inner {
+      width: 45%;
+      
+      @include max-screen(768px) {
+        width: 100%;
+      }
+
+      & p, & h1 {
+        color: $black;
+        text-wrap: balance;
+      }
+    }
+
+    & .hero__flourish {
+      background-image: url('../img/flourish-white.svg');
+      mix-blend-mode: normal;
+      width: 120%;
+
+      @include max-screen(768px) {
+        position: absolute;
+        top: 25%;
+      }
+    }
+
+  }

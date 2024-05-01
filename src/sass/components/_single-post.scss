@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 80%;
+
+  @include max-screen(768px){
+    padding: 15rem 0 0;
+  }
 }
 
 .single-post {
@@ -19,6 +23,10 @@
     max-width: 944px;
     margin: auto;
     padding: 8em 0em;
+
+    @include max-screen(768px){ 
+      padding: 4em 0;
+    }
 
     & p {
       font-size: 1.4rem;

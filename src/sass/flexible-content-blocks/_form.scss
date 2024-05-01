@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: 41fr 27fr;
     gap: 5rem;
+
+    @include max-screen(768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__contact-card {

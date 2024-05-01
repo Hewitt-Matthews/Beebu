@@ -141,7 +141,7 @@ $(document).ready(function() {
       }
     
       function applyStylesOnResize() {
-          applyPaddingAndMargin('.hero .wrapper', '.wrapper--slider');
+          applyPaddingAndMargin('.wrapper', '.wrapper--slider');
       }
     
       // Apply styles when the page loads
@@ -204,6 +204,20 @@ $(document).ready(function() {
 
     }
     
+    // Adapt pre-built acf hero to fit careers page only
+    if(window.location.pathname === '/careers/'){
+      (function (){
+
+        document.querySelector('body').classList.add('careers-page');
+        // document.querySelector('.header').style.backgroundColor
+
+        // document.querySelector('.flourish-hero').classList.add('careers__hero');
+        
+        document.querySelector('.flourish-hero .button').classList.remove('button--black');
+        document.querySelector('.flourish-hero .button').classList.add('button--green');
+
+      })();
+    }
   
 
 });

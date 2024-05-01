@@ -1,5 +1,9 @@
 .coloured-block-grid-block {
 
+  @include max-screen(991px){
+    padding-bottom: 1rem;
+  }
+
   &__intro {
     max-width: 1020px;
   }
@@ -22,6 +26,10 @@
     border-radius: 24px;
     display: flex;
     gap: 3em;
+
+    @include max-screen(991px){
+      flex-direction: column;
+    }
 
     img {
       width: 100px;

@@ -3,11 +3,153 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    @include min-screen(769px){
+      & .button {
+        position: absolute;
+        right: calc(5% + 140px);
+      }
+    }
+
+    @include max-screen(768px){
+      & .button {
+       display: none;
+      }
+    }
+
+    & .meta {
+      width: 70%;
+      margin-bottom: 4.25rem;
+
+      @include max-screen(768px){
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      & h2 {
+        margin-bottom: 0;
+      }
+    }
   }
 
-  &__slider {
-    display: flex;
-    flex-direction: row;
+  & .slick-list {
+    padding: 0 10% 0 0 !important;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
   }
   
+
+  & .slick-arrow {
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -5rem;
+    background-color: $green;
+    border-radius: 100px;
+    opacity: 0.5;
+    transition: opacity .5s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      color: $black;
+      font-size: 20px;
+    }
+  }
+
+  & .slick-next {
+    right: 5%;
+  }
+
+  & .slick-prev {
+    right: calc(5% + 60px);
+    left: auto;
+  }
+
+  & .slick-slide {
+    margin-right: 2rem;
+  }
+
+  &__guides-image {
+    border-radius: 24px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    background-color: white;
+    display: flex;
+    padding: 4em 0px;
+    gap: 2em;
+  }
+
+  &__meta {
+    align-content: center;
+  }
+
+  &__title {
+    color: $off-black!important;
+  }
+
+  &__copy {
+    color: $off-black!important;
+  }
+
+  &__guides-title {
+    margin-bottom: 10px;
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .guides-slider {
+    padding-bottom: 10rem;
+    
+    & .slick-list {
+      padding: 0 !important;
+    }
+
+    & .slick-arrow {
+      top: auto;
+      bottom: -5rem;
+      right: auto;
+      left: 0;
+    }
+
+    & .slick-next {
+      left: calc(5% + 60px);
+      right: auto;
+    }
+
+    & .slick-prev {
+      left: 5%;
+    }
+
+    & .slick-slide {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__inner {
+      & .meta {
+        width: 100%;
+      }
+    }
+
+  }
+
 }

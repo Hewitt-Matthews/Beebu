@@ -1,3 +1,9 @@
+.ctacontainer {
+    @include max-screen (768px) {
+        padding-bottom: 0;
+    }
+}
+
 .cta {
     position: relative;
     padding: 7rem 3.5rem;

@@ -31,8 +31,8 @@ $section_padding = get_sub_field('section_padding'); ?>
               <div class="slider__slide">
                   <img class="slider__testimonial-image" src="<?= $image ?>" />
                   <div>
-                      <div class="slider__testimonial-testimonial"><?= $testimonial ?></div>
-                      <h2 class="slider__testimonial-title"><?= $title ?></h2>
+                      <p class="slider__testimonial-testimonial"><?= $testimonial ?></p>
+                      <p class="slider__testimonial-title"><?= $title ?></p>
                       <p class="slider__testimonial-position"><?= $position ?></p>
                   </div>
               </div>
@@ -41,3 +41,11 @@ $section_padding = get_sub_field('section_padding'); ?>
         </div>
     </div>
 </div>
+
+<script>
+$( document ).ready(function() {
+	$('.slider__slider').slick({
+	  slidesToShow: 1
+	});
+});
+</script>

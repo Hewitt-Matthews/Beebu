@@ -23,7 +23,7 @@ $guides_query = new WP_Query( $args ); ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
   " data-glide-el="track">
-    <div class="wrapper">
+    <div class="wrapper wrapper--slider">
       <div class="guides-slider__inner">
         <div class="meta">
           <h2 class="slider__title">Guides</h2>

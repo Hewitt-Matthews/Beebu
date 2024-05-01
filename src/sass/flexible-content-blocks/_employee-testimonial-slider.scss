@@ -1,0 +1,119 @@
+.team-testimonial-slider {
+
+    & .slider__title {
+        text-wrap: balance;
+    }
+
+    & .slick-arrow {
+        height: 40px;
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: -5rem;
+        background-color: $green;
+        border-radius: 100px;
+        opacity: 0.5;
+        transition: opacity .5s ease;
+    
+        &:hover {
+          opacity: 1;
+        }
+    
+        &::before {
+          color: $black;
+          font-size: 20px;
+        }
+      }
+    
+      & .slick-next {
+        right: 5%;
+      }
+    
+      & .slick-prev {
+        right: calc(5% + 60px);
+        left: auto;
+      }
+
+    & .slider__slider {
+        margin-top: 5rem;
+
+        & .slick-slide {
+            margin-right: 3rem;
+        }
+        
+        & .slider__slide {
+            display: grid !important;
+            grid-template-columns: 1fr 4fr;
+            gap: 15rem;
+            cursor: grab;
+
+            @include max-screen(768px) {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                justify-content: center;
+            }
+
+            &:active {
+                cursor: grabbing;
+            }
+
+            & .slider__testimonial {
+
+                &-testimonial {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+
+                    @include max-screen(768px) {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &-title {
+                    margin-bottom: 0;
+                }
+            }
+
+            & img.slider__testimonial-image {
+                height: auto;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 200px;
+                object-fit: cover;
+
+                @include max-screen(768px){
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .team-testimonial-slider {
+      padding-bottom: 10rem;
+      
+      & .slick-arrow {
+        top: auto;
+        bottom: -5rem;
+        right: auto;
+        left: 0;
+      }
+  
+      & .slick-next {
+        left: calc(5% + 60px);
+        right: auto;
+      }
+  
+      & .slick-prev {
+        left: 5%;
+      }
+  
+    }
+  
+  }
