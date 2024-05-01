@@ -1,5 +1,9 @@
 .locations-map {
     margin-bottom: 6rem;
+    background-image: url(../img/large-flourish.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 40%;
 
     & .wrapper {
         display: grid;
@@ -12,13 +16,18 @@
     }
 
     &__map {
-        // background-image: url(../img/map.png);
         position: relative;
+        width: 150%;
+        left: -10%;
 
         & .area {
             width: 50px !important;
             height: auto;
             position: absolute;
+
+            &.map-hovered {
+                z-index: 100;
+            }
         }
     }
 

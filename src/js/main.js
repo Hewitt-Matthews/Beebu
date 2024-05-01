@@ -170,6 +170,7 @@ $(document).ready(function() {
 
           const image = document.querySelector(`.js-area-marker[data-location=${escapedLocation}] img`);
           const currentSrc = image.src;
+          image.parentElement.classList.add('map-hovered');
           
           // Replace end of image link
           const newSrc = currentSrc.replace('location.png', 'location-green.png');
@@ -188,6 +189,7 @@ $(document).ready(function() {
 
           const image = document.querySelector(`.js-area-marker[data-location=${escapedLocation}] img`);
           const currentSrc = image.src;
+          image.parentElement.classList.remove('map-hovered');
           
           // Replace end of image link
           const newSrc = currentSrc.replace('location-green.png', 'location.png');
@@ -201,6 +203,7 @@ $(document).ready(function() {
       })
 
     }
+    
   
 
 });
