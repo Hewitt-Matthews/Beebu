@@ -1,8 +1,8 @@
 .comparison {
 
-    @include max-screen(767px) { 
-        display: none;
-    }
+    // @include max-screen(767px) { 
+    //     display: none;
+    // }
     
     &__title {
         text-align: center;

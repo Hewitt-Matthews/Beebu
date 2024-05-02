@@ -17,7 +17,7 @@ else :
   $section_padding = get_sub_field('section_padding');
 endif; ?>
 
-<div class="comparison section
+<div class="comparison hide-mobile section
   <?php echo 'section--' . $section_options_background_colour; ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
