@@ -209,9 +209,6 @@ $(document).ready(function() {
       (function (){
 
         document.querySelector('body').classList.add('careers-page');
-        // document.querySelector('.header').style.backgroundColor
-
-        // document.querySelector('.flourish-hero').classList.add('careers__hero');
         
         document.querySelector('.flourish-hero .button').classList.remove('button--black');
         document.querySelector('.flourish-hero .button').classList.add('button--green');

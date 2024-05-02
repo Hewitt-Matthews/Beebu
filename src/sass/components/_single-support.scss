@@ -1,0 +1,12 @@
+.single-support {
+
+    .hero {
+        @include max-screen(768px) {
+            min-height: 60vh;
+        }
+    }
+
+    & .hero__inner {
+        padding-bottom: 0;
+    }
+}

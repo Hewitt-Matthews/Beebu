@@ -28,7 +28,7 @@ $section_padding = get_sub_field('section_padding');
       <div class="grid-content__grid grid-content__columns-<?= $grid_width ?>">
         <?php foreach ( $grid_blocks as $block ) : ?>
           <?php if ( $block['page_link'] && $block['link_type'] ) : ?>
-            <a href="<?= $block['page_link']['url'] ?>">
+            <a href="<?= $block['page_link']['url'] ?>" class="grid-content__link">
           <?php endif; ?>
             <div class="grid-content__block">
               <img class="grid-content__block-image" src="<?= $block['icon']['url'] ?>" />

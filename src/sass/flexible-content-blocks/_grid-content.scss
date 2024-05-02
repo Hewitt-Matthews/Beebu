@@ -1,6 +1,10 @@
 .grid-content {
   padding-top: 10rem;
 
+  &__link {
+    display: flex;
+  }
+
   &__inner {
       display: flex;
       align-items: center;
@@ -62,11 +66,23 @@
   &__block {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       min-height: 450px;
       padding: 2.5rem;
       background: #F6F4F2;
       border-radius: 1.5rem;
+
+      @include max-screen(768px){
+        justify-content: space-between;
+      }
+
+      & div {
+
+        @include min-screen(769px){
+          margin-top: 3rem;
+        }
+
+      }
   }
 
   &__block-image {

@@ -26,6 +26,16 @@
       mix-blend-mode: normal;
       width: 120%;
 
+      &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-color: $white;
+        position: absolute;
+        left: -90%;
+        
+      }
+
       @include max-screen(768px) {
         position: absolute;
         top: 25%;
