@@ -85,6 +85,8 @@
   &__block-image {
       height: auto;
       max-width: 130px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
   }
 
   &__block-title {}

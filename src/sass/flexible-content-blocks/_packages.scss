@@ -83,6 +83,7 @@
 
         &-spec {
             font-size: 1.25rem;
+            text-align: center;
         }
 
         &-button {
@@ -159,14 +160,6 @@
       text-align: center;
       will-change: auto;
     }
-}
-
-@media screen and (min-width: 769px) {
-
-    .packages__package-title {
-        height: 80px;
-    }
-
 }
 
 @media screen and (max-width: 989px){
