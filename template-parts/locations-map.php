@@ -38,7 +38,7 @@ if ( $locations ) : ?>
 
       <div class="locations-map__map">
         
-      <img src="<?= get_template_directory_uri() ?>/assets/img/map-close.png">
+      <img src="<?= get_template_directory_uri() ?>/assets/img/map.png">
 
         <?php foreach( $locations as $location ) :
       

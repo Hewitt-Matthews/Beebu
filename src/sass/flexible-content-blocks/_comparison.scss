@@ -7,7 +7,7 @@
     &__title {
         text-align: center;
         margin-bottom: 3rem;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     table {
@@ -57,5 +57,50 @@
 
     tr:last-of-type td {
         border-bottom: none;
+    }
+}
+
+
+
+// Mobile Styles (Not table)
+.comparison {
+
+    &__grid {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__grid-mob {
+        padding: 2rem 0;
+        text-align: center;
+
+        &:not(.open){
+            border-bottom: 1px solid $black;
+        }
+
+        &.open ul {
+             display: initial;
+        }
+
+        & h3 {
+            margin: 1rem 0;
+        }
+
+        & ul {
+            display: none;
+
+            & li {
+                border-bottom: 1px solid $black;
+                padding: 2rem;
+
+                &:last-of-type {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        &:first-of-type {
+            background-color: $green;
+        }
     }
 }

@@ -83,3 +83,71 @@ endif; ?>
         </div>
     </div>
 </div>
+
+
+
+<!-- Mobile Version -->
+<div class="comparison hide-desktop section
+  <?php echo 'section--' . $section_options_background_colour; ?>
+  <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
+  <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
+  ">
+    <div class="wrapper">
+        <div class="comparison__inner">
+            <h2 class="comparison__title"><?=$title ?></h2>
+            <div class="comparison__grid">
+                <?php
+                if ( ! empty ( $table ) ) {
+
+                    if ( ! empty( $table['header'] ) ) {
+                
+                        foreach ( $table['header'] as $key => $th ) {
+
+                            if ($key != 0) {
+
+                                echo '<div class="comparison__grid-mob js-comparison-grid-mob">';
+
+                                    echo '<h3>';
+
+                                        echo $th['c'];
+
+                                    echo '</h3>';
+
+                                    echo '<ul>';
+
+                                    $i = 0;
+
+                                    while ($i < sizeof($table['header']) - 1) {
+
+                                        echo '<li>';
+
+                                            echo implode(" ", $table['body'][$i][$key]);
+
+                                        echo '</li>';
+                                        
+                                        $i++;
+                                    }
+
+                                    echo'</ul>';
+
+                                    // Only display button after first list
+                                    if ($key == 1) {
+
+                                        echo '<a href="'.$button['url'].'" class="button button--black">'.$button['title'].'</a>';
+
+                                    }
+
+                                echo '</div>';
+
+                            }
+                            
+                        }
+            
+                    }
+                    
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>

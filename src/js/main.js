@@ -152,6 +152,39 @@ $(document).ready(function() {
 
     }
 
+      
+    if(document.querySelector('.js-comparison-grid-mob')) {
+
+      const firstTableEl = document.querySelector('.js-comparison-grid-mob');
+      const allTableEls = document.querySelectorAll('.js-comparison-grid-mob');
+
+      firstTableEl.classList.add('open');
+      firstTableEl.classList.add('beebu-table-el');
+
+      allTableEls.forEach(item => {
+
+        if( !item.classList.contains('beebu-table-el') ) {
+
+          item.addEventListener("click", () => {
+
+            if(item.classList.contains('open')){
+
+              item.classList.remove('open');
+
+            } else {
+
+              item.classList.add('open');
+              
+            }
+
+          })
+
+        }
+
+      });
+
+    }
+
 
     // Map Script
     if(document.querySelector('.locations-map')){
