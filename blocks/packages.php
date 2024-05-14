@@ -46,7 +46,7 @@ $next_year = date('Y', strtotime('+1 year'));
                         <a href="" class="button button--black packages__package-button"><small>From </small><?=$package['price'] ?></a>
                         <span><?=$package['contract_length'] ?></span>
                         <span>*Based on location</span>
-                        <span>**Monthly price will rise each year by the Consumer Price Index (CPI) rate of inflation published in January of that year, beginning from April <?php echo $next_year ?>.</span>
+                        <span>With no in contract price rises.</span>
                     </div>
                 <?php endforeach; ?>
             </div>
