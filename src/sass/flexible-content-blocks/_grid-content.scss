@@ -1,5 +1,6 @@
 .grid-content {
   padding-top: 10rem;
+  padding-bottom: 0;
 
   &__link {
     display: flex;
@@ -39,7 +40,7 @@
   }
 
   &__grid {
-      margin: 4rem 0 2.5rem;
+      margin: 4rem 0 6rem;
       display: grid;
       // grid-template-columns: repeat(3, 1fr);
       gap: 2.5rem;

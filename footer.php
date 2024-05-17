@@ -56,7 +56,6 @@
         </div>
         <div class="footer__bottom">
             <p>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</p>
-            <p>Website designed and built by HewittMatthews</p>
         </div>
     </div>
 </footer>
