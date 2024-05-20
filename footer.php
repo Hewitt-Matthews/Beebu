@@ -55,7 +55,11 @@
             <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot-white.svg" />
         </div>
         <div class="footer__bottom">
-            <p>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</p>
+            <p>
+                <span>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</span>
+                <br>
+                <span>Beebu Telecom Limited is registered in England & Wales at: 1 Barnes Wallis Road, Fareham, Hampshire, UK PO15 5UA. Company no. 08043921. Please view our Privacy Policy for more information about how we protect and process the data you submit. Beebu Telecom Limited is authorised and regulated by the Financial Conduct Authority for certain types of consumer credit lending and credit related activities that are regulated under the Consumer Credit Act 1974 and by the Financial Services and Markets Act 2000. We are a broker not a lender (FCA Registered Number: ZA209021).</span>
+            </p>
         </div>
     </div>
 </footer>

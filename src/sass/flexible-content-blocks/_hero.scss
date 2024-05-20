@@ -1,3 +1,11 @@
+.home .hero {
+
+  @include max-screen(768px){
+    background-position: 75%;
+  }
+
+}
+
 .hero {
     padding: 6em 0 12em;
     // padding: 16em 0 12em;
