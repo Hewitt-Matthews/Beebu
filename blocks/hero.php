@@ -41,9 +41,9 @@ endif; ?>
       <p class="hero__copy"><?= $copy ?></p>
       
       <?php if ( $postcode_search ) : ?>
-        <form class="postcode-search">
-          <input class="postcode-search__input" type="text" placeholder="Enter Postcode" />
-          <button class="postcode-search__button" type="submit">Check your area</button>
+        <form class="postcode-search" method="POST" action="https://signup.beebu.co.uk/bb2/postcode?"> 
+          <input class="postcode-search__input" type="text" name="postcode" value="" placeholder="Enter your postcode"> 
+          <button class="postcode-search__button" button="" type="submit" name="submit">Check Availability</button>
         </form>
       <?php endif; ?>
 

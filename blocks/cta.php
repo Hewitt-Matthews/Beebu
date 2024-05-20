@@ -44,10 +44,10 @@ $section_padding = get_sub_field('section_padding');
                     <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
                   <?php endif; ?>
                 <?php elseif ($type == 'postcode'): ?>
-                    <form class="postcode-search">
-                        <input class="postcode-search__input" type="text" placeholder="Enter Postcode" />
-                        <button class="postcode-search__button" type="submit">Check your area</button>
-                    </form>
+                  <form class="postcode-search" method="POST" action="https://signup.beebu.co.uk/bb2/postcode?"> 
+                    <input class="postcode-search__input" type="text" name="postcode" value="" placeholder="Enter your postcode"> 
+                    <button class="postcode-search__button" button="" type="submit" name="submit">Check Availability</button>
+                  </form>
                 <?php endif; ?>
             </div>
         </div>
