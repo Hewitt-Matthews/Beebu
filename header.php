@@ -15,15 +15,6 @@
     <div class="wrapper">
         <div class="header__inner">
             <div class="header__logo">
-                <!-- <a href="/">
-                  <?php // 404, home, about, contact
-                  if ( is_404() || is_page('about') || is_page('contact') || is_home() || is_front_page() ) : ?>
-                    <img src="<?=get_template_directory_uri() ?>/assets/img/new-beebu-logo-white.png" />
-                  <?php else : ?>
-                    <img src="<?=get_template_directory_uri() ?>/assets/img/new-beebu-logo-black.png" />
-                  <?php endif; ?>
-                </a> -->
-
                 <?php 
                   $nav_img = get_field('header_nav_image');
                   if ( $nav_img ) { ?>
