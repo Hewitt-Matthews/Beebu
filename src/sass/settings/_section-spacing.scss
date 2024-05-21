@@ -20,6 +20,11 @@
             top: -186px;
             content: '';
             z-index: 1;
+
+            @media screen and (min-width: 1920px) {
+              height: 13vw;
+              background-size: cover !important;
+            }
         }
     }
 
@@ -70,4 +75,10 @@
             background-position: bottom center;
         }
     }
+}
+
+@media screen and (min-width: 1920px){
+  .footer.section--curved::before {
+    z-index: -1 !important;
+  }
 }
