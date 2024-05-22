@@ -1,6 +1,7 @@
 <?php
 
 $title = get_sub_field('title');
+$title_colour = get_sub_field('title_colour');
 $packages = get_sub_field('packages');
 $section_options_background_colour = get_sub_field('section_options_background_colour');
 $section_options_curved_section = get_sub_field('section_options_curved_section');
@@ -17,7 +18,7 @@ $next_year = date('Y', strtotime('+1 year'));
   ">
     <div class="wrapper">
         <div class="packages__inner">
-            <h2 class="packages__title"><?=$title ?></h2>
+            <h2 class="packages__title <?php if($title_colour) : ?><?= $title_colour ?><?php endif; ?>"><?=$title ?></h2>
             <div class="packages__grid">
                 <?php foreach ($packages as $package): ?>
                     <?php $degree = 0; 

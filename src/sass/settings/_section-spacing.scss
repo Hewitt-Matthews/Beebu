@@ -19,7 +19,7 @@
             background-position: bottom center;
             top: -186px;
             content: '';
-            z-index: 1;
+            z-index: 0;
 
             @media screen and (min-width: 1920px) {
               height: 13vw;
@@ -79,6 +79,6 @@
 
 @media screen and (min-width: 1920px){
   .footer.section--curved::before {
-    z-index: 0 !important;
+    z-index: -1 !important;
   }
 }
