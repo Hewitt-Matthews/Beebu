@@ -56,8 +56,8 @@ $blogPosts = new WP_Query( array (
 
     </div>
 
-    <?php include('flexible-content.php'); ?>
   </div>
 </div>
+<?php include('flexible-content.php'); ?>
 
 <?php get_footer(); ?>

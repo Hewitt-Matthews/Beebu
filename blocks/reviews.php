@@ -7,14 +7,14 @@ $button = get_sub_field('button');
 $section_options_background_colour = get_sub_field('section_options_background_colour');
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding');
-
+$remove_top_spacing = get_sub_field('remove_top_spacing');
 ?>
 
 <div class="reviews section
   <?php echo 'section--' . $section_options_background_colour; ?>
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
-  ">
+  " style=" <?php if ( $remove_top_spacing ) : echo 'margin-top: 0;'; endif; ?>">
     <div class="wrapper">
         <div class="reviews__inner">
             <h2 class="reviews__title"><?=$title ?></h2>
@@ -39,7 +39,7 @@ $section_padding = get_sub_field('section_padding');
                 <span>Excellent</span>
                 <div class="reviews__score">
                     <?php for ($i=0; $i < $rating; $i++): ?>
-                        <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
+                        <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star-green.svg" /></span>
                     <?php endfor; ?>
                 </div>
                 <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot.svg" />

@@ -67,4 +67,8 @@ endif; ?>
 
   </div>
 
+  <div class="hero-bg__seperate hide-desktop">
+    <?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : echo '<img src="' . $background_image['url'] . '">'; endif; ?>
+    </div>
+
 </div>

@@ -68,6 +68,10 @@
         align-items: center;
         gap: 2rem;
 
+        & .reviews__star {
+            background-color: $white;
+        }
+
         img {
             max-height: 45px;
             width: auto;

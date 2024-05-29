@@ -4,7 +4,7 @@
     <div class="wrapper">
         <div class="footer__inner">
             <div class="footer__col">
-                <p>Whilst we are building Beebu our Customer Services are available:</p>
+                <p>Our Customer Services are available:</p>
                 <ul>
                     <li>Monday - Friday</li>
                     <li>9:00am - 6:00pm</li>

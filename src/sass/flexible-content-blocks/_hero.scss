@@ -2,6 +2,8 @@
 
   @include max-screen(768px){
     background-position: 75%;
+    background: $green;
+    background-image: none !important;
   }
 
 }
@@ -35,6 +37,10 @@
 
     &__title {
         color: $white;
+
+        @include max-screen(389px) {
+          font-size: 1.9rem;
+        }
     }
 
     &__copy {

@@ -111,6 +111,8 @@ endif; ?>
 
                                         echo $th['c'];
 
+                                        echo '<span class="comparison__expand js-comparison__expand">&nbsp;</span>';
+
                                     echo '</h3>';
 
                                     echo '<ul>';

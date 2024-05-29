@@ -65,6 +65,26 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_6655f92600ccc",
+            "label": "Remove Top Spacing",
+            "name": "remove_top_spacing",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -85,5 +105,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710416134
+    "modified": 1716910489
 }

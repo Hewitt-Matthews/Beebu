@@ -65,6 +65,26 @@
 // Mobile Styles (Not table)
 .comparison {
 
+    &__expand{ 
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $black;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 2px;
+            height: 24px;
+            background: $black;
+        }
+    }
+
     &__grid {
         border-radius: 20px;
         overflow: hidden;
@@ -78,12 +98,42 @@
             border-bottom: 1px solid $black;
         }
 
+        &.open {
+            & .comparison__expand::before {
+                display: none;
+            }
+        }
+
         &.open ul {
              display: initial;
         }
 
+        &.beebu-table-el h3 {
+            display: block;
+
+            & span {
+                display: none;
+            }
+        }
+
         & h3 {
             margin: 1rem 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $green-light;
+                padding: 10px 0;
+                border-radius: 100px;
+                height: 44px;
+                width: auto;
+                aspect-ratio: 1 / 1;
+            }
         }
 
         & ul {
