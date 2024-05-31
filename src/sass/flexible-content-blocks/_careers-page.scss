@@ -36,6 +36,10 @@
         
       }
 
+      @include min-screen(1080px) {
+        width: 100%;
+      }
+
       @include max-screen(768px) {
         position: absolute;
         top: 25%;
