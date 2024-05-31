@@ -1,4 +1,4 @@
-$button-background: $brand;
+$button-background: $green-light;
 $button-text:       $black ;
 
 .button, .wp-block-button__link {
@@ -18,7 +18,7 @@ $button-text:       $black ;
 
   @include link-hover {
     background: transparent;
-    border: 1px solid $button-background;
+    border: 1px solid $brand;
     color: $brand;
   }
 }

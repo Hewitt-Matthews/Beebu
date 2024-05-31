@@ -35,8 +35,8 @@ $next_year = date('Y', strtotime('+1 year'));
                         </div>
                         <div class="packages__package-speed">
                             <span class="packages__package-large"><?=$package['speed'] ?></span>
-                            <span>mbps</span>
-                            <span class="packages__package-small">Upload and download speed</span>
+                            <span>Mbps</span>
+                            <span class="packages__package-small">Download and upload speed</span>
                         </div>
                         <h3 class="packages__package-title"><?=$package['title'] ?></h3>
                         <ul class="packages__package-specs">

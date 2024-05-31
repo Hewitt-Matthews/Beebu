@@ -2,8 +2,13 @@
 
   @include max-screen(768px){
     background-position: 75%;
-    background: $green;
-    background-image: none !important;
+    position: relative;
+  }
+
+  &__copy {
+    @include max-screen(768px) {
+      margin-bottom: 10rem;
+    }
   }
 
 }
@@ -16,13 +21,18 @@
     // height: 1080px;
     min-height: 100vh;
 
+    @include max-screen(768px){
+      display: flex;
+      align-items: center;
+    }
+
     &__flourish {
       background-image: url('../img/flourish.svg');
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
       // background-position: right top;
-      height: 200%;
+      height: 220%;
       // height: 100%;
       width: 100%;
       position: absolute;
@@ -84,11 +94,30 @@
     }
 }
 
+.page-id-538 .hero.flourish-hero {
+  // position: relative;
+
+  &::before {
+    content: '';
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    opacity: 0;
+
+    @include max-screen(768px) {
+      opacity: 0.4;
+    }
+  }
+}
+
 .error404 .hero {
   margin-bottom: -200px;
 }
 
-.page-id-595 {
+.page-id-595, .page-id-471{
   .hero {
     min-height: auto;
   }
@@ -109,4 +138,13 @@
 
    }
    
+}
+
+@media screen and (max-width: 768px){
+  .hero {
+
+    &__flourish {
+      height: 120%;
+    }
+  }
 }

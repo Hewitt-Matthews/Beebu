@@ -18,7 +18,7 @@
           <div class="single-post__content">
             <div class="button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
             <h1 class="single-post__title"><?php the_title(); ?></h1>
-            <p class="single-post__meta">Article by <span><?php echo get_the_author_meta('display_name', $author_id); ?></span> - <?php the_date(); ?></p>
+            <!-- <p class="single-post__meta">Article by <span><?php echo get_the_author_meta('display_name', $author_id); ?></span> - <?php the_date(); ?></p> -->
             <?php the_content() ;?>
             <?php /******************************************************************************************
              * Social Share

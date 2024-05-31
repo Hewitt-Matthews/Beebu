@@ -7,6 +7,7 @@ $(document).ready(function() {
     const html = document.querySelector("html");
     const hamburger = document.querySelector(".js-open-nav");
     const mobNavMenu = document.querySelector(".header__menu");
+    const headerLogo = document.querySelector(".header__logo");
     let isNavOpen = false;
 
     // Add navopen class to hamburger too
@@ -23,6 +24,7 @@ $(document).ready(function() {
             html.style.overflowY = 'hidden';
             mobNavMenu.classList.add('nav-open');
             hamburger.classList.add('nav-open');
+            headerLogo.classList.add('nav-open');
             setTimeout(() => {
               isNavOpen = true;
               },1)
@@ -33,6 +35,7 @@ $(document).ready(function() {
             html.style.overflowY = 'scroll';
             mobNavMenu.classList.remove('nav-open');
             hamburger.classList.remove('nav-open');
+            headerLogo.classList.remove('nav-open');
             setTimeout(() => {
               isNavOpen = false;
               },1)
