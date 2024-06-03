@@ -45,8 +45,12 @@
     font-weight: 700;
   }
 
+  .ginput_container.ginput_container_consent {
+    align-items: center;
+  }
+
   form .gform-body label a {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   form .gform-body input:not([type="checkbox"]) {

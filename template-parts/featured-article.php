@@ -31,10 +31,10 @@ $link = get_the_permalink($featured_article); ?>
           <?php if ( $title ) : ?>
             <h3><?= $title ?></h3>
           <?php endif; ?>
-
+<!-- 
           <?php if ( $date ) : ?>
             <p class="date"><strong><?= $date ?></strong></p>
-          <?php endif; ?>
+          <?php endif; ?> -->
 
           <?php if ( $copy ) : ?>
             <p><?= $copy ?></p>

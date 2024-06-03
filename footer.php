@@ -7,7 +7,7 @@
                 <p>Our Customer Services are available:</p>
                 <ul>
                     <li>Monday - Friday</li>
-                    <li>9:00am - 6:00pm</li>
+                    <li>9:00am - 5:00pm</li>
                 </ul>
                 <?php if(get_field('email_address', 'option')): ?>
                     <a class="footer__email" href="mailto:<?=get_field('email_address', 'option') ?>"><?=get_field('email_address', 'option') ?></a>
