@@ -22,10 +22,21 @@
         }
     }
 
+    &__locations {
+        @include min-screen(769px) {
+            z-index: 10;
+        }
+    }
+
     &__map {
         position: relative;
         width: 150%;
         right: 25%;
+
+        @include max-screen(1660px) {
+            width: 120%;
+            right: 15%;
+        }
 
         @include max-screen(1100px) {
             // left: -30%;

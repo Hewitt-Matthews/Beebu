@@ -1,7 +1,7 @@
 .grid-content {
   // padding-top: 10rem;
   // padding-bottom: 0;
-  padding-top: 0;
+  padding-top: 1rem;
   padding-bottom: 10rem;
 
   &__link {
@@ -71,6 +71,7 @@
       padding: 2.5rem;
       background: #F6F4F2;
       border-radius: 1.5rem;
+      width: 100%;
 
       @include max-screen(768px){
         justify-content: space-between;
@@ -109,4 +110,8 @@
 .page-id-482 .grid-content {
   padding-top: 0rem;
   margin-top: -17rem;
+}
+
+.section--off-white .grid-content__block {
+  background-color: $white;
 }

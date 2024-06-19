@@ -37,7 +37,7 @@
         background: $green;
 
         &.section--curved:before {
-            background: url('../img/green-oval.svg');
+            background: url('../img/green-oval-new.svg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom center;
@@ -94,7 +94,7 @@
   }
 
   .footer.section--curved {
-    margin-top: 20em;
+    margin-top: 20em;;
   }
   .footer.section--curved::before {
     top: calc(-13vw + 1px);
