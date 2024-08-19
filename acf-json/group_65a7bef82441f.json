@@ -69,6 +69,88 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_66c3377562a72",
+            "label": "Mobile Image",
+            "name": "mobile_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "background-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "flourish"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_66c3396331c26",
+            "label": "Mobile Background Colour",
+            "name": "mobile_background_colour",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "background-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65f45768d64b2",
+                        "operator": "==",
+                        "value": "flourish"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "White",
+                "off-white": "Off White",
+                "green": "Green",
+                "dark": "Dark"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_65a7bef8c946b",
             "label": "Title",
             "name": "title",
@@ -211,5 +293,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710752163
+    "modified": 1724070351
 }

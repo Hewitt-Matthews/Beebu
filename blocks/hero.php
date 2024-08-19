@@ -24,10 +24,29 @@ else :
   $background_image = get_sub_field('background_image');
   $add_page_button = get_sub_field('add_page_button');
   $button = $add_page_button ? get_sub_field('button') : '';
+  $mobile_image = get_sub_field('mobile_image');
+  $mobile_background_colour = get_sub_field('mobile_background_colour');
 
+  var_dump($mobile_background_colour);
 endif; ?>
 
+<!-- <style>
+
+.hero {
+  
+}
+
+</style> -->
+
+
+
 <div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>" style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : echo 'background-image: url(' . $background_image['url'] .')'; endif; ?>">
+
+<?php if ( $mobile_image ) : ?>
+  <script>
+  document.querySelector('.hero').classList.add('section--<?= $mobile_background_colour ?>')
+  </script>
+<?php endif; ?>
 
   <?php if ( $hero_type === 'flourish' ) : ?>
     <div class="hero__flourish"></div>
@@ -35,7 +54,11 @@ endif; ?>
 
   <div class="wrapper">
 
-    <div class="hero__inner">
+      <div class="hero__inner">
+
+      <div class="hero__mobile-image hide-desktop">
+        <img src="<?= $mobile_image['url'] ?>" alt="">
+      </div>
 
       <h1 class="hero__title"><?= $title ?></h1>
       <p class="hero__copy"><?= $copy ?></p>

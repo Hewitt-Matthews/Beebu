@@ -5,11 +5,11 @@
     position: relative;
   }
 
-  &__copy {
-    @include max-screen(768px) {
-      margin-bottom: 10rem;
-    }
-  }
+  // &__copy {
+  //   @include max-screen(768px) {
+  //     margin-bottom: 10rem;
+  //   }
+  // }
 
 }
 
@@ -24,6 +24,7 @@
     @include max-screen(768px){
       display: flex;
       align-items: center;
+      // background-image: none !important;
     }
 
     &__flourish {
@@ -43,6 +44,10 @@
     &__inner {
         max-width: 700px;
         padding: 100px 0px 160px 0px;
+    }
+
+    &__mobile-image {
+      margin-bottom: 5rem;
     }
 
     &__title {
