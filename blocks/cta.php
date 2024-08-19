@@ -4,6 +4,8 @@ $type = 'postcode';
 if(get_sub_field('cta_type')) {
     $type = 'button';
 }
+$remove_line = get_sub_field('remove_line');
+
 
 $flourish = get_sub_field('show_background_flourish');
 $flourish_colour = $flourish ? get_sub_field('flourish_colour') : null;
@@ -49,7 +51,7 @@ $background_position_x = get_sub_field('background_position_x');
         <?php endif; ?>
             <div class="cta__inner">
                 <h2 class="cta__title"><?=$title ?></h2>
-                <?php if($type == 'button'): ?>
+                <?php if($type == 'button' && $remove_line == false): ?>
                     <hr class="cta__rule" />
                 <?php endif; ?>
                     <p class="cta__copy"><?=$copy ?></p>

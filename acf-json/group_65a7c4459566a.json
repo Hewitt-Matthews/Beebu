@@ -23,6 +23,34 @@
             "ui": 1
         },
         {
+            "key": "field_66c333c431931",
+            "label": "Remove Line",
+            "name": "remove_line",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65a7c459145c3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_65a7c486145c4",
             "label": "Background Image",
             "name": "background_image",
@@ -199,5 +227,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724066628
+    "modified": 1724068846
 }
