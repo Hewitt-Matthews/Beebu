@@ -48,6 +48,35 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_66c323dfa6827",
+            "label": "Background Position (X Axis)",
+            "name": "background_position_x",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Mobile only. <br>\r\n50% Will place the image in the centre.\r\n0% Will align the image to the left edge.\r\n100% Will align the image to the right edge.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65a7c486145c4",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
             "key": "field_65a7c4ab145c6",
             "label": "Show Background Flourish",
             "name": "show_background_flourish",
@@ -61,39 +90,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "If checked this will add an 'e' logo to the background of this call to action",
+            "message": "If checked this will add a green 'e' logo to the background of this call to action",
             "default_value": 1,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_65f42d977148c",
-            "label": "Flourish Colour",
-            "name": "flourish_colour",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65a7c4ab145c6",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Green",
-            "ui_off_text": "Clear",
-            "ui": 1
         },
         {
             "key": "field_65c24ac7c10a9",
@@ -198,5 +199,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710501336
+    "modified": 1724066628
 }

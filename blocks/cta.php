@@ -14,8 +14,22 @@ $copy = get_sub_field('copy');
 $section_options_background_colour = get_sub_field('section_options_background_colour');
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding');
-
+$background_position_x = get_sub_field('background_position_x');
 ?>
+
+<!-- Background Image Position - Mobile Only -->
+<?php if($background_position_x): ?>
+<style>
+  @media screen and (max-width: 1024px) {
+
+    .ctacontainer .cta {
+      background-position-x: <?= $background_position_x ?>% !important;
+    }
+
+  }
+</style>
+<?php endif; ?>
+
 <div class="ctacontainer section
   <?php echo 'section--' . $section_options_background_colour; ?>
   <?php if ( $section_options_curved_section ) : echo 'section--curved'; endif; ?>
