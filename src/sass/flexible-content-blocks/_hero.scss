@@ -68,7 +68,7 @@
         padding: 100px 0px 160px 0px;
     }
 
-    &__title {
+    & h1 {
         color: $white;
 
         @include max-screen(768px) {
