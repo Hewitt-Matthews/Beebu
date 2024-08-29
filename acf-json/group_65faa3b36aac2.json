@@ -126,6 +126,40 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_65faa3d86b0c4"
+                },
+                {
+                    "key": "field_66d030a156727",
+                    "label": "Region",
+                    "name": "region",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "north-east": "North East",
+                        "north-west": "North West",
+                        "yorkshire": "Yorkshire",
+                        "east-midlands": "East Midlands",
+                        "west-midlands": "West Midlands",
+                        "london": "London",
+                        "south-east": "South East",
+                        "east": "East",
+                        "south-west": "South West",
+                        "midlands": "Midlands"
+                    },
+                    "default_value": "",
+                    "return_format": "array",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_65faa3d86b0c4"
                 }
             ]
         }
@@ -148,5 +182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710924849
+    "modified": 1724927934
 }

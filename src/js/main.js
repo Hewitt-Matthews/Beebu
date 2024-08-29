@@ -236,7 +236,30 @@ $(document).ready(function() {
         });
 
 
-      })
+      });
+
+      // Map accordion
+      document.querySelectorAll('.map-accordion').forEach((accordion) => {
+        const header = accordion.querySelector('.map-accordion__header');
+        const inner = accordion.querySelector('.map-accordion__inner');
+    
+        header.addEventListener('click', () => {
+            // Toggle the 'open' class on the clicked accordion
+            accordion.classList.toggle('open');
+    
+            // If the accordion is open, set the max-height of inner to its scrollHeight
+            if (accordion.classList.contains('open')) {
+                inner.style.maxHeight = inner.scrollHeight + 'px';
+            } else {
+                // If not open, set the max-height to 0
+                inner.style.maxHeight = '0';
+            }
+        });
+    
+        // Optionally, you can set initial max-height to 0 for better initial collapse
+        inner.style.maxHeight = '0';
+    });
+    
 
     }
     

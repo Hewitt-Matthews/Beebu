@@ -59,29 +59,80 @@
         }
     }
 
-    & .locations__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-        width: 80%;
+    & .map-accordion {
+        background-color: $off-white;
+        padding: 2rem;
+        border-radius: 24px;
 
-        @include max-screen(768px) {
-            grid-template-columns: 1fr;
-            width: 100%;
+        &.open {
+
+            & .map-accordion__header {
+                margin-bottom: 1rem;
+            }
+
+            & svg line:first-of-type {
+                opacity: 0;
+            }
         }
 
-        & .area-name {
-            background-color: $off-white;
-            border-bottom: 5px solid $green;
-            padding: 1rem;
-            font-weight: 600;
+        & h3 {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             cursor: pointer;
             transition: all .3s ease;
+        }
 
-            &:hover {
-                background-color: $green;
-                border-color: $off-black;
+        &__icon {
+            background-color: $green;
+            border-radius: 200px;
+            height: 44px;
+            width: 44px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & svg line:first-of-type {
+                transition: opacity .3s ease;
             }
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 1rem 2rem;
+            
+            max-height: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+
+            @include max-screen(768px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    & .area-name {
+        border-bottom: 4px solid $green;
+        padding-bottom: 4px;
+        width: fit-content;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            border-color: $off-black;
         }
     }
 }
