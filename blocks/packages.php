@@ -44,7 +44,7 @@ $next_year = date('Y', strtotime('+1 year'));
                                 <li class="packages__package-spec"><?=$spec['spec'] ?></li>
                             <?php endforeach; ?>
                         </ul>
-                        <a href="" class="button button--black packages__package-button"><small>From </small><?=$package['price'] ?></a>
+                        <a href="https://signup.beebu.co.uk/signup/postcode" target="_blank" class="button button--black packages__package-button"><small>From </small><?=$package['price'] ?></a>
                         <span><?=$package['contract_length'] ?></span>
                         <span>*Based on location</span>
                         <span>With no in contract price rises.</span>
