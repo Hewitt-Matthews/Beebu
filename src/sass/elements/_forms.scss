@@ -19,3 +19,33 @@ textarea {
 select {
 
 }
+
+#mc_embed_signup {
+  @include max-screen($menu-mobile-breakpoint) {
+    width: auto !important;
+  }
+  .mc-field-group {
+    input, select {
+      background-color: $off-white;
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0.7rem 0 !important;
+    }
+    select {
+      border-right: 0.7rem solid $off-white;
+    }
+    .datefield {
+      input {
+        background: none;
+    }
+  }
+}
+#mc-embedded-subscribe {
+  font-size: 1.5em ;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 1rem 0;
+}
+}
