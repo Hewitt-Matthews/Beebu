@@ -6,6 +6,8 @@ if(get_sub_field('cta_type')) {
 }
 $remove_line = get_sub_field('remove_line');
 
+// Add this new line to get the custom availability check URL
+$availability_check_url = get_sub_field('availability_check_url') ?: 'https://signup.beebu.co.uk/bb2/postcode?';
 
 $flourish = get_sub_field('show_background_flourish');
 $flourish_colour = $flourish ? get_sub_field('flourish_colour') : null;
@@ -60,9 +62,9 @@ $background_position_x = get_sub_field('background_position_x');
                     <a href="<?=$button['url'] ?>" class="button"><?=$button['title'] ?></a>
                   <?php endif; ?>
                 <?php elseif ($type == 'postcode'): ?>
-                  <form class="postcode-search" method="POST" action="https://signup.beebu.co.uk/bb2/postcode?"> 
+                  <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="" placeholder="Enter your postcode"> 
-                    <button class="postcode-search__button" button="" type="submit" name="submit">Check Availability</button>
+                    <button class="postcode-search__button" type="submit">Check Availability</button>
                   </form>
                 <?php endif; ?>
             </div>

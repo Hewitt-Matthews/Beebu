@@ -169,6 +169,22 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_66eacb0d8b054",
+            "label": "Availability Check URL",
+            "name": "availability_check_url",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
             "key": "field_65f467f0fb2d2",
             "label": "Add Trustpilot",
             "name": "add_trustpilot",
@@ -251,5 +267,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724229394
+    "modified": 1726663498
 }

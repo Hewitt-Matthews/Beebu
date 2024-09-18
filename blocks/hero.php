@@ -26,6 +26,7 @@ else :
   $button = $add_page_button ? get_sub_field('button') : '';
   $mobile_image = get_sub_field('mobile_image');
   $mobile_background_colour = get_sub_field('mobile_background_colour');
+  $availability_check_url = get_sub_field('availability_check_url') ?: 'https://signup.beebu.co.uk/bb2/postcode?';
 
 endif; ?>
 
@@ -48,9 +49,9 @@ endif; ?>
       <p class="hero__copy"><?= $copy ?></p>
       
       <?php if ( $postcode_search ) : ?>
-        <form class="postcode-search" method="POST" action="https://signup.beebu.co.uk/bb2/postcode?"> 
+        <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
           <input class="postcode-search__input" type="text" name="postcode" value="" placeholder="Enter your postcode"> 
-          <button class="postcode-search__button" button="" type="submit" name="submit">Check Availability</button>
+          <button class="postcode-search__button" type="submit">Check Availability</button>
         </form>
       <?php endif; ?>
 
