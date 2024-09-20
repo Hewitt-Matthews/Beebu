@@ -48,12 +48,12 @@ endif; ?>
       <h1 class="hero__title"><?= $title ?></h1>
       <p class="hero__copy"><?= $copy ?></p>
       
-      <?php if ( $postcode_search ) : ?>
-        <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
-          <input class="postcode-search__input" type="text" name="postcode" value="" placeholder="Enter your postcode"> 
-          <button class="postcode-search__button" type="submit">Check Availability</button>
-        </form>
-      <?php endif; ?>
+      <?php elseif ($type == 'postcode'): ?>
+        <form class="postcode-search" method="POST" action="<?php echo esc_url($availability_check_url); ?>" onsubmit="return handlePostcodeSubmit(this);"> 
+          <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
+            <button class="postcode-search__button" type="submit">Check Availability</button>
+         </form>
+       <?php endif; ?>
 
       <?php if ( $add_page_button ) : ?>
         <a href="<?=$button['url'] ?>" class="button <?php if ( $hero_type === 'flourish' ) : ?> button--black <?php endif; ?>"><?=$button['title'] ?></a>
