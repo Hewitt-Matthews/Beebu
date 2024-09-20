@@ -49,7 +49,7 @@ endif; ?>
       <p class="hero__copy"><?= $copy ?></p>
       
       <?php if ($postcode_search): ?>
-        <form class="postcode-search" method="POST" action="<?php echo esc_url($availability_check_url); ?>" onsubmit="return handlePostcodeSubmit(this);"> 
+        <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>" onsubmit="return handlePostcodeSubmit(this);"> 
           <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
             <button class="postcode-search__button" type="submit">Check Availability</button>
          </form>
