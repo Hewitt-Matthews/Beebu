@@ -26,7 +26,7 @@ else :
   $button = $add_page_button ? get_sub_field('button') : '';
   $mobile_image = get_sub_field('mobile_image');
   $mobile_background_colour = get_sub_field('mobile_background_colour');
-  $availability_check_url = get_sub_field('availability_check_url') ?: 'https://signup.beebu.co.uk/bb2/postcode?';
+  $availability_check_url = get_sub_field('availability_check_url');
 
 endif; ?>
 
