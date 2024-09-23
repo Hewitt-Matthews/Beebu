@@ -32,7 +32,7 @@ endif; ?>
 
 
 <div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>" 
-     style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : ?>background-image: url('<?= esc_url($background_image['url']) ?>');<?php endif; ?>">
+     style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : ?>background-image: url('<?= esc_url($background_image['url']) ?>') !important;<?php endif; ?>">
 
   <?php if ( $hero_type === 'flourish' ) : ?>
     <div class="hero__flourish"></div>
