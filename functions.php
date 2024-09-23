@@ -299,4 +299,14 @@ function acf_load_form_select_choices( $field ) {
   return $field;
   
 }
-add_filter('acf/load_field/name=form', 'acf_load_form_select_choices'); ?>
+add_filter('acf/load_field/name=form', 'acf_load_form_select_choices');
+
+// Add custom classes to all menu items
+function add_custom_class_to_all_menu_items($item_output, $item, $depth, $args) {
+    $custom_class = 'your-custom-class'; // Replace with your desired class
+    $item_output = str_replace('<a', '<a class="' . esc_attr($custom_class) . '"', $item_output);
+    return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'add_custom_class_to_all_menu_items', 10, 4);
+
+?>
