@@ -2,7 +2,7 @@
 
 require 'includes/hm-core-functions.php';
 
-// Define theme version number so we can force use updated scripts/styles
+//Define theme version number so we can force use updated scripts/styles
 $theme = wp_get_theme();
 define('THEME_VERSION', $theme->Version);
 
@@ -49,7 +49,9 @@ if( function_exists('acf_add_options_page') ) {
  * Numbered Pagination
  ******************************************************************************************/
 if ( !function_exists( 'custom_pagination' ) ) {
+
     function custom_pagination() {
+
         $prev_arrow = is_rtl() ? '→' : '←';
         $next_arrow = is_rtl() ? '←' : '→';
 
@@ -76,6 +78,7 @@ if ( !function_exists( 'custom_pagination' ) ) {
             ) );
         }
     }
+
 }
 
 /******************************************************************************************
@@ -143,45 +146,56 @@ add_action( 'init', 'register_my_menus' );
  * Posts - Filter Articles
  ******************************************************************************************/
 function filter_articles_by_category() {
-    $category = $_POST['category'];
 
-    $args = array(
-        'post_type'      => 'post',
-        'category_name'  => $category,
-        'tax_query'     => array(
-            array(
-                'taxonomy' => 'post-type',
-                'field'    => 'slug',
-                'terms'    => 'articles'
-            )
-        ),
-        'posts_per_page' => 4,
-    );
+  $category = $_POST['category'];
 
-    $post_query = new WP_Query($args);
+  $args = array(
+    'post_type'      => 'post',
+    'category_name'  => $category,
+    'tax_query'     => array(
+      array(
+        'taxonomy' => 'post-type',
+        'field'    => 'slug',
+        'terms'    => 'articles'
+      )
+    ),
+    'posts_per_page' => 4,
+  );
 
-    if ($post_query->have_posts()) {
-        echo '<ul>';
-        while ($post_query->have_posts()) : $post_query->the_post(); ?>
-            <li>
-                <a href="<?php the_permalink(); ?>">
-                    <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
-                    <h3 class="article-card__title"><?php the_title(); ?></h3>
-                    <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
-                </a>
-            </li>
-        <?php endwhile; wp_reset_postdata();
-        echo '</ul>';
-        echo paginate_links(array(
-            'base' => '/articles/%_%',
-            'current' => max(1, get_query_var('paged')),
-            'total' => $post_query->max_num_pages
-        ));
-    } else {
-        echo '<p>No posts found.</p>';
-    }
-    wp_die();
+  $post_query = new WP_Query($args);
+
+  if ($post_query->have_posts()) {
+
+    echo '<ul>';
+
+    while ($post_query->have_posts()) : $post_query->the_post(); ?>
+
+      <li>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+          <h3 class="article-card__title"><?php the_title(); ?></h3>
+          <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
+        </a>
+
+      </li>
+
+    <?php endwhile; wp_reset_postdata();
+
+    echo '</ul>';
+
+    echo paginate_links(array(
+      'base' => '/articles/%_%',
+      'current' => max(1, get_query_var('paged')),
+      'total' => $post_query->max_num_pages
+    ));
+
+  } else {
+    echo '<p>No posts found.</p>';
+  }
+
+  wp_die();
 }
 add_action('wp_ajax_filter_articles_by_category', 'filter_articles_by_category');
 add_action('wp_ajax_nopriv_filter_articles_by_category', 'filter_articles_by_category');
@@ -190,45 +204,56 @@ add_action('wp_ajax_nopriv_filter_articles_by_category', 'filter_articles_by_cat
  * Posts - Filter Guides
  ******************************************************************************************/
 function filter_guides_by_category() {
-    $category = $_POST['category'];
 
-    $args = array(
-        'post_type'      => 'post',
-        'category_name'  => $category,
-        'tax_query'     => array(
-            array(
-                'taxonomy' => 'post-type',
-                'field'    => 'slug',
-                'terms'    => 'guides'
-            )
-        ),
-        'posts_per_page' => 4,
-    );
+  $category = $_POST['category'];
 
-    $post_query = new WP_Query($args);
+  $args = array(
+    'post_type'      => 'post',
+    'category_name'  => $category,
+    'tax_query'     => array(
+      array(
+        'taxonomy' => 'post-type',
+        'field'    => 'slug',
+        'terms'    => 'guides'
+      )
+    ),
+    'posts_per_page' => 4,
+  );
 
-    if ($post_query->have_posts()) {
-        echo '<ul>';
-        while ($post_query->have_posts()) : $post_query->the_post(); ?>
-            <li>
-                <a href="<?php the_permalink(); ?>">
-                    <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
-                    <h3 class="article-card__title"><?php the_title(); ?></h3>
-                    <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
-                </a>
-            </li>
-        <?php endwhile; wp_reset_postdata();
-        echo '</ul>';
-        echo paginate_links(array(
-            'base' => '/guides/%_%',
-            'current' => max(1, get_query_var('paged')),
-            'total' => $post_query->max_num_pages
-        ));
-    } else {
-        echo '<p>No posts found.</p>';
-    }
-    wp_die();
+  $post_query = new WP_Query($args);
+
+  if ($post_query->have_posts()) {
+
+    echo '<ul>';
+
+    while ($post_query->have_posts()) : $post_query->the_post(); ?>
+
+      <li>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="article-card__tag button button--small"><?php echo get_the_category()[0]->cat_name; ?></div>
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+          <h3 class="article-card__title"><?php the_title(); ?></h3>
+          <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
+        </a>
+
+      </li>
+
+    <?php endwhile; wp_reset_postdata();
+
+    echo '</ul>';
+
+    echo paginate_links(array(
+      'base' => '/guides/%_%',
+      'current' => max(1, get_query_var('paged')),
+      'total' => $post_query->max_num_pages
+    ));
+
+  } else {
+    echo '<p>No posts found.</p>';
+  }
+
+  wp_die();
 }
 add_action('wp_ajax_filter_guides_by_category', 'filter_guides_by_category');
 add_action('wp_ajax_nopriv_filter_guides_by_category', 'filter_guides_by_category'); 
@@ -237,61 +262,41 @@ add_action('wp_ajax_nopriv_filter_guides_by_category', 'filter_guides_by_categor
  * Form Options - ACF Gravity Form Select
  ******************************************************************************************/
 function acf_load_form_select_choices( $field ) {
-    // Reset choices
-    $field['choices'] = array();
+    
+  // Reset choices
+  $field['choices'] = array();
 
-    // Make sure Gravity Forms is active
-    if (class_exists('GFForms')) {
-        // Get a list of forms
-        $forms = GFAPI::get_forms();
+  // Make sure Gravity Forms is active
+  if (class_exists('GFForms')) {
 
-        // Check if there are forms available
-        if (!empty($forms)) {
-            if( is_array($forms) ) {
-                foreach( $forms as $form ) {
-                    $field['choices'][ $form['id'] ] = $form['title'];
-                }
-            }
-        } else {
-            echo 'No forms found.';
+    // Get a list of forms
+    $forms = GFAPI::get_forms();
+
+    // Check if there are forms available
+    if (!empty($forms)) {
+
+      if( is_array($forms) ) {
+      
+        foreach( $forms as $form ) {
+
+          // Exclude forms with IDs 4, 5, and 6
+          // if ($form['id'] !== 4 && $form['id'] !== 5 && $form['id'] !== 6) {
+            $field['choices'][ $form['id'] ] = $form['title'];
+          // }
+            
         }
+        
+      }
     } else {
-        echo 'Gravity Forms is not active.';
+      echo 'No forms found.';
     }
 
-    // Return the field
-    return $field;
+  } else {
+    echo 'Gravity Forms is not active.';
+  }
+
+  // Return the field
+  return $field;
+  
 }
-add_filter('acf/load_field/name=form', 'acf_load_form_select_choices');
-
-// Add Customizer settings for menu item classes
-function customize_register($wp_customize) {
-    $wp_customize->add_section('menu_item_classes', array(
-        'title' => __('Menu Item Classes', 'beebu'),
-        'priority' => 30,
-    ));
-
-    $wp_customize->add_setting('menu_item_class', array(
-        'default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-
-    $wp_customize->add_control('menu_item_class', array(
-        'label' => __('Custom Class for Menu Items', 'your-textdomain'),
-        'section' => 'menu_item_classes',
-        'type' => 'text',
-    ));
-}
-add_action('customize_register', 'customize_register');
-
-// Add custom classes to all menu items
-function add_custom_class_to_all_menu_items($item_output, $item, $depth, $args) {
-    $custom_class = get_theme_mod('menu_item_class', ''); // Get the custom class from Customizer
-    if (!empty($custom_class)) {
-        $item_output = str_replace('<a', '<a class="' . esc_attr($custom_class) . '"', $item_output);
-    }
-    return $item_output;
-}
-add_filter('walker_nav_menu_start_el', 'add_custom_class_to_all_menu_items', 10, 4);
-
-?>
+add_filter('acf/load_field/name=form', 'acf_load_form_select_choices'); ?>
