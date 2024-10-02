@@ -276,16 +276,3 @@ $(document).ready(function() {
   
 
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all postcode search forms
-    const postcodeForms = document.querySelectorAll('.postcode-search');
-
-    postcodeForms.forEach(form => {
-        form.addEventListener('submit', function(event) {
-            const postcodeInput = form.querySelector('.postcode-search__input');
-            postcodeInput.value = postcodeInput.value.trim(); // Trim spaces
-            postcodeInput.value = encodeURIComponent(postcodeInput.value); // Encode spaces
-        });
-    });
-});
