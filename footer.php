@@ -33,6 +33,11 @@
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     <?php endif; ?>
+                    <?php if(get_field('tiktok_url', 'option')): ?>
+                        <a href="<?=get_field('tiktok_url', 'option') ?>" class="footer__social">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="footer__col">
