@@ -35,50 +35,118 @@ endif; ?>
 <div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>" 
      style="<?php if ( $hero_type === 'background-image' || $hero_type === 'flourish' ) : ?>background-image: url('<?= esc_url($background_image['url']) ?>');<?php endif; ?>">
 
-  <?php if ( $hero_type === 'flourish' ) : ?>
-    <div class="hero__flourish"></div>
-  <?php endif; ?>
+  <div class="wrapper hero-slider">
+    <div class="slick-slider">
+      <?php if ( $hero_type === 'flourish' ) : ?>
+        <div class="hero__flourish"></div>
+      <?php endif; ?>
 
-  <div class="wrapper">
+      <div class="wrapper">
+        <div class="hero__inner">
+        
+            <div class="hero__mobile-image hide-desktop">
+              <img src="<?= esc_url($mobile_image['url']) ?>" alt="Mobile Image">
+            </div>
 
-      <div class="hero__inner">
+          <h1 class="hero__title"><?= $title ?></h1>
+          <p class="hero__copy"><?= $copy ?></p>
+          
+          <?php if ($postcode_search): ?>
+            <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
+              <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
+              <button class="postcode-search__button" type="submit">Check Availability</button>
+            </form>
+          <?php endif; ?>
 
-      <div class="hero__mobile-image hide-desktop">
-        <img src="<?= $mobile_image['url'] ?>" alt="">
+          <?php if ( $additional_text_below_the_postcode_search ): ?>
+            <p class="hero__text-below-postcode"><?= $additional_text_below_the_postcode_search ?></p>
+          <?php endif; ?>
+
+          <?php if ( $add_page_button ) : ?>
+            <a href="<?=$button['url'] ?>" class="button <?php if ( $hero_type === 'flourish' ) : ?> button--black <?php endif; ?>"><?=$button['title'] ?></a>
+          <?php endif; ?>
+
+          <?php if ( $trustpilot ) : ?>
+            <div class="hero__trustpilot">
+              <span>Excellent</span>
+              <div class="reviews__score">
+                <?php for ($i=0; $i < $rating; $i++): ?>
+                  <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
+                <?php endfor; ?>
+              </div>
+              <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot-white.svg" />
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
 
-      <h1 class="hero__title"><?= $title ?></h1>
-      <p class="hero__copy"><?= $copy ?></p>
-      
-      <?php if ($postcode_search): ?>
-        <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
-          <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
-            <button class="postcode-search__button" type="submit">Check Availability</button>
-         </form>
-       <?php endif; ?>
-
-       <?php if ( $additional_text_below_the_postcode_search ): ?>
-        <p class="hero__text-below-postcode"><?= $additional_text_below_the_postcode_search ?></p>
-       <?php endif; ?>
-
-      <?php if ( $add_page_button ) : ?>
-        <a href="<?=$button['url'] ?>" class="button <?php if ( $hero_type === 'flourish' ) : ?> button--black <?php endif; ?>"><?=$button['title'] ?></a>
-      <?php endif; ?>
-
-      <?php if ( $trustpilot ) : ?>
-        <div class="hero__trustpilot">
-          <span>Excellent</span>
-          <div class="reviews__score">
-            <?php for ($i=0; $i < $rating; $i++): ?>
-                <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
-            <?php endfor; ?>
-          </div>
-          <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot-white.svg" />
+      <!-- Additional Slides -->
+      <div class="wrapper">
+        <div class="hero__inner">
+          <h1 class="hero__title">Slide 2 Title</h1>
+          <p class="hero__copy">This is the content for slide 2.</p>
         </div>
-      <?php endif; ?>
-        
+      </div>
+
+      <div class="wrapper">
+        <div class="hero__inner">
+          <h1 class="hero__title">Slide 3 Title</h1>
+          <p class="hero__copy">This is the content for slide 3.</p>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="hero__inner">
+          <h1 class="hero__title">Slide 4 Title</h1>
+          <p class="hero__copy">This is the content for slide 4.</p>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="hero__inner">
+          <h1 class="hero__title">Slide 5 Title</h1>
+          <p class="hero__copy">This is the content for slide 5.</p>
+        </div>
+      </div>
+
     </div>
-
   </div>
-
 </div>
+
+<!-- Include Slick CSS and JS from CDN -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.slick-slider').slick({
+      dots: true, // Show dots for navigation
+      arrows: false, // Hide arrows
+      infinite: true, // Infinite looping
+      speed: 500, // Transition speed
+      slidesToShow: 1, // Number of slides to show
+      slidesToScroll: 1, // Number of slides to scroll
+      autoplay: true, // Enable autoplay
+      autoplaySpeed: 3000, // Time between slides (in milliseconds)
+      pauseOnHover: true, // Pause autoplay on hover
+      responsive: [
+        {
+          breakpoint: 768, // Tablet
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480, // Mobile
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
