@@ -90,6 +90,12 @@
         }
     }
 
+    &__text-below-postcode {
+      position: relative;
+      color: $white; 
+      margin-top: 24px;
+    }
+
     &__trustpilot {
         margin-top: 3rem;
         max-width: 600px;

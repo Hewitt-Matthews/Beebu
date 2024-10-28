@@ -27,6 +27,7 @@ else :
   $mobile_image = get_sub_field('mobile_image');
   $mobile_background_colour = get_sub_field('mobile_background_colour');
   $availability_check_url = get_sub_field('availability_check_url');
+  $additional_text_below_the_postcode_search = get_sub_field('additional_text_below_the_postcode_search');
 
 endif; ?>
 
@@ -54,6 +55,10 @@ endif; ?>
           <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
             <button class="postcode-search__button" type="submit">Check Availability</button>
          </form>
+       <?php endif; ?>
+
+       <?php if ( $additional_text_below_the_postcode_search ): ?>
+        <p class="hero__text-below-postcode"><?= $additional_text_below_the_postcode_search ?></p>
        <?php endif; ?>
 
       <?php if ( $add_page_button ) : ?>
