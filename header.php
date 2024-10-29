@@ -65,8 +65,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 </button>
                 <!-- <div class="main-menu"> -->
-                <div class="header__menu">
-                    <?php wp_nav_menu( array('theme_location' => 'main-navigation') ); ?>
+                <div class="header__menu <?php echo get_field('black_links', 'option') ? 'black-links' : ''; ?>">
+                    <?php 
+                    wp_nav_menu( array('theme_location' => 'main-navigation') ); 
+                    ?>
                 </div>
             </nav>
         </div>
