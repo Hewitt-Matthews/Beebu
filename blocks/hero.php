@@ -132,7 +132,6 @@ endif; ?>
 
 <script>
 jQuery(document).ready(function($) {
-    // Initialize both sliders independently
     function initSliders() {
         // Desktop Slider
         if (!$('.desktop-slider').hasClass('slick-initialized')) {
@@ -147,7 +146,6 @@ jQuery(document).ready(function($) {
                 autoplay: true,
                 autoplaySpeed: 3000
             });
-            console.log('Desktop slider initialized');
         }
 
         // Mobile Slider
@@ -163,26 +161,25 @@ jQuery(document).ready(function($) {
                 autoplay: true,
                 autoplaySpeed: 3000
             });
-            console.log('Mobile slider initialized');
         }
     }
 
     // Initialize on page load
     initSliders();
 
-    // Handle resize
-    var resizeTimer;
+    // Handle resize with debounce
+    let resizeTimer;
     $(window).on('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            // Destroy both sliders
+            // Destroy existing sliders
             if ($('.desktop-slider').hasClass('slick-initialized')) {
                 $('.desktop-slider').slick('unslick');
             }
             if ($('.mobile-slider').hasClass('slick-initialized')) {
                 $('.mobile-slider').slick('unslick');
             }
-            // Reinitialize both
+            // Reinitialize both sliders
             initSliders();
         }, 250);
     });
