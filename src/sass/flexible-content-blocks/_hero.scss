@@ -2,6 +2,7 @@
   @include max-screen(768px) {
     background-position: 75%;
     position: relative;
+    display: none;
   }
 }
 
@@ -12,9 +13,10 @@
   min-height: 100vh;
 
   @include max-screen(768px) {
-    display: flex;
+    // display: flex;
     align-items: flex-end;
     position: relative;
+    display: none;
 
     &__mobile-image {
       position: absolute;
@@ -114,6 +116,13 @@
 
     .hero__copy {
       color: $off-black;
+    }
+  }
+  &.mobile__hero {
+    display: none;
+
+    @include max-screen(768px) {
+      display: block;
     }
   }
 }
