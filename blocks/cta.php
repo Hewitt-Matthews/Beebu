@@ -19,9 +19,6 @@ $section_options_background_colour = get_sub_field('section_options_background_c
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding');
 $background_position_x = get_sub_field('background_position_x');
-
-$background_image = get_sub_field('background_image');
-$bg_alt_text = get_post_meta($background_image['ID'], '_wp_attachment_image_alt', true);
 ?>
 
 <!-- Background Image Position - Mobile Only -->
@@ -43,10 +40,7 @@ $bg_alt_text = get_post_meta($background_image['ID'], '_wp_attachment_image_alt'
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   ">
     <div class="wrapper">
-        <div class="cta cta--<?=$type ?>" 
-             style="background-image: url('<?= $background_image['url']; ?>');"
-             role="img" 
-             aria-label="<?= $bg_alt_text ?: $title ?>">
+        <div class="cta cta--<?=$type ?>" style="background-image: url('<?=get_sub_field('background_image')['url']; ?>');">
         <?php if($mask): ?>
             <div class="cta__mask"></div>
         <?php endif; ?>
