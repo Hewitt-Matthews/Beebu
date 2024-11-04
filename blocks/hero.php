@@ -18,7 +18,9 @@ else :
 
   $hero_type = get_sub_field('hero_type');
   $title = get_sub_field('title');
+  $mobile_title = get_sub_field('mobile_title');
   $copy = get_sub_field('copy');
+  $mobile_copy = get_sub_field('mobile_copy');
   $postcode_search = get_sub_field('add_postcode_search');
   $trustpilot = get_sub_field('add_trustpilot');
   $background_image = get_sub_field('background_image');
@@ -30,14 +32,6 @@ else :
   $additional_text_below_the_postcode_search = get_sub_field('additional_text_below_the_postcode_search');
   $background_images = get_sub_field('hero_background_images');
   $mobile_images = get_sub_field('mobile_images');
-
-  // Add debugging
-  echo '<pre style="display: none;">'; // Hidden but can check source
-  echo "Desktop Images:\n";
-  var_dump($background_images);
-  echo "\nMobile Images:\n";
-  var_dump($mobile_images);
-  echo '</pre>';
 
 endif; ?>
 
@@ -99,8 +93,8 @@ endif; ?>
 
     <div class="wrapper">
         <div class="hero__inner">
-            <h1 class="hero__title"><?= $title ?></h1>
-            <p class="hero__copy"><?= $copy ?></p>
+            <h1 class="hero__title"><?= $mobile_title ?></h1>
+            <p class="hero__copy"><?= $mobile_copy ?></p>
             
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
@@ -136,7 +130,7 @@ jQuery(document).ready(function($) {
         // Desktop Slider
         if (!$('.desktop-slider').hasClass('slick-initialized')) {
             $('.desktop-slider').slick({
-                dots: true,
+                dots: false,
                 arrows: false,
                 infinite: true,
                 slidesToShow: 1,
@@ -151,7 +145,7 @@ jQuery(document).ready(function($) {
         // Mobile Slider
         if (!$('.mobile-slider').hasClass('slick-initialized')) {
             $('.mobile-slider').slick({
-                dots: true,
+                dots: false,
                 arrows: false,
                 infinite: true,
                 slidesToShow: 1,
