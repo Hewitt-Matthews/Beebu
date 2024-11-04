@@ -25,11 +25,15 @@ $section_padding = get_sub_field('section_padding'); ?>
               $testimonial = get_field('testimonial', $slide->ID);
               $position = get_field('position', $slide->ID);
               $image = get_the_post_thumbnail_url($slide->ID);
+              $image_id = get_post_thumbnail_id($slide->ID);
+              $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
             
             ?>
 
               <div class="slider__slide">
-                  <img class="slider__testimonial-image" src="<?= $image ?>" />
+                  <img class="slider__testimonial-image" 
+                       src="<?= $image ?>" 
+                       alt="<?= $alt_text ?: $title ?>" />
                   <div>
                       <p class="slider__testimonial-testimonial"><?= $testimonial ?></p>
                       <p class="slider__testimonial-title"><?= $title ?></p>

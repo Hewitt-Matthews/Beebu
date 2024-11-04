@@ -33,11 +33,16 @@ $guides_query = new WP_Query( $args ); ?>
       </div>
       <div class="guides-slider__slider slider-wrapper slick">
         <?php if ( $guides_query->have_posts() ) :
-          while ( $guides_query->have_posts() ) : $guides_query->the_post(); ?>
+          while ( $guides_query->have_posts() ) : $guides_query->the_post(); 
+            $image_id = get_post_thumbnail_id();
+            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+          ?>
 
             <div class="slider__slide slick__slide">
               <a href="<?php the_permalink(); ?>">
-                <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="article-card__image">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" 
+                     alt="<?= $alt_text ?: get_the_title() ?>"
+                     class="article-card__image">
                 <h3 class="article-card__title"><?php the_title(); ?></h3>
                 <p class="article-card__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>
               </a>

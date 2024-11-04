@@ -23,7 +23,10 @@ $remove_top_spacing = get_sub_field('remove_top_spacing');
                     <div class="reviews__review">
                         <div class="reviews__score">
                             <?php for ($i=0; $i < $review->stars; $i++): ?>
-                                <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
+                                <span class="reviews__star">
+                                    <img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" 
+                                         alt="Rating star" />
+                                </span>
                             <?php endfor; ?>
                         </div>
                         <div class="reviews__review-content">
@@ -39,10 +42,14 @@ $remove_top_spacing = get_sub_field('remove_top_spacing');
                 <span>Excellent</span>
                 <div class="reviews__score">
                     <?php for ($i=0; $i < $rating; $i++): ?>
-                        <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star-green.svg" /></span>
+                        <span class="reviews__star">
+                            <img src="<?=get_template_directory_uri() ?>/assets/img/star-green.svg" 
+                                 alt="Trustpilot rating star" />
+                        </span>
                     <?php endfor; ?>
                 </div>
-                <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot.svg" />
+                <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot.svg" 
+                     alt="Trustpilot logo" />
             </div>
             <?php if ( $button ) : ?>
               <a href="<?=$button['url'] ?>" class="button button--black"><?=$button['title'] ?></a>

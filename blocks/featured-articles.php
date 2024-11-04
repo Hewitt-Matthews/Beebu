@@ -22,8 +22,12 @@ $section_padding = get_sub_field('section_padding');
         <div class="featured-articles__grid">
             <?php foreach ($articles as $article): ?>
                 <a href="<?=get_permalink($article); ?>" class="article-card">
+                    <?php 
+                    $image_id = get_post_thumbnail_id($article);
+                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                    ?>
                     <div class="article-card__tag button button--small">Help & Advice</div>
-                    <img src="<?=get_the_post_thumbnail_url($article, 'small'); ?>" alt="" class="article-card__image" />
+                    <img src="<?=get_the_post_thumbnail_url($article, 'small'); ?>" alt="<?= $alt_text ?: $article->post_title ?>" class="article-card__image" />
                     <h2 class="article-card__title"><?=$article->post_title; ?></h2>
                     <p class="article-card__excerpt"><?= wp_trim_words( get_the_excerpt($article), 30, '[...]' ); ?></p>
             </a>

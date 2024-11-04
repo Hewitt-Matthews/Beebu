@@ -47,7 +47,8 @@ $section_padding = get_sub_field('section_padding'); ?>
             ?>
 
               <div class="text-list-block__list-inner">
-                <img src="<?=get_template_directory_uri() ?>/assets/img/tick.svg" />
+                <img src="<?=get_template_directory_uri() ?>/assets/img/tick.svg" 
+                     alt="Tick icon" />
                 <p><?= $title ?></p>
               </div>
 

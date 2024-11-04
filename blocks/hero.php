@@ -43,8 +43,14 @@ endif; ?>
     <div class="desktop-slider">
         <?php 
         if ($background_images) :
-            foreach ($background_images as $image) : ?>
-                <div class="slide" style="background-image: url('<?php echo esc_url($image['background_image']['url']); ?>');"></div>
+            foreach ($background_images as $image) : 
+                $desktop_alt_text = get_post_meta($image['background_image']['ID'], '_wp_attachment_image_alt', true);
+            ?>
+                <div class="slide" 
+                     style="background-image: url('<?php echo esc_url($image['background_image']['url']); ?>');"
+                     role="img" 
+                     aria-label="<?= $desktop_alt_text ?: $title ?>">
+                </div>
             <?php endforeach;
         endif; ?>
     </div>
@@ -87,8 +93,14 @@ endif; ?>
     <div class="mobile-slider">
         <?php 
         if ($mobile_images) :
-            foreach ($mobile_images as $image) : ?>
-                <div class="slide" style="background-image: url('<?php echo esc_url($image['mobile_image']['url']); ?>');"></div>
+            foreach ($mobile_images as $image) : 
+                $mobile_alt_text = get_post_meta($image['mobile_image']['ID'], '_wp_attachment_image_alt', true);
+            ?>
+                <div class="slide" 
+                     style="background-image: url('<?php echo esc_url($image['mobile_image']['url']); ?>');"
+                     role="img" 
+                     aria-label="<?= $mobile_alt_text ?: $mobile_title ?>">
+                </div>
             <?php endforeach;
         endif; ?>
     </div>

@@ -33,12 +33,13 @@ $section_padding = get_sub_field('section_padding'); ?>
         $slide_image = $slide['slide_image'];
         $title = $slide['title'];
         $copy = $slide['copy'];
+        $alt_text = get_post_meta($slide_image['ID'], '_wp_attachment_image_alt', true);
       
       ?>
 
         <div class="content-slider__slide slick__slide">
           <div class="content-slider__content">
-            <img class="slider__image" src="<?= $slide_image['url'] ?>" />
+            <img class="slider__image" src="<?= $slide_image['url'] ?>" alt="<?= $alt_text ?: $title ?>" />
             <div class="content-slider__meta">
               <h2 class="content-slider__title"><?= $title ?></h2>
               <p class="content-slider__copy"><?= $copy ?></p>

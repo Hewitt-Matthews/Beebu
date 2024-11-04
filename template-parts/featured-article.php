@@ -20,8 +20,11 @@ $link = get_the_permalink($featured_article); ?>
 
         <div class="featured-article__image">
 
-          <?php if( !empty( $featured_image ) ) : ?>
-            <img src="<?= $featured_image ?>" alt="<?= $title ?>" />
+          <?php if( !empty( $featured_image ) ) : 
+            $image_id = get_post_thumbnail_id($featured_article);
+            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+          ?>
+            <img src="<?= $featured_image ?>" alt="<?= $alt_text ?: $title ?>" />
           <?php endif; ?>
 
         </div>

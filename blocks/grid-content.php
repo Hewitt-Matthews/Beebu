@@ -26,12 +26,17 @@ $section_padding = get_sub_field('section_padding');
         </div>
       <?php endif; ?>
       <div class="grid-content__grid grid-content__columns-<?= $grid_width ?>">
-        <?php foreach ( $grid_blocks as $block ) : ?>
+        <?php foreach ( $grid_blocks as $block ) : 
+          $icon = $block['icon'];
+          $alt_text = get_post_meta($icon['ID'], '_wp_attachment_image_alt', true);
+        ?>
           <?php if ( $block['page_link'] && $block['link_type'] ) : ?>
             <a href="<?= $block['page_link']['url'] ?>" class="grid-content__link">
           <?php endif; ?>
             <div class="grid-content__block">
-              <img class="grid-content__block-image" src="<?= $block['icon']['url'] ?>" />
+              <img class="grid-content__block-image" 
+                   src="<?= $icon['url'] ?>" 
+                   alt="<?= $alt_text ?: $block['title'] ?>" />
               <div>
                 <h2 class="grid-content__block-title"><?= $block['title'] ?></h2>
                 <p class="grid-content__block-copy"><?= $block['description'] ?></p>

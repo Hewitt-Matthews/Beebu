@@ -39,12 +39,16 @@ $section_padding = get_sub_field('section_padding'); ?>
 
       <div class="text-image-block__image">
 
-        <?php if( !empty( $main_image ) ) : ?>
-          <img src="<?= $main_image['url'] ?>" alt="<?= $main_image['alt'] ?>" class="main-image" />
+        <?php if( !empty( $main_image ) ) : 
+          $main_alt_text = get_post_meta($main_image['ID'], '_wp_attachment_image_alt', true);
+        ?>
+          <img src="<?= $main_image['url'] ?>" alt="<?= $main_alt_text ?: $main_image['alt'] ?>" class="main-image" />
         <?php endif; ?>
 
-        <?php if( !empty( $overlay_image ) ) : ?>
-          <img src="<?= $overlay_image['url'] ?>" alt="<?= $overlay_image['alt'] ?>" class="overlay-image" />
+        <?php if( !empty( $overlay_image ) ) : 
+          $overlay_alt_text = get_post_meta($overlay_image['ID'], '_wp_attachment_image_alt', true);
+        ?>
+          <img src="<?= $overlay_image['url'] ?>" alt="<?= $overlay_alt_text ?: $overlay_image['alt'] ?>" class="overlay-image" />
         <?php endif; ?>
 
       </div>

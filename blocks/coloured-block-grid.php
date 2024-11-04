@@ -38,12 +38,13 @@ $section_padding = get_sub_field('section_padding'); ?>
             $title = $item['title'];
             $copy = $item['copy'];
             $icon = $item['icon'];
+            $alt_text = get_post_meta($icon['ID'], '_wp_attachment_image_alt', true);
 
           ?>
 
             <div class="coloured-block-grid-block__list-inner">
 
-              <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="" />
+              <img src="<?= $icon['url'] ?>" alt="<?= $alt_text ?: $icon['alt'] ?>" class="" />
               <div class="meta">
                 <p class="title"><?= $title ?></p>
                 <p><?= $copy ?></p>

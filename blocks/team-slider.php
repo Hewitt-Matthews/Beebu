@@ -33,11 +33,14 @@ $team_query = new WP_Query( $args ); ?>
               $title = get_the_title();
               $member_position = get_field('member_position');
               $member_image = get_field('member_image');
+              $alt_text = get_post_meta($member_image['ID'], '_wp_attachment_image_alt', true);
             
             ?>
 
               <div class="team-slider__slide slick__slide">
-                  <img class="team-slider__team-image" src="<?= $member_image['url'] ?>" />
+                  <img class="team-slider__team-image" 
+                       src="<?= $member_image['url'] ?>" 
+                       alt="<?= $alt_text ?: $title ?>" />
                   <div>
                       <h3 class="team-slider__team-title"><?= $title ?></h3>
                       <p class="team-slider__team-position"><?= $member_position ?></p>
