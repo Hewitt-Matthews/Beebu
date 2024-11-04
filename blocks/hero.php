@@ -12,10 +12,13 @@ if ( is_404() ) :
   $add_page_button = get_field('hero_add_page_button', 'options');
   $button = $add_page_button ? get_field('hero_button', 'options') : '';
   
-  // Get the images using the correct nested path
+  // A fix to hide the warning messages on a 404 page
   $background_images = get_field('hero', 'options')['hero_background_images'];
   $mobile_images = get_field('hero', 'options')['mobile_images'];
-  
+  $mobile_title = $title;
+  $mobile_copy = $copy;
+  $additional_text_below_the_postcode_search = '';
+
 else : 
 
   $hero_type = get_sub_field('hero_type');
