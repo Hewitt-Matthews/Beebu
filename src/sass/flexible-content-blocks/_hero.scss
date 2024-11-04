@@ -7,14 +7,12 @@
 
 // Desktop Hero
 .hero {
-  padding: 6em 0 12em;
+  padding: 6em 0 0;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding-bottom: 0;
-  margin-bottom: -5vw;
 
   // Slider styles
   .desktop-slider {
@@ -26,7 +24,8 @@
     z-index: 0;
 
     .slide {
-      height: calc(100vh + 10vw);
+      min-height: 100vh;
+      padding-bottom: 15vw;
       width: 100%;
       background-size: cover;
       background-position: 75% center;
@@ -128,8 +127,8 @@
 // Mobile Hero
 .mobile__hero {
   display: none;
-  height: 80vh;
-  // position: relative;
+  min-height: 100vh;
+  padding-bottom: 15vw;
   overflow: hidden;
 
   .mobile-slider {
@@ -183,7 +182,7 @@
 
   @include max-screen(768px) {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
@@ -277,8 +276,22 @@
   position: relative;
   z-index: 2;
   background: #fff;
-  margin-top: -10vw;
-  padding-top: 10vw;
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -15vw;
+  padding-top: 20vw;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+
+  @include max-screen(1024px) {
+    margin-top: -20vw;
+    padding-top: 25vw;
+    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @include max-screen(768px) {
+    margin-top: -25vw;
+    padding-top: 30vw;
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  }
 }

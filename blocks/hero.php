@@ -13,7 +13,9 @@ if ( is_404() ) :
   $background_image = get_field('hero_background_image', 'options');
   $add_page_button = get_field('hero_add_page_button', 'options');
   $button = $add_page_button ? get_field('hero_button', 'options') : '';
-
+  $background_images = get_field('hero_background_images', 'options');
+  $mobile_images = get_field('hero_mobile_images', 'options');
+  
 else : 
 
   $hero_type = get_sub_field('hero_type');
