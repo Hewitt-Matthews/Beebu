@@ -4,17 +4,17 @@
  * 404 Page Check
  ******************************************************************************************/
 if ( is_404() ) :
-
   $hero_type = get_field('hero_hero_type', 'options');
   $title = get_field('hero_title', 'options');
   $copy = get_field('hero_copy', 'options');
   $postcode_search = get_field('hero_add_postcode_search', 'options');
   $trustpilot = get_field('hero_add_trustpilot', 'options');
-  $background_image = get_field('hero_background_image', 'options');
   $add_page_button = get_field('hero_add_page_button', 'options');
   $button = $add_page_button ? get_field('hero_button', 'options') : '';
-  $background_images = get_field('hero_background_images', 'options');
-  $mobile_images = get_field('hero_mobile_images', 'options');
+  
+  // Get the images using the correct nested path
+  $background_images = get_field('hero', 'options')['hero_background_images'];
+  $mobile_images = get_field('hero', 'options')['mobile_images'];
   
 else : 
 
@@ -140,56 +140,33 @@ endif; ?>
 
 <script>
 jQuery(document).ready(function($) {
-    function initSliders() {
-        // Desktop Slider
-        if (!$('.desktop-slider').hasClass('slick-initialized')) {
-            $('.desktop-slider').slick({
-                dots: false,
-                arrows: false,
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: false,
-                speed: 300,
-                autoplay: true,
-                autoplaySpeed: 3000
-            });
-        }
-
-        // Mobile Slider
-        if (!$('.mobile-slider').hasClass('slick-initialized')) {
-            $('.mobile-slider').slick({
-                dots: false,
-                arrows: false,
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: false,
-                speed: 300,
-                autoplay: true,
-                autoplaySpeed: 3000
-            });
-        }
+    // Initialize sliders only once
+    if (!$('.desktop-slider').hasClass('slick-initialized')) {
+        $('.desktop-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: false,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
     }
 
-    // Initialize on page load
-    initSliders();
-
-    // Handle resize with debounce
-    let resizeTimer;
-    $(window).on('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            // Destroy existing sliders
-            if ($('.desktop-slider').hasClass('slick-initialized')) {
-                $('.desktop-slider').slick('unslick');
-            }
-            if ($('.mobile-slider').hasClass('slick-initialized')) {
-                $('.mobile-slider').slick('unslick');
-            }
-            // Reinitialize both sliders
-            initSliders();
-        }, 250);
-    });
+    if (!$('.mobile-slider').hasClass('slick-initialized')) {
+        $('.mobile-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: false,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
+    }
 });
 </script>
