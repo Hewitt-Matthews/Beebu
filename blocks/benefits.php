@@ -21,12 +21,17 @@ $section_padding = get_sub_field('section_padding');
             <p class="benefits__description"><?=$description ?></p>
         </div>
         <div class="benefits__grid">
-            <?php foreach ($benefits as $benefit): ?>
+            <?php foreach ($benefits as $benefit): 
+                $icon = $benefit['icon'];
+                $alt_text = get_post_meta($icon['ID'], '_wp_attachment_image_alt', true);
+            ?>
                 <div class="benefits__benefit">
-                    <img class="benefits__benefit-image" src="<?=$benefit['icon']['url'] ?>" />
+                    <img class="benefits__benefit-image" 
+                         src="<?= $icon['url'] ?>" 
+                         alt="<?= $alt_text ?: $benefit['title'] ?>" />
                     <div>
-                        <h2 class="benefits__benefit-title"><?=$benefit['title'] ?></h2>
-                        <p class="benefits__benefit-copy"><?=$benefit['description'] ?></p>
+                        <h2 class="benefits__benefit-title"><?= $benefit['title'] ?></h2>
+                        <p class="benefits__benefit-copy"><?= $benefit['description'] ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>
