@@ -66,6 +66,8 @@ endif; ?>
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
+                    <input class="postcode-search__input" type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? esc_attr($_GET['utm_source']) : ''; ?>"> 
+                    <input class="postcode-search__input" type="hidden" name="awc" value="<?php echo isset($_GET['awc']) ? esc_attr($_GET['awc']) : ''; ?>"> 
                     <button class="postcode-search__button" type="submit">Check Availability</button>
                 </form>
             <?php endif; ?>
