@@ -75,6 +75,7 @@
 
       @include max-screen(768px){
         justify-content: space-between;
+        padding: 1rem;
       }
 
       & div {
