@@ -38,7 +38,7 @@
     transition: filter .3s ease;
 
     &.nav-open {
-      filter: brightness(10) saturate(0);
+      filter: brightness(0) invert(1);
     }
 
     @include flex-vertical-center;
