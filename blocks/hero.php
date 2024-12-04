@@ -67,16 +67,21 @@ endif; ?>
     <div class="wrapper">
         <div class="hero__inner">
             <div class="hero__content">
-                <?php if ($background_images): 
-                    foreach ($background_images as $index => $image): ?>
+                <?php if ($background_images && $hero_type !== 'green-background'): ?>
+                    <?php foreach ($background_images as $index => $image): ?>
                         <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
                             <h1 class="hero__title"><?= $image['title'] ?></h1>
                             <p class="hero__copy"><?= $image['copy'] ?></p>
                         </div>
-                    <?php endforeach;
-                endif; ?>
+                    <?php endforeach; ?>
+                <?php else: // Green background or no images ?>
+                    <div class="hero__slide-content active">
+                        <h1 class="hero__title"><?= $title ?></h1>
+                        <p class="hero__copy"><?= $copy ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
-
+            
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
@@ -137,16 +142,21 @@ endif; ?>
     <div class="wrapper">
         <div class="hero__inner">
             <div class="hero__content">
-                <?php if ($mobile_images): 
-                    foreach ($mobile_images as $index => $image): ?>
+                <?php if ($mobile_images && $hero_type !== 'green-background'): ?>
+                    <?php foreach ($mobile_images as $index => $image): ?>
                         <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
                             <h1 class="hero__title"><?= $image['title'] ?></h1>
                             <p class="hero__copy"><?= $image['copy'] ?></p>
                         </div>
-                    <?php endforeach;
-                endif; ?>
+                    <?php endforeach; ?>
+                <?php else: // Green background or no images ?>
+                    <div class="hero__slide-content active">
+                        <h1 class="hero__title"><?= $mobile_title ?></h1>
+                        <p class="hero__copy"><?= $mobile_copy ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
-
+            
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
