@@ -46,13 +46,13 @@ endif; ?>
     <div class="desktop-slider">
         <?php 
         if ($background_images) :
-            foreach ($background_images as $image) : 
+            foreach ($background_images as $index => $image) : 
                 $desktop_alt_text = get_post_meta($image['background_image']['ID'], '_wp_attachment_image_alt', true);
             ?>
                 <div class="slide" 
                      style="background-image: url('<?php echo esc_url($image['background_image']['url']); ?>');"
                      role="img" 
-                     aria-label="<?= $desktop_alt_text ?: $title ?>">
+                     aria-label="<?= $desktop_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
         endif; ?>
@@ -60,9 +60,17 @@ endif; ?>
 
     <div class="wrapper">
         <div class="hero__inner">
-            <h1 class="hero__title"><?= $title ?></h1>
-            <p class="hero__copy"><?= $copy ?></p>
-            
+            <div class="hero__content">
+                <?php if ($background_images): 
+                    foreach ($background_images as $index => $image): ?>
+                        <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
+                            <h1 class="hero__title"><?= $image['title'] ?></h1>
+                            <p class="hero__copy"><?= $image['copy'] ?></p>
+                        </div>
+                    <?php endforeach;
+                endif; ?>
+            </div>
+
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
@@ -102,13 +110,13 @@ endif; ?>
     <div class="mobile-slider">
         <?php 
         if ($mobile_images) :
-            foreach ($mobile_images as $image) : 
+            foreach ($mobile_images as $index => $image) : 
                 $mobile_alt_text = get_post_meta($image['mobile_image']['ID'], '_wp_attachment_image_alt', true);
             ?>
                 <div class="slide" 
                      style="background-image: url('<?php echo esc_url($image['mobile_image']['url']); ?>');"
                      role="img" 
-                     aria-label="<?= $mobile_alt_text ?: $mobile_title ?>">
+                     aria-label="<?= $mobile_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
         endif; ?>
@@ -116,9 +124,17 @@ endif; ?>
 
     <div class="wrapper">
         <div class="hero__inner">
-            <h1 class="hero__title"><?= $mobile_title ?></h1>
-            <p class="hero__copy"><?= $mobile_copy ?></p>
-            
+            <div class="hero__content">
+                <?php if ($mobile_images): 
+                    foreach ($mobile_images as $index => $image): ?>
+                        <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
+                            <h1 class="hero__title"><?= $image['title'] ?></h1>
+                            <p class="hero__copy"><?= $image['copy'] ?></p>
+                        </div>
+                    <?php endforeach;
+                endif; ?>
+            </div>
+
             <?php if ($postcode_search): ?>
                 <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
                     <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required> 
@@ -160,7 +176,7 @@ endif; ?>
 jQuery(document).ready(function($) {
     // Initialize sliders only once
     if (!$('.desktop-slider').hasClass('slick-initialized')) {
-        $('.desktop-slider').slick({
+        $('.desktop-slider, .hero__content').slick({
             dots: false,
             arrows: false,
             infinite: true,
@@ -169,12 +185,13 @@ jQuery(document).ready(function($) {
             fade: false,
             speed: 300,
             autoplay: true,
-            autoplaySpeed: 3000
+            autoplaySpeed: 3000,
+            asNavFor: '.hero__content' // This syncs the content with the background
         });
     }
 
     if (!$('.mobile-slider').hasClass('slick-initialized')) {
-        $('.mobile-slider').slick({
+        $('.mobile-slider, .mobile__hero .hero__content').slick({
             dots: false,
             arrows: false,
             infinite: true,
@@ -183,7 +200,8 @@ jQuery(document).ready(function($) {
             fade: false,
             speed: 300,
             autoplay: true,
-            autoplaySpeed: 3000
+            autoplaySpeed: 3000,
+            asNavFor: '.mobile__hero .hero__content' // This syncs the content with the background
         });
     }
 });
