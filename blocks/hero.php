@@ -42,11 +42,15 @@ endif; ?>
 
 
 <!--Desktop Hero-->
-<div class="hero <?php if ( $hero_type === 'flourish' ) : echo 'flourish-hero'; elseif ( $hero_type === 'green-background' ) : echo 'section--green'; endif; ?>">
-    <div class="desktop-slider">
+<div class="hero">
+    <?php if ($hero_type === 'flourish'): ?>
+        <div class="hero__flourish"></div>
+    <?php endif; ?>
+    
+    <div class="desktop-slider <?php if ($hero_type === 'flourish'): echo 'flourish-hero'; elseif ($hero_type === 'green-background'): echo 'section--green'; endif; ?>">
         <?php 
-        if ($background_images) :
-            foreach ($background_images as $index => $image) : 
+        if ($background_images && $hero_type !== 'green-background'): // Only show background images if not green background
+            foreach ($background_images as $image): 
                 $desktop_alt_text = get_post_meta($image['background_image']['ID'], '_wp_attachment_image_alt', true);
             ?>
                 <div class="slide" 
@@ -55,7 +59,9 @@ endif; ?>
                      aria-label="<?= $desktop_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
-        endif; ?>
+        elseif ($hero_type === 'green-background'): // Add a single slide without background image for green background ?>
+            <div class="slide"></div>
+        <?php endif; ?>
     </div>
 
     <div class="wrapper">
@@ -107,10 +113,10 @@ endif; ?>
 
 <!--Mobile Hero-->
 <div class="mobile__hero">
-    <div class="mobile-slider">
+    <div class="mobile-slider <?php if ($hero_type === 'flourish'): echo 'flourish-hero'; elseif ($hero_type === 'green-background'): echo 'section--green'; endif; ?>">
         <?php 
-        if ($mobile_images) :
-            foreach ($mobile_images as $index => $image) : 
+        if ($mobile_images && $hero_type !== 'green-background'): // Only show background images if not green background
+            foreach ($mobile_images as $image): 
                 $mobile_alt_text = get_post_meta($image['mobile_image']['ID'], '_wp_attachment_image_alt', true);
             ?>
                 <div class="slide" 
@@ -119,7 +125,9 @@ endif; ?>
                      aria-label="<?= $mobile_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
-        endif; ?>
+        elseif ($hero_type === 'green-background'): // Add a single slide without background image for green background ?>
+            <div class="slide"></div>
+        <?php endif; ?>
     </div>
 
     <div class="wrapper">
