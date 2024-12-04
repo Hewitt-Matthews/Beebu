@@ -43,10 +43,6 @@ endif; ?>
 
 <!--Desktop Hero-->
 <div class="hero">
-    <?php if ($hero_type === 'flourish'): ?>
-        <div class="hero__flourish"></div>
-    <?php endif; ?>
-    
     <div class="desktop-slider <?php if ($hero_type === 'flourish'): echo 'flourish-hero'; elseif ($hero_type === 'green-background'): echo 'section--green'; endif; ?>">
         <?php 
         if ($background_images && $hero_type !== 'green-background'): // Only show background images if not green background
@@ -59,10 +55,14 @@ endif; ?>
                      aria-label="<?= $desktop_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
-        elseif ($hero_type === 'green-background'): // Add a single slide without background image for green background ?>
+        elseif ($hero_type === 'green-background' || $hero_type === 'flourish'): // Add a single slide for green background or flourish ?>
             <div class="slide"></div>
         <?php endif; ?>
     </div>
+
+    <?php if ($hero_type === 'flourish'): ?>
+        <div class="hero__flourish"></div>
+    <?php endif; ?>
 
     <div class="wrapper">
         <div class="hero__inner">
@@ -125,10 +125,14 @@ endif; ?>
                      aria-label="<?= $mobile_alt_text ?: $image['title'] ?>">
                 </div>
             <?php endforeach;
-        elseif ($hero_type === 'green-background'): // Add a single slide without background image for green background ?>
+        elseif ($hero_type === 'green-background' || $hero_type === 'flourish'): // Add a single slide for green background or flourish ?>
             <div class="slide"></div>
         <?php endif; ?>
     </div>
+
+    <?php if ($hero_type === 'flourish'): ?>
+        <div class="hero__flourish"></div>
+    <?php endif; ?>
 
     <div class="wrapper">
         <div class="hero__inner">
