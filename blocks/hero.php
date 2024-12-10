@@ -37,12 +37,8 @@ else :
   $additional_text_below_the_postcode_search = get_sub_field('additional_text_below_the_postcode_search');
   $background_images = get_sub_field('hero_background_images');
   $mobile_images = get_sub_field('mobile_images');
-  $slick_speed = get_sub_field('slick_speed');
-  $slick_autoplay_speed = get_sub_field('slick_autoplay_speed');
 
-endif;
-
-?>
+endif; ?>
 
 
 <!--Desktop Hero-->
@@ -209,11 +205,10 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: false,
-            speed: <?= $slick_speed ?: 300 ?>, // Duration of the transition effect between slides (in ms)
+            speed: 200,
             autoplay: true,
-            autoplaySpeed: <?= $slick_autoplay_speed ?: 3000 ?>, // Duration to wait before transitioning to the next slide in autoplay (in ms)
-            asNavFor: '.hero__content', // This syncs the content with the background
-            draggable: false // Disable dragging of slides
+            autoplaySpeed: 2000,
+            asNavFor: '.hero__content' // This syncs the content with the background
         });
     }
 
@@ -225,11 +220,10 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: false,
-            speed: <?= $slick_speed ?: 300 ?>, // Duration of the transition effect between slides (in ms)
+            speed: 200,
             autoplay: true,
-            autoplaySpeed: <?= $slick_autoplay_speed ?: 3000 ?>, // Duration to wait before transitioning to the next slide in autoplay (in ms)
-            asNavFor: '.mobile__hero .hero__content', // This syncs the content with the background
-            draggable: false // Disable dragging of slides
+            autoplaySpeed: 2000,
+            asNavFor: '.mobile__hero .hero__content' // This syncs the content with the background
         });
     }
 });
