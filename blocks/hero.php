@@ -205,9 +205,9 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: false,
-            speed: 200,
+            speed: 500, // Speed of the slide transition
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 5000, // Each slide is shown for 5 seconds
             asNavFor: '.hero__content' // This syncs the content with the background
         });
     }
@@ -220,9 +220,9 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: false,
-            speed: 200,
+            speed: 500, // Speed of the slide transition
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 5000, // Each slide is shown for 5 seconds
             asNavFor: '.mobile__hero .hero__content' // This syncs the content with the background
         });
     }
