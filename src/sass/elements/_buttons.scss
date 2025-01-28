@@ -2,12 +2,12 @@ $button-background: $green-light;
 $button-text:       $black ;
 
 .button, .wp-block-button__link {
-  padding: 24px 30px;
+  padding: 17px 9px;
   border-radius: $base-radius;
   display: inline-block;
   color: $button-text;
   background: $button-background;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1;
   border: 1px solid $button-background;
   transition: $transition-time;
