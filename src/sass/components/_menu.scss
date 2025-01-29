@@ -70,3 +70,18 @@
     }
   }
 }
+
+/* Hide mobile logo by default */
+.mobile-logo {
+    display: none;
+}
+
+/* Show mobile logo and hide desktop logo on mobile devices */
+@include max-screen($menu-mobile-breakpoint) {
+    .desktop-logo {
+        display: none;
+    }
+    .mobile-logo {
+        display: block;
+    }
+}
