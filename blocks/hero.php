@@ -204,7 +204,6 @@ jQuery(document).ready(function($) {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            fade: true,
             speed: 1000, // Speed of the slide transition
             autoplay: true,
             autoplaySpeed: 5000, // Each slide is shown for 5 seconds
@@ -219,7 +218,6 @@ jQuery(document).ready(function($) {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            fade: true,
             speed: 1000, // Speed of the slide transition
             autoplay: true,
             autoplaySpeed: 5000, // Each slide is shown for 5 seconds
