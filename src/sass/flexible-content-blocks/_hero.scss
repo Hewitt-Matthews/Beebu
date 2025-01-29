@@ -66,9 +66,10 @@
   & h1 {
     color: $white;
     overflow: hidden;
-
+    margin-bottom: 0;
     @include max-screen(389px) {
       font-size: 1.9rem;
+      margin-bottom: 0;
     }
   }
 
@@ -81,6 +82,7 @@
     position: relative;
     color: $white; 
     margin-top: 24px;
+    margin-bottom: 0;
   }
 
   &__trustpilot {
@@ -176,6 +178,7 @@
 
   .hero__title {
     color: $white;
+    margin-bottom: 0;
   }
 
   .hero__trustpilot {

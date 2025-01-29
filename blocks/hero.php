@@ -70,14 +70,22 @@ endif; ?>
                 <?php if ($background_images && $hero_type !== 'green-background'): ?>
                     <?php foreach ($background_images as $index => $image): ?>
                         <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
-                            <h1 class="hero__title"><?= $image['title'] ?></h1>
-                            <p class="hero__copy"><?= $image['copy'] ?></p>
+                            <?php if ($image['title']): ?>
+                                <h1 class="hero__title"><?= $image['title'] ?></h1>
+                            <?php endif; ?>
+                            <?php if ($image['copy']): ?>
+                                <p class="hero__copy"><?= $image['copy'] ?></p>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 <?php else: // Green background or no images ?>
                     <div class="hero__slide-content active">
-                        <h1 class="hero__title"><?= $title ?></h1>
-                        <p class="hero__copy"><?= $copy ?></p>
+                        <?php if ($title): ?>
+                            <h1 class="hero__title"><?= $title ?></h1>
+                        <?php endif; ?>
+                        <?php if ($copy): ?>
+                            <p class="hero__copy"><?= $copy ?></p>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>
@@ -145,14 +153,22 @@ endif; ?>
                 <?php if ($mobile_images && $hero_type !== 'green-background'): ?>
                     <?php foreach ($mobile_images as $index => $image): ?>
                         <div class="hero__slide-content <?= $index === 0 ? 'active' : '' ?>">
-                            <h1 class="hero__title"><?= $image['title'] ?></h1>
-                            <p class="hero__copy"><?= $image['copy'] ?></p>
+                            <?php if ($image['title']): ?>
+                                <h1 class="hero__title"><?= $image['title'] ?></h1>
+                            <?php endif; ?>
+                            <?php if ($image['copy']): ?>
+                                <p class="hero__copy"><?= $image['copy'] ?></p>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 <?php else: // Green background or no images ?>
                     <div class="hero__slide-content active">
-                        <h1 class="hero__title"><?= $mobile_title ?></h1>
-                        <p class="hero__copy"><?= $mobile_copy ?></p>
+                        <?php if ($mobile_title): ?>
+                            <h1 class="hero__title"><?= $mobile_title ?></h1>
+                        <?php endif; ?>
+                        <?php if ($mobile_copy): ?>
+                            <p class="hero__copy"><?= $mobile_copy ?></p>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>
