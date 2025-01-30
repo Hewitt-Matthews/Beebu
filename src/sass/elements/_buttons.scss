@@ -55,6 +55,13 @@ $button-text:       $black ;
     color: $black;
     border-color: $black;
   }
+
+  // Responsive font size for black buttons
+  font-size: 1.2rem; // Default font size
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Even smaller font size for mobile
+  }
 }
 
 // Black button on the comparison table
