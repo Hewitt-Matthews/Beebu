@@ -305,3 +305,20 @@
     -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
   }
 }
+
+// Hero on homepage
+.home {
+  .mobile__hero {
+    .hero__title {
+      text-align: center;
+    }
+
+    .hero__copy {
+      text-align: center;
+    } 
+
+    .hero__text-below-postcode {
+      text-align: center;
+    }
+  }
+}
