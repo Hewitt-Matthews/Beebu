@@ -24,15 +24,20 @@ $next_year = date('Y', strtotime('+1 year'));
                     <?php $degree = 0; 
                     
                     if($package['gauge_meter']) {
-                        $degree = (180 * $package['gauge_meter']) / 100;
+                        $degree = (($package['gauge_meter'] * 180) / 100) - 45;
                     }
                     ?>
                     <div class="packages__package">
                         <span class="packages__package-eyebrow"><?=$package['eyebrow'] ?></span>
-                        <div class="gauge js-gauge" style="width: 100%; --rotation-2:<?=$degree ?>deg;">
-                            <div class="percentage js-percentage"></div>
-                            <div class="mask"></div>
+                        
+
+                        <div class="speedbox js-gauge">
+                            <div class="speedbox__score js-score" data-rotation="<?=$degree ?>"></div>
+                            <div class="speedbox__groove"></div>
+                            <div class="speedbox__base"></div>
                         </div>
+
+
                         <div class="packages__package-speed">
                             <span class="packages__package-large"><?=$package['speed'] ?></span>
                             <span>Mbps</span>

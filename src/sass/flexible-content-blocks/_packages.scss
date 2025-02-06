@@ -79,6 +79,7 @@
             font-weight: 600;
             font-size: 40px;
             text-align: center;
+            z-index: 10;
         }
 
         &-specs {
@@ -86,6 +87,7 @@
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+            z-index: 10;
         }
 
         &-spec {
@@ -116,62 +118,66 @@
 
     }
 
-    .gauge {
+    .speedbox {
+        margin-top: 1rem;
+        margin-bottom: -150px;
+        height: 300px;
+        width: 300px;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
         position: relative;
-        border-radius: 50%/100% 100% 0 0;
-        background-color: $orange;
-        overflow: hidden;
-        will-change: auto;
-        width: 100%;
-        border: 5px solid white;
-        margin-right: -1px;
-    }
-    .gauge:before{
-        content: "";
-        display: block;
-        padding-top: 50%;   /* ratio of 2:1*/
-        will-change: auto;
-    }
-    .gauge .chart {
-      overflow: hidden;
-      will-change: auto;
-    }
-    .gauge .mask {
-      position: absolute;
-      left: 12%;
-      right: 12%;
-      bottom: 0;
-      top: 24%;
-      background-color: #fff;
-      border-radius: 50%/100% 100% 0 0;
-      will-change: auto;
-    }
-    
-    .gauge .percentage {
-        position:  absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: #F6F4F2;
-        transform:rotate(var(--rotation)); 
-        transform-origin: bottom center; 
-        will-change: auto;
+        z-index: 5;
+        
+        &__groove {
+          height: 150px;
+          width: 300px;
+          background: transparent;
+          border-top-left-radius: 150px;
+          border-top-right-radius: 150px;
+          border: 40px solid #eee;
+          border-bottom: 0;
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        &__score {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: rotate(-45deg);
+          height: 300px;
+          width: 300px;
+          background: transparent;
+          border-radius: 50%;
+          border: 40px solid #F6F4F2;
+          border-color: transparent transparent #FF9100 #FF9100;
+          box-sizing: border-box;
+          cursor: pointer;
+          z-index: 1;
+          transition: transform .3s ease;
+          
+        }
+        &__base {
+          width: 340px;
+          height: 150px;
+          background: white;
+          position: relative;
+          top: 150px;
+          z-index: 20;
+          &:before {
+            content: '';
+            width: 240px;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
 
-        --rotation: 0deg;
-        transition: all 2s ease;
-        transition-delay: .5s;
-    }
-    .gauge:hover {
-      --rotation: 100deg;
-      will-change: auto;
-    }
-    .gauge .value {
-      position:absolute; bottom:0%; left:0;   
-      width:100%; 
-      text-align: center;
-      will-change: auto;
-    }
 }
 
 @media screen and (max-width: 989px){

@@ -95,27 +95,33 @@ $(document).ready(function() {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 // Element is in view
-                entry.target.querySelectorAll('.js-percentage').forEach(el => {
+                entry.target.querySelectorAll('.js-score').forEach(el => {
+                  let rotation = $(el).data('rotation');
                     el.style.animationDelay = '.5s';
                     el.style.transition = 'all 2s ease';
-                  el.style.transform = 'rotate(var(--rotation-2))';
+                    el.style.transform = `rotate(${rotation}deg)`;
                 });
               } else {
                 // Element not in view
-                entry.target.querySelectorAll('.js-percentage').forEach(el => {
+                entry.target.querySelectorAll('.js-score').forEach(el => {
                   el.style.animationDelay = '0s';
                   el.style.transition = 'none';
-                  el.style.transform = 'rotate(0deg)';
+                  el.style.transform = 'rotate(-45deg)';
                 });
               }
             });
           });
           
       
-              const gauges = document.querySelectorAll('.js-gauge');
-              gauges.forEach(gauge => {
-                  observer.observe(gauge);
-              });
+          const gauges = document.querySelectorAll('.js-gauge');
+          gauges.forEach(gauge => {
+              observer.observe(gauge);
+          });
+
+        // let speed = 50;
+        // let updatedSpeed = Math.round(speed*180/100)-45;
+
+        // $("#speedbox-score").css("transform","rotate("+updatedSpeed+"deg)");
 
     }
 
