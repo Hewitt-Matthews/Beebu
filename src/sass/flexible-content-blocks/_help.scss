@@ -101,7 +101,8 @@
         text-align: center;
 
         @include max-screen(768px) {
-            margin-top: 3rem;
+            margin-top: 1rem;
+            
         }
     }
 }
