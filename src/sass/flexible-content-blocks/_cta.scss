@@ -84,7 +84,7 @@
 
 @media screen and (max-width: 768px) {
     .cta {
-        padding: 7rem 1.5rem;
+        padding: 3rem 1.5rem;
 
         & .postcode-search {
             display: flex;
@@ -92,7 +92,7 @@
         }
 
         & .postcode-search .postcode-search__input {
-            text-align: center;
+            text-align: left;
         }
 
         &--postcode {
