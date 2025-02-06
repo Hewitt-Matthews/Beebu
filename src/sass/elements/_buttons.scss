@@ -47,13 +47,13 @@ $button-text:       $black ;
 
 .button--black {
   color: $white;
-  background: $black;
-  border-color: $black;
+  background: $grey-new;
+  border-color: $grey-new;
   color: $white;
 
   &:hover {
-    color: $black;
-    border-color: $black;
+    color: $white;
+    border-color: $grey-new;
   }
 
   // Responsive font size for black buttons
