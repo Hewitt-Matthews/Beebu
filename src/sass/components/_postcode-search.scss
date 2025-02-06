@@ -7,7 +7,7 @@
 .postcode-search {
     min-width: 600px;
     padding: 1rem 1rem 1rem 2rem;
-    border: 1px solid $black;
+    border: 1px solid $grey-new;
     background: $white;
     display: inline-flex;
     border-radius: 3.5rem;
@@ -16,10 +16,10 @@
     @include max-screen(767px) { 
         min-width: auto;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         gap: 1rem;
         border-radius: 2rem;
-        padding: 0.7rem 1rem 1rem;
+        padding: 0.7rem;
     }
 
     &__input {
@@ -34,7 +34,7 @@
     }
     &__button {
         padding: 1rem 2rem;
-        background: $black;
+        background: $grey-new;
         color: $white;
         border: none;
         border-radius: 2.5rem;
@@ -46,6 +46,19 @@
   @media (max-width: 480px) {
     font-size: 1rem; // Even smaller font size for mobile
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+    }
+
+    &__button.mobile-button {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__button.mobile-button {
+            display: block;
+        }
     }
 }
 
@@ -65,6 +78,12 @@
         &__input {
             padding: 5px 0;
             text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            &__input {
+                padding: 0;
+                text-align: left;
+            }
         }
 
     }
