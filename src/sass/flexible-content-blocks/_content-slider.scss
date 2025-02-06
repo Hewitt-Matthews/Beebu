@@ -57,6 +57,9 @@
     & img {
       height: 250px;
       width: auto;
+      @media screen and (max-width: 768px) {
+        height: 150px;
+      }
     }
   }
 
@@ -67,6 +70,11 @@
     gap: 2em;
     border-radius: 30px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      background-color: #f6f4f2;
+      padding: 1rem;
+    }
   }
 
   &__meta {
@@ -116,7 +124,7 @@
   }
 
   .content-slider {
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
     
     & .slick-list {
       padding: 0 !important;
@@ -132,10 +140,12 @@
     & .slick-next {
       left: calc(5% + 60px);
       right: auto;
+      display: none !important;
     }
 
     & .slick-prev {
       left: 5%;
+      display: none !important;
     }
 
     & .slick-slide {
