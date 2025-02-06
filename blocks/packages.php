@@ -28,7 +28,7 @@ $next_year = date('Y', strtotime('+1 year'));
                     }
                     ?>
                     <div class="packages__package">
-                        <span class="packages__package-eyebrow"><?=$package['eyebrow'] ?></span>
+                        <!-- <span class="packages__package-eyebrow"><?=$package['eyebrow'] ?></span> -->
                         
 
                         <div class="speedbox js-gauge">
