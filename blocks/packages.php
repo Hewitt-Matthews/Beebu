@@ -68,7 +68,7 @@ $next_year = date('Y', strtotime('+1 year'));
         if (window.innerWidth < 768) {
             if (!packagesSlider.hasClass('slick-initialized')) {
                 packagesSlider.slick({
-                    dots: true,
+                    dots: false,
                     arrows: false,
                     infinite: false,
                     slidesToShow: 1,
