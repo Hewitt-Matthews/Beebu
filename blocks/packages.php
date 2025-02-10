@@ -19,7 +19,7 @@ $next_year = date('Y', strtotime('+1 year'));
     <div class="wrapper">
         <div class="packages__inner">
             <h2 class="packages__title <?php if($title_colour) : ?><?= $title_colour ?><?php endif; ?>"><?=$title ?></h2>
-            <div class="packages__grid">
+            <div class="packages__grid js-packages-slider">
                 <?php foreach ($packages as $package): ?>
                     <?php $degree = 0; 
                     
@@ -59,3 +59,36 @@ $next_year = date('Y', strtotime('+1 year'));
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        const packagesSlider = $('.js-packages-slider');
+        
+    function initPackagesSlider() {
+        if (window.innerWidth < 768) {
+            if (!packagesSlider.hasClass('slick-initialized')) {
+                packagesSlider.slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true
+                });
+            }
+        } else {
+            if (packagesSlider.hasClass('slick-initialized')) {
+                packagesSlider.slick('unslick');
+            }
+        }
+    }
+
+    // Initialize on page load
+    initPackagesSlider();
+
+    // Re-initialize on window resize
+        $(window).on('resize', function() {
+            initPackagesSlider();
+        });
+    });
+</script>
