@@ -71,7 +71,7 @@ $background_position_x = get_sub_field('background_position_x');
                       <?php endif; ?>
                   <?php endif; ?>
                     <button class="postcode-search__button" type="submit">Check Availability</button>
-                    <button class="postcode-search__button mobile-button" type="submit">></button>
+                    <button class="postcode-search__button mobile-button" type="submit"><i class="fas fa-angle-right"></i></button>
                 </form>
                 <?php endif; ?>
             </div>

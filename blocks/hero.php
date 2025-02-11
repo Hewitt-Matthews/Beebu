@@ -185,7 +185,7 @@ endif; ?>
                             <input class="postcode-search__input" type="hidden" name="sn" value="<?php echo esc_attr($_GET['sn']); ?>">
                         <?php endif; ?>
                     <?php endif; ?>
-                    <button class="postcode-search__button mobile-button" type="submit">></button>
+                    <button class="postcode-search__button mobile-button" type="submit"><i class="fas fa-angle-right"></i></button>
                 </form>
             <?php endif; ?>
 
