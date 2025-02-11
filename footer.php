@@ -69,6 +69,8 @@
     </div>
 </footer>
 
+<button class="back-to-top" title="Back to Top"><i class="fas fa-angle-up"></i></button>
+
 <?php wp_footer(); ?>
 
 

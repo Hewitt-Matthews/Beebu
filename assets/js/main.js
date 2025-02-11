@@ -282,3 +282,25 @@ $(document).ready(function() {
   
 
 });
+
+// Back to top button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    if (backToTopButton) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 600) {
+                backToTopButton.classList.add('is-visible');
+            } else {
+                backToTopButton.classList.remove('is-visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
