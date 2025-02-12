@@ -63,7 +63,7 @@ $background_position_x = get_sub_field('background_position_x');
                   <?php endif; ?>
                 <?php elseif ($type == 'postcode'): ?>
                   <form class="postcode-search" method="GET" action="<?php echo esc_url($availability_check_url); ?>"> 
-                  <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter your postcode" required>
+                  <input class="postcode-search__input" type="text" name="postcode" value="<?php echo isset($_GET['postcode']) ? esc_attr($_GET['postcode']) : ''; ?>" placeholder="Enter postcode" required>
                   <?php if (isset($_GET['utm_source']) && $_GET['utm_source'] === 'awin'): ?>
                       <input class="postcode-search__input" type="hidden" name="utm_source" value="awin"> 
                       <?php if (isset($_GET['awc'])): ?>
