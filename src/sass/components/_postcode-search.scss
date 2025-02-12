@@ -14,12 +14,20 @@
 
 
     @include max-screen(767px) { 
-        min-width: auto;
         display: flex;
         // flex-direction: column;
-        gap: 1rem;
+        // gap: 1rem;
         border-radius: 2rem;
         padding: 0.7rem;
+        width: 100%;
+        min-width: 17rem;
+        max-width: 17rem;
+        margin: 0 auto;
+    }
+    .fas.fa-angle-right {
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+        }
     }
 
     &__input {
