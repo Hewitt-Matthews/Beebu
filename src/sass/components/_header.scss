@@ -18,7 +18,7 @@
   .btn-primary {
     a {
       color: #ffffff; // Default button text color
-      background-color: $off-black; // Default background color
+      background-color: $grey-new; // Default background color
     }
 
     @include max-screen(1300px) {
@@ -195,11 +195,11 @@
 // Black links in header
 .header__menu.black-links .menu-main-navigation-container ul#menu-main-navigation {
   li.menu-item a {
-    color: $off-black;
+    color: $grey-new;
   }
 }
 
 .btn-primary a {
   color: $white !important;
-  background: $off-black;
+  background: $grey-new;
 }
