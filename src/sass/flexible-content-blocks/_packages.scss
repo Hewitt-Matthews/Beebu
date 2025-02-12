@@ -69,6 +69,9 @@
             font-size: 1.25rem;
             margin: 0;
             margin-top: 10px;
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
         }
 
         &-large {
@@ -187,6 +190,9 @@
             width: 240px;
             position: absolute;
             top: 0;
+          }
+          @media screen and (max-width: 768px) {
+            width: 310px;
           }
         }
       }
