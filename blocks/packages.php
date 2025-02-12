@@ -73,7 +73,9 @@ $next_year = date('Y', strtotime('+1 year'));
                     infinite: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
+                    variableWidth: false,
+                    cssEase: 'linear'
                 });
             }
         } else {
