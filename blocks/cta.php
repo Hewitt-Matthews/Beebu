@@ -19,17 +19,18 @@ $section_options_background_colour = get_sub_field('section_options_background_c
 $section_options_curved_section = get_sub_field('section_options_curved_section');
 $section_padding = get_sub_field('section_padding');
 $background_position_x = get_sub_field('background_position_x');
+$background_image = get_sub_field('background_image')['url'];
+// Add this line to get mobile background image
+$mobile_background_image = get_sub_field('mobile_background_image')['url'];
 ?>
 
 <!-- Background Image Position - Mobile Only -->
 <?php if($background_position_x): ?>
 <style>
-  @media screen and (max-width: 1024px) {
-
+  @media screen and (max-width: 767px) {
     .ctacontainer .cta {
       background-position-x: <?= $background_position_x ?>% !important;
     }
-
   }
 </style>
 <?php endif; ?>
@@ -40,7 +41,16 @@ $background_position_x = get_sub_field('background_position_x');
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   ">
     <div class="wrapper">
-        <div class="cta cta--<?=$type ?>" style="background-image: url('<?=get_sub_field('background_image')['url']; ?>');">
+        <div class="cta cta--<?=$type ?>" style="background-image: url('<?= $background_image; ?>');">
+        <?php if($mobile_background_image): ?>
+        <style>
+            @media screen and (max-width: 767px) {
+                .cta.cta--<?=$type ?> {
+                    background-image: url('<?= $mobile_background_image; ?>') !important;
+                }
+            }
+        </style>
+        <?php endif; ?>
         <?php if($mask): ?>
             <div class="cta__mask"></div>
         <?php endif; ?>
