@@ -1,0 +1,18 @@
+// Custom scrollbar styling
+body {
+  // Scrollbar width
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  // Scrollbar thumb (the draggable part)
+  &::-webkit-scrollbar-thumb {
+    background: $orange;
+    border-radius: 5px;
+  }
+
+  // Scrollbar track (the background)
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+}
