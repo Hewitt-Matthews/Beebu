@@ -21,7 +21,8 @@ $section_padding = get_sub_field('section_padding');
 $background_position_x = get_sub_field('background_position_x');
 $background_image = get_sub_field('background_image')['url'];
 // Add this line to get mobile background image
-$mobile_background_image = get_sub_field('mobile_background_image')['url'];
+$mobile_background_image = get_sub_field('mobile_background_image');
+$mobile_background_image = $mobile_background_image ? $mobile_background_image['url'] : $background_image;
 ?>
 
 <!-- Background Image Position - Mobile Only -->
