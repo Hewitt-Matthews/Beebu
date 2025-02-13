@@ -51,14 +51,12 @@
             </div>
         </div>
         <div class="footer__trustpilot">
-            <span>Excellent</span>
-            <div class="reviews__score">
-                <?php for ($i=0; $i < $rating; $i++): ?>
-                    <span class="reviews__star"><img src="<?=get_template_directory_uri() ?>/assets/img/star.svg" /></span>
-                <?php endfor; ?>
-            </div>
-            <img src="<?=get_template_directory_uri() ?>/assets/img/trustpilot-white.svg" />
-        </div>
+            <!-- TrustBox script -->
+            <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+                    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b732fbfb950b10de65e5" data-businessunit-id="65957e521d1c310aa125e6d5" data-style-height="24px" data-style-width="100%" data-theme="dark">
+                        <a href="https://uk.trustpilot.com/review/beebu.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                    </div>
+                </div>
         <div class="footer__bottom">
             <p>
                 <span>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</span>
