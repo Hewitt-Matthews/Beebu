@@ -25,16 +25,7 @@ $mobile_background_image = get_sub_field('mobile_background_image');
 $mobile_background_image = $mobile_background_image ? $mobile_background_image['url'] : $background_image;
 ?>
 
-<!-- Background Image Position - Mobile Only -->
-<?php if($background_position_x): ?>
-<style>
-  @media screen and (max-width: 767px) {
-    .ctacontainer .cta {
-      background-position-x: <?= $background_position_x ?>% !important;
-    }
-  }
-</style>
-<?php endif; ?>
+
 
 <div class="ctacontainer section
   <?php echo 'section--' . $section_options_background_colour; ?>
@@ -42,16 +33,9 @@ $mobile_background_image = $mobile_background_image ? $mobile_background_image['
   <?php if ( $section_padding ) : echo 'section--spaced'; endif; ?>
   ">
     <div class="wrapper">
-        <div class="cta cta--<?=$type ?>" style="background-image: url('<?= $background_image; ?>');">
-        <?php if($mobile_background_image): ?>
-        <style>
-            @media screen and (max-width: 767px) {
-                .cta.cta--<?=$type ?> {
-                    background-image: url('<?= $mobile_background_image; ?>') !important;
-                }
-            }
-        </style>
-        <?php endif; ?>
+        <div class="cta cta--<?=$type ?>">
+        <div class="cta__background-image is-desktop" style="background-image: url('<?= $background_image; ?>');"></div>
+        <div class="cta__background-image is-mobile" style="background-image: url('<?= $mobile_background_image; ?>'); <?php if($background_position_x): ?> background-position-x: <?= $background_position_x ?>%;<? endif; ?>"></div>
         <?php if($mask): ?>
             <div class="cta__mask"></div>
         <?php endif; ?>
