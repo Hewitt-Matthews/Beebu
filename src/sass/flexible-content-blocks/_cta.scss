@@ -15,6 +15,36 @@
     background-position: center;
     z-index: 9;
 
+    &__background-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 1.5rem;
+        background-size: cover;
+        background-position: center;
+
+        &.is-desktop {
+            display: block;
+        }
+
+        &.is-mobile {
+            display: none;
+        }
+
+        @include max-screen(768px) {
+            &.is-desktop {
+                display: none;
+            }
+
+            &.is-mobile {
+                display: block;
+            }
+        }
+    }
+
+
     &__mask {
         position: absolute;
         top: 0;
