@@ -176,9 +176,22 @@
     padding: 190px 0px 0px 0px;
   }
 
+  .hero__content {
+    @include max-screen(768px) {
+      text-align: center;
+    }
+  }
+
   .hero__title {
     color: $white;
     margin-bottom: 0;
+    text-align: center;
+  }
+
+  .hero__text-below-postcode {
+    @include max-screen(768px) {
+      text-align: center;
+    }
   }
 
   .hero__trustpilot {
