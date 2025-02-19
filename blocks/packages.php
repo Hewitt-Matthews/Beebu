@@ -51,8 +51,8 @@ $next_year = date('Y', strtotime('+1 year'));
                         </ul>
                         <a href="https://signup.beebu.co.uk/signup/postcode" target="_blank" class="button button--black packages__package-button"><small>From </small><?=$package['price'] ?></a>
                         <span><?=$package['contract_length'] ?></span>
-                        <span><?= !empty($package['based_on_location_message']) ? $package['based_on_location_message'] : '*Based on location' ?></span>
-                        <span><?= !empty($package['monthly_price_rise_message']) ? $package['monthly_price_rise_message'] : '**Monthly price will rise each year by the Retail Price Index (RPI) rate of inflation published in January of that year, beginning from April 2025.' ?></span>
+                        <span><?=$package['based_on_location_message']  ?></span>
+                        <span><?=$package['monthly_price_rise_message'] ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
