@@ -299,4 +299,18 @@ function acf_load_form_select_choices( $field ) {
   return $field;
   
 }
-add_filter('acf/load_field/name=form', 'acf_load_form_select_choices'); ?>
+add_filter('acf/load_field/name=form', 'acf_load_form_select_choices'); 
+
+
+
+/******************************************************************************************
+ * Disable Theme Editor
+ ******************************************************************************************/
+function disable_theme_editor() {
+  define('DISALLOW_FILE_EDIT', true);
+}
+add_action('init', 'disable_theme_editor');
+
+
+
+?>
