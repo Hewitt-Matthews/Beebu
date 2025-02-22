@@ -64,7 +64,7 @@
             <p>
                 <span>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</span>
                 <br>
-                <span><?php the_field('footer_legal_disclaimer_text', 'option'); ?></span>
+                <span><?php echo get_field('footer_legal_disclaimer_text', 'option'); ?></span>
             </p>
         </div>
     </div>
