@@ -45,10 +45,16 @@
         font-size: 1.125rem;
         line-height: 1.4;
       }
-      ul {
+      .footer__opening-hours {
         margin: 1rem 0 2rem;
-        list-style: disc;
-        padding: 0 0 0 2rem;
+        p {
+          margin-bottom: 0.5rem;
+        }
+        span {
+          padding-left: 6px;
+        }
+        // list-style: disc;
+        // padding: 0 0 0 2rem;
       }
       .footer__email {
         text-decoration: underline;

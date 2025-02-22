@@ -5,10 +5,13 @@
         <div class="footer__inner">
             <div class="footer__col">
                 <p>Our Customer Services are available:</p>
-                <ul>
-                    <li>Monday - Friday</li>
-                    <li>9:00am - 5:00pm</li>
-                </ul>
+                <?php if(have_rows('footer_opening_hours', 'option')): ?>
+                    <div class="footer__opening-hours">
+                        <?php while(have_rows('footer_opening_hours', 'option')): the_row(); ?>
+                            <p><?php echo get_sub_field('days'); ?><span><?php echo get_sub_field('times'); ?></span></p>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
                 <?php if(get_field('email_address', 'option')): ?>
                     <a class="footer__email" href="mailto:<?=get_field('email_address', 'option') ?>"><?=get_field('email_address', 'option') ?></a>
                 <?php endif; ?>
@@ -61,7 +64,7 @@
             <p>
                 <span>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</span>
                 <br>
-                <span>Beebu Telecom Limited is registered in England & Wales at: 1 Barnes Wallis Road, Fareham, Hampshire, UK PO15 5UA. Company no. 08635537. Please view our Privacy Policy for more information about how we protect and process the data you submit.</span>
+                <span><?php echo get_field('footer_legal_disclaimer_text', 'option'); ?></span>
             </p>
         </div>
     </div>
