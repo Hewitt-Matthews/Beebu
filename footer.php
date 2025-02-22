@@ -64,7 +64,7 @@
             <p>
                 <span>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</span>
                 <br>
-                <span>Beebu Telecom Limited is registered in England & Wales at: 1 Barnes Wallis Road, Fareham, Hampshire, UK PO15 5UA. Company no. 08635537. Please view our Privacy Policy for more information about how we protect and process the data you submit.</span>
+                <span><?php the_field('footer_legal_disclaimer_text', 'option'); ?></span>
             </p>
         </div>
     </div>
