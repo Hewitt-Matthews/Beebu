@@ -5,10 +5,13 @@
         <div class="footer__inner">
             <div class="footer__col">
                 <p>Our Customer Services are available:</p>
-                <ul>
-                    <li>Monday - Friday</li>
-                    <li>9:00am - 5:00pm</li>
-                </ul>
+                <?php if(have_rows('footer_opening_hours', 'option')): ?>
+                    <div class="footer__opening-hours">
+                        <?php while(have_rows('footer_opening_hours', 'option')): the_row(); ?>
+                            <p><?php echo get_sub_field('days'); ?><span><?php echo get_sub_field('times'); ?></span></p>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
                 <?php if(get_field('email_address', 'option')): ?>
                     <a class="footer__email" href="mailto:<?=get_field('email_address', 'option') ?>"><?=get_field('email_address', 'option') ?></a>
                 <?php endif; ?>
