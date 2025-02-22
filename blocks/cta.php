@@ -5,10 +5,7 @@ if(get_sub_field('cta_type')) {
     $type = 'button';
 }
 $remove_line = get_sub_field('remove_line');
-
-// Add this new line to get the custom availability check URL
 $availability_check_url = get_sub_field('availability_check_url');
-
 $flourish = get_sub_field('show_background_flourish');
 $flourish_colour = $flourish ? get_sub_field('flourish_colour') : null;
 $mask = get_sub_field('show_background_mask');
@@ -20,7 +17,6 @@ $section_options_curved_section = get_sub_field('section_options_curved_section'
 $section_padding = get_sub_field('section_padding');
 $background_position_x = get_sub_field('background_position_x');
 $background_image = get_sub_field('background_image')['url'];
-// Add this line to get mobile background image
 $mobile_background_image = get_sub_field('mobile_background_image');
 $mobile_background_image = $mobile_background_image ? $mobile_background_image['url'] : $background_image;
 ?>
