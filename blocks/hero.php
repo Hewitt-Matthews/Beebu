@@ -104,7 +104,9 @@ endif; ?>
             <?php endif; ?>
 
             <?php if ($additional_text_below_the_postcode_search): ?>
-                <p class="hero__text-below-postcode"><?= $additional_text_below_the_postcode_search ?></p>
+                <div class="hero__text-below-postcode">
+                    <?php echo $additional_text_below_the_postcode_search; ?>
+                </div>
             <?php endif; ?>
 
             <?php if ($add_page_button) : ?>
@@ -190,7 +192,9 @@ endif; ?>
             <?php endif; ?>
 
             <?php if ($additional_text_below_the_postcode_search): ?>
-                <p class="hero__text-below-postcode"><?= $additional_text_below_the_postcode_search ?></p>
+                <div class="hero__text-below-postcode">
+                    <?php echo $additional_text_below_the_postcode_search; ?>
+                </div>
             <?php endif; ?>
 
             <?php if ($add_page_button) : ?>

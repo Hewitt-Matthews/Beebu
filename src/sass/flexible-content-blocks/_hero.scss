@@ -83,6 +83,13 @@
     color: $white; 
     margin-top: 24px;
     margin-bottom: 0;
+    p {
+      color: $white;
+      margin-bottom: 0;
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__trustpilot {
